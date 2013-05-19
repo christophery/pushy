@@ -99,6 +99,10 @@ textarea {
     box-sizing: border-box;   
 }
 
+ul{
+    padding: 0px;
+}
+
 #container{
     position: relative;
     padding: 20px;
@@ -106,32 +110,44 @@ textarea {
 
 .pushy{
     position: fixed;
-    background: #000;
+    background: #333332;
+    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
+    -moz-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
+    box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
 }
 
 .pushy a{
     display: block;
     color: #FFF;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.pushy a:hover{
+    background: #D9D9D9;
 }
 
 .pushy-menu{
-    width: 240px;
+    width: 200px;
     height: 100%;
     top: 0;
     z-index: 9999;
 }
 
 .pushy-menu-left{
-    left: -240px;
+    /*left: -240px;*/
+    -webkit-transform: translate3d(-200px,0,0);
 }
 
 .pushy-menu-open{
-    left: 0px;
+    /*left: 0px;*/
+    -webkit-transform: translate3d(0,0,0);
 }
 
 .container-push {
     overflow-x: hidden;
-    left: 240px;
+    /*left: 240px;*/
+    -webkit-transform: translate3d(200px,0,0);
 }
 
 .pushy, #container{
