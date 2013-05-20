@@ -94,12 +94,13 @@ textarea {
    ========================================================================== */
 
 *{
-    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;   
 }
 
 ul{
+    margin: 0px;
     padding: 0px;
 }
 
@@ -108,9 +109,13 @@ ul{
     padding: 20px;
 }
 
+/* Menu Appearance */
+
 .pushy{
     position: fixed;
     background: #333332;
+    font-size: 0.8em;
+    font-weight: bold;
     -webkit-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
     -moz-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
     box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
@@ -118,13 +123,16 @@ ul{
 
 .pushy a{
     display: block;
-    color: #FFF;
-    padding: 10px;
+    color: #b3b3b1;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
     text-decoration: none;
 }
 
 .pushy a:hover{
-    background: #D9D9D9;
+    background: #1a1a1a;
+    color: #FFF;
 }
 
 .pushy-menu{
@@ -134,24 +142,40 @@ ul{
     z-index: 9999;
 }
 
+/* Menu Movement */
+
 .pushy-menu-left{
-    /*left: -240px;*/
     -webkit-transform: translate3d(-200px,0,0);
+    -moz-transform: translate3d(-200px,0,0);
+    -ms-transform: translate3d(-200px,0,0);
+    -o-transform: translate3d(-200px,0,0);
+    transform: translate3d(-200px,0,0);
 }
 
 .pushy-menu-open{
-    /*left: 0px;*/
     -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
 
 .container-push {
     overflow-x: hidden;
-    /*left: 240px;*/
     -webkit-transform: translate3d(200px,0,0);
+    -moz-transform: translate3d(200px,0,0);
+    -ms-transform: translate3d(200px,0,0);
+    -o-transform: translate3d(200px,0,0);
+    transform: translate3d(200px,0,0);
 }
 
+/* Menu Transitions */
+
 .pushy, #container{
--webkit-transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
+    -webkit-transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
+    -moz-transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
+    -o-transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
+    transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
 }
 
 
