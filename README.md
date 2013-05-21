@@ -8,6 +8,11 @@ Pushy is a off canvas menu that adds a mobile/tablet like menu to your website.
 - Using Modernizer CSS classes for IE fallback.
 - Menu closes when link is clicked.
 
+##Requirements
+
+- jQuery
+- Modernizer
+
 ##Browser Compatibility
 
 - IE 7+
