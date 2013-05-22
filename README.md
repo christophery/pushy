@@ -11,7 +11,7 @@ Pushy is an off-canvas navigation menu for your website.
 ##Requirements
 
 - jQuery 1.9+
-- Modernizer
+- Modernizr
 
 ##Browser Compatibility
 
@@ -28,7 +28,7 @@ Mobile
 
 ##What I Used
 
-- HTML 5 Boilerplate
+- HTML5 Boilerplate
 - jQuery
-- CSS 3 transforms & transitions
-- Modernizer
+- CSS3 transforms & transitions
+- Modernizr
