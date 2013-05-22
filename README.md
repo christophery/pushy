@@ -2,7 +2,7 @@
 
 Pushy is an off-canvas navigation menu for your website.
 
-[View Demo](http://www.christopheryee.ca/pushy)
+[View Demo](http://www.christopheryee.ca/pushy) |
 [View Project on GitHub](https://github.com/christophery/pushy/)
 
 ##Features
