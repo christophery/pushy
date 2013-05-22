@@ -6,26 +6,65 @@
 
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   line-height: 1.4em;
 }
 
-p{
-	line-height: 1.3em;
+/* Links */
+
+a{
+	color: #00b4ff;
+	text-decoration: none;
 }
 
-ul{
+a:hover{
+	color: #000;
+}
+
+/* Headings*/
+
+h1{
+	font-size: 2.4em;
+}
+
+h2{
+	border-bottom: 1px solid #D9D9D9;
+	padding: 0 0 5px 0;
+}
+
+/* Lists */
+
+nav ul{
     margin: 0px;
     padding: 0px;
 }
 
+/* Container */
+
 #container{
 	position: relative;
-	padding: 20px;
+	padding: 20px 40px;
 }
+
+/* Menu Button */
 
 .menu-btn{
 	width: 100px;
 	padding: 10px;
-	background: #EFEFEF;
+	margin-bottom: 30px;
+	background: #000;
+	color: #FFF;
 	text-align: center;
 	cursor: pointer;
+}
+
+.menu-btn:hover{
+	background: #00b4ff;
+	color: #FFF;
+}
+
+/* Footer */
+
+footer{
+	font-size: 0.9em;
+	text-align: center;
 }
