@@ -1,24 +1,27 @@
-#Pushy (WIP)
+#Pushy
 
-Pushy is a off canvas menu that adds a mobile/tablet like menu to your website.
+Pushy is an off-canvas navigation menu for your website.
 
 ##Features
 
-- CSS 3D transformations for smoother performance on mobile.
-- Using Modernizer CSS classes for IE fallback.
+- Uses CSS 3D transformations for better performance on mobile.
+- Fallback to jQuery (IE < 9).
 - Menu closes when link is clicked.
 
 ##Requirements
 
-- jQuery
+- jQuery 1.9+
 - Modernizer
 
 ##Browser Compatibility
 
+Desktop
 - IE 7+
 - Chrome
 - Firefox
 - Safari (Mac)
+
+Mobile
 - Chrome (Android 4.2.2)
 - Browser (Android 4.2.2)
 - Safari (iOS 6)
@@ -26,11 +29,6 @@ Pushy is a off canvas menu that adds a mobile/tablet like menu to your website.
 ##What I Used
 
 - HTML 5 Boilerplate
-- jQuery toggleClass
-- CSS transitions & 3D transformation.
-- Modernizer CSS classes.
-
-##To-do
-
-- jQuery animation fallback for IE 7,8,9.
-- Better naming of CSS classes.
+- jQuery
+- CSS 3 transforms & transitions
+- Modernizer

@@ -1,18 +1,6 @@
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;   
-}
-
-ul{
-    margin: 0px;
-    padding: 0px;
-}
-
-#container{
-    position: relative;
-    padding: 20px;
-}
+/*! Pushy - v0.6 - 2013-5-22
+* https://github.com/christophery/pushy/
+* by Christopher Yee */
 
 /* Menu Appearance */
 
@@ -49,7 +37,7 @@ ul{
 
 /* Menu Movement */
 
-.csstransforms3d .pushy-menu-left{
+.pushy-menu-left{
     -webkit-transform: translate3d(-200px,0,0);
     -moz-transform: translate3d(-200px,0,0);
     -ms-transform: translate3d(-200px,0,0);
@@ -57,7 +45,7 @@ ul{
     transform: translate3d(-200px,0,0);
 }
 
-.csstransforms3d .pushy-menu-open{
+.pushy-menu-open{
     -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
@@ -65,25 +53,13 @@ ul{
     transform: translate3d(0,0,0);
 }
 
-.csstransforms3d .container-push {
+.container-push {
     overflow-x: hidden;
     -webkit-transform: translate3d(200px,0,0);
     -moz-transform: translate3d(200px,0,0);
     -ms-transform: translate3d(200px,0,0);
     -o-transform: translate3d(200px,0,0);
     transform: translate3d(200px,0,0);
-}
-
-.no-csstransforms3d .pushy-menu-left{
-    left: -200px; /* IE Fallback */
-}
-
-.no-csstransforms3d .pushy-menu-open{
-    left: 0px; /* IE Fallback */
-}
-
-.no-csstransforms3d .container-push{
-    left: 200px; /* IE Fallback */
 }
 
 /* Menu Transitions */
@@ -94,17 +70,3 @@ ul{
     -o-transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
     transition:all 0.2s cubic-bezier(.16,.68,.43,.99);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
