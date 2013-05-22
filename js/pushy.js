@@ -1,16 +1,18 @@
 /*! Pushy - v0.6 - 2013-5-22
+* Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
 var pushy = $('.pushy'),
 	container = $('#container'),
 	menuBtn = $('.menu-btn, .pushy a'),
-	menuSpeed = 200; //jQuery fallback menu speed
+	menuSpeed = 200, //jQuery fallback menu speed
+	menuWidth = "200px"; //jQuery fallback menu width
 
 if(!Modernizr.csstransforms3d){
 	//Browser doesn't support CSS 3D Transforms, fallback to jQuery	
-	
-	pushy.css({left: "-200px"}); //Hide menu by default
+
+	pushy.css({left: "-" + menuWidth}); //Hide menu by default
 	container.css({"overflow-x": "hidden"});
 
 	//Keep track of menu state (open/close)
@@ -20,10 +22,10 @@ if(!Modernizr.csstransforms3d){
 	menuBtn.click(function() {
 		if (state) {
 			pushy.animate({left: "0px"}, menuSpeed);
-			container.animate({left: "200px"}, menuSpeed);
+			container.animate({left: menuWidth}, menuSpeed);
 			state = false;
 		} else {
-			pushy.animate({left: "-200px"}, menuSpeed);
+			pushy.animate({left: "-" + menuWidth}, menuSpeed);
 			container.animate({left: "0px"}, menuSpeed);
 			state = true;
 		}

@@ -4,6 +4,14 @@
     box-sizing: border-box;   
 }
 
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+}
+
+p{
+	line-height: 1.3em;
+}
+
 ul{
     margin: 0px;
     padding: 0px;
