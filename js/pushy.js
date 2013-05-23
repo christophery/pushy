@@ -1,4 +1,4 @@
-/*! Pushy - v0.8 - 2013-5-22
+/*! Pushy - v0.8.1 - 2013-5-23
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -7,7 +7,7 @@ var pushy = $('.pushy'),
 	container = $('#container'),
 	menuBtn = $('.menu-btn, .pushy a'),
 	menuSpeed = 200, //jQuery fallback menu speed
-	menuWidth = "200px"; //jQuery fallback menu width
+	menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
 if(!Modernizr.csstransforms3d){
 	//Browser doesn't support CSS 3D Transforms, fallback to jQuery	
