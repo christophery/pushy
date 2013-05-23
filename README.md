@@ -26,7 +26,7 @@ Desktop
 
 Mobile
 - Chrome (Android 4.2.2)
-- Browser (Android 4.2.2)
+- Android Browser (Android 4.2.2)
 - Safari (iOS 6)
 
 ##What I Used
