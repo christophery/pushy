@@ -1,11 +1,11 @@
-/*! Pushy - v0.8.2 - 2013-5-23
+/*! Pushy - v0.8.3 - 2013-5-23
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
 var pushy = $('.pushy'),
 	container = $('#container'),
-	menuClass = "pushy-menu-left pushy-menu-open",
+	menuClass = "pushy-left pushy-open",
 	containerClass = "container-push",
 	menuBtn = $('.menu-btn, .pushy a'),
 	menuSpeed = 200, //jQuery fallback menu speed
