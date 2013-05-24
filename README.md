@@ -13,7 +13,7 @@ Pushy is an off-canvas navigation menu for your website.
 
 ##Requirements
 
-- jQuery 1.9+
+- jQuery 1.9.1
 - Modernizr
 
 ##Browser Compatibility

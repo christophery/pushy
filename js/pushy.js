@@ -1,26 +1,25 @@
-/*! Pushy - v0.8.3 - 2013-5-23
+/*! Pushy - v0.8.3 - 2013-5-24
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
-var pushy = $('.pushy'),
-	container = $('#container'),
-	menuClass = "pushy-left pushy-open",
-	containerClass = "container-push",
-	menuBtn = $('.menu-btn, .pushy a'),
+var pushy = $('.pushy'), //menu css class
+	container = $('#container'), //container css class
+	pushyClass = "pushy-left pushy-open", //menu position & menu open class
+	containerClass = "container-push", //container open class
+	menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
 	menuSpeed = 200, //jQuery fallback menu speed
 	menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
 if(!Modernizr.csstransforms3d){
-	//Browser doesn't support CSS 3D Transforms, fallback to jQuery	
+	//jQuery fallback (no 3D transforms support)
+	pushy.css({left: "-" + menuWidth}); //hide menu by default
+	container.css({"overflow-x": "hidden"}); //fixes IE issue
 
-	pushy.css({left: "-" + menuWidth}); //Hide menu by default
-	container.css({"overflow-x": "hidden"});
-
-	//Keep track of menu state (open/close)
+	//keep track of menu state (open/close)
 	var state = true;
 
-	//Toggle menu
+	//toggle menu
 	menuBtn.click(function() {
 		if (state) {
 			pushy.animate({left: "0px"}, menuSpeed);
@@ -34,9 +33,9 @@ if(!Modernizr.csstransforms3d){
 	});
 
 }else{
-	//Use native CSS 3D Transforms
+	//use native CSS 3D Transforms
 	menuBtn.click(function () {
-		pushy.toggleClass(menuClass);
+		pushy.toggleClass(pushyClass);
 		container.toggleClass(containerClass);
 	});
 }
