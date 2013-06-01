@@ -8,14 +8,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/pushy.css">
         <link rel="stylesheet" href="css/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="css/pushy.css">
         
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.0.min.js"><\/script>')</script>
+        <!-- Modernizr -->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
     </head>
     <body>
+        <!-- Pushy Menu -->
         <nav class="pushy pushy-left">
             <ul>
                 <li><a href="#">Item 1</a></li>
@@ -26,26 +31,31 @@
                 <li><a href="#">Item 6</a></li>
             </ul>
         </nav>
+        <!-- Your Content -->
         <div id="container">
+            <!-- Menu Button -->
             <div class="menu-btn">&#9776; Menu</div>
 
             <h1>Pushy</h1>
 
-            <p>Pushy is an off-canvas navigation menu for your website.</p>
+            <p>Pushy is an responsive off-canvas navigation menu, using CSS transforms &amp; transitions.</p>
+
+            <p>Feel free to <a href="http://www.twitter.com/cmyee" target="_blank">let me know</a> if you use Pushy in one of your websites.</p>
             
-            <a href="http://www.christopheryee.ca/pushy">View Demo</a> |
-            <a href="https://github.com/christophery/pushy">View Project on GitHub</a>
+            <a href="http://www.christopheryee.ca/pushy" target="_blank">View Demo</a> |
+            <a href="https://github.com/christophery/pushy" target="_blank">View Project on GitHub</a>
 
             <h2>Features</h2>
             <ul>
-                <li>Uses CSS 3D transforms for better performance on mobile.</li>
-                <li>Fallback to jQuery (IE &lt; 9).</li>
+                <li>Uses CSS transforms &amp; transitions.</li>
+                <li>Smooth performance on mobile devices.</li>
+                <li>jQuery animation fallback for IE 7 - 9.</li>
                 <li>Menu closes when link is clicked.</li>
             </ul>
             
             <h2>Requirements</h2>
             <ul>
-                <li>jQuery 1.9.1</li>
+                <li>jQuery 1.10</li>
                 <li>Modernizr</li>
             </ul>
 
@@ -53,7 +63,7 @@
 
             <h3>Desktop</h3>
             <ul>
-                <li>IE 7+</li>
+                <li>IE 7-10</li>
                 <li>Chrome</li>
                 <li>Firefox</li>
                 <li>Safari (Mac)</li>
@@ -64,24 +74,34 @@
                 <li>Chrome (Android 4.2.2)</li>
                 <li>Android Browser (Android 4.2.2)</li>
                 <li>Safari (iOS 6)</li>
-            </ul>            
+            </ul>  
 
-            <h2>What I Used</h2>
+            <h2>Version history</h2>
+
+            0.8.4
             <ul>
-                <li>HTML5 Boilerplate</li>
-                <li>jQuery</li>
-                <li>CSS3</li>
-                <li>Modernizr</li>
+                <li>Fixed performance issue with mobile devices</li>
+                <li>Updated to jQuery 1.10</li>
+                <li>Updated the demo file</li>
+                <li>Updated the read me</li>
+            </ul>         
+
+            <h2>Thanks to</h2>
+            <ul>
+                <li><a href="http://html5boilerplate.com/">HTML5 Boilerplate</a></li>
+                <li><a href="http://jquery.com/">jQuery</a></li>
+                <li><a href="http://modernizr.com/">Modernizr</a></li>
             </ul>
             
             <footer>
                 Copyright (c) 2013 <a href="http://www.christopheryee.ca">Christopher Yee</a>
             </footer>
         </div>
-
+        
+        <!-- Pushy JS -->
         <script src="js/pushy.min.js"></script>
 
-        <!-- Google Analytics -->
+        <!-- Demo Google Analytics -->
         <script>
             var _gaq=[['_setAccount','UA-3555686-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
