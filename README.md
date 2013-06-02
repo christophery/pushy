@@ -1,6 +1,6 @@
 #Pushy
 
-Pushy is an responsive off-canvas navigation menu, using CSS transforms & transitions.
+Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 
 Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
