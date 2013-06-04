@@ -31,7 +31,6 @@ $(function() {
 				container.animate({left: "0px"}, menuSpeed);
 				state = true;
 			}
-			e.preventDefault();
 		});
 
 	}else{
@@ -39,7 +38,6 @@ $(function() {
 		menuBtn.click(function(e) {
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
-			e.preventDefault();
 		});
 	}
 });
