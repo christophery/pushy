@@ -12,8 +12,13 @@ $(function() {
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
-	if(!Modernizr.csstransforms3d){
-		//jQuery fallback (no 3D transforms support)
+	if(Modernizr.csstransforms3d){
+		menuBtn.click(function(e) {
+			pushy.toggleClass(pushyClass);
+			container.toggleClass(containerClass);
+		});
+	}else{
+		//jQuery fallback
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
 		container.css({"overflow-x": "hidden"}); //fixes IE issue
 
@@ -31,13 +36,6 @@ $(function() {
 				container.animate({left: "0px"}, menuSpeed);
 				state = true;
 			}
-		});
-
-	}else{
-		//use native CSS 3D Transforms
-		menuBtn.click(function(e) {
-			pushy.toggleClass(pushyClass);
-			container.toggleClass(containerClass);
 		});
 	}
 });
