@@ -86,7 +86,7 @@
     bottom: 0;
     left: 200px;
     z-index: 900;
-    background: red;
+    /*background: red;*/
 }
 
 /* Media Queries */

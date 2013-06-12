@@ -9,7 +9,7 @@ $(function() {
 		container = $('#container'), //container css class
 		pushyClass = "pushy-left pushy-open", //menu position & menu open class
 		containerClass = "container-push", //container open class
-		menuBtn = $('.menu-btn, .pushy a, .menu-open, .site-overlay'), //css classes to toggle the menu
+		menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
@@ -28,6 +28,7 @@ $(function() {
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
 		});
+
 	}else{
 		//jQuery fallback
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
