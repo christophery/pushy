@@ -72,6 +72,27 @@
     -webkit-perspective: 1000;
 }
 
+/* Site Overlay */
+
+.site-overlay{
+    display: none;
+}
+
+.pushy-open .site-overlay{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 200px;
+    z-index: 900;
+    /*background: red;*/
+}
+
+.site-overflow{
+    display: hidden;
+}
+
 /* Media Queries */
 
 @media screen and (max-width: 768px){

@@ -8,14 +8,21 @@ $(function() {
 		container = $('#container'), //container css class
 		pushyClass = "pushy-left pushy-open", //menu position & menu open class
 		containerClass = "container-push", //container open class
-		menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
+		menuBtn = $('.menu-btn, .pushy a, .site-overlay'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
 	if(Modernizr.csstransforms3d){
-		menuBtn.click(function(e) {
+		pushy.after('<div class="site-overlay"></div>'); //add site overlay
+		menuBtn.click(function() {
+			$('body').toggleClass('pushy-open').css({"overflow": "hidden"}); //toggle site overlay + disable scrolbars
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
+		});
+		$('.site-overlay').click(function(){ //close menu when clicking site overlay
+			$('body').toggleClass('pushy-open').css({"overflow": "visible"}); //toggle site overlay + restore scrollbars
+			//pushy.toggleClass(pushyClass);
+			//container.toggleClass(containerClass);
 		});
 	}else{
 		//jQuery fallback
