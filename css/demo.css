@@ -4,6 +4,10 @@
     box-sizing: border-box;   
 }
 
+html, body{
+	overflow-x: hidden; /*prevents horizontal scroll bars*/
+}
+
 body {
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    line-height: 1.4em;

@@ -1,4 +1,4 @@
-/*! Pushy - v0.8.4 - 2013-6-1
+/*! Pushy - v0.8.5 - 2013-6-11
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -78,7 +78,7 @@
     display: none;
 }
 
-.pushy-open .site-overlay{
+.menu-open .site-overlay{
     display: block;
     position: absolute;
     top: 0;
@@ -86,11 +86,7 @@
     bottom: 0;
     left: 200px;
     z-index: 900;
-    /*background: red;*/
-}
-
-.site-overflow{
-    display: hidden;
+    background: red;
 }
 
 /* Media Queries */

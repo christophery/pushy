@@ -1,28 +1,32 @@
-/*! Pushy - v0.8.4 - 2013-6-1
+/*! Pushy - v0.8.5 - 2013-6-11
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
 $(function() {
 	var pushy = $('.pushy'), //menu css class
+		body = $('body'),
 		container = $('#container'), //container css class
 		pushyClass = "pushy-left pushy-open", //menu position & menu open class
 		containerClass = "container-push", //container open class
-		menuBtn = $('.menu-btn, .pushy a, .site-overlay'), //css classes to toggle the menu
+		menuBtn = $('.menu-btn, .pushy a, .menu-open, .site-overlay'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
 	if(Modernizr.csstransforms3d){
+
 		pushy.after('<div class="site-overlay"></div>'); //add site overlay
+
 		menuBtn.click(function() {
-			$('body').toggleClass('pushy-open').css({"overflow": "hidden"}); //toggle site overlay + disable scrolbars
+			body.toggleClass('menu-open'); //toggle site overlay
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
 		});
+
 		$('.site-overlay').click(function(){ //close menu when clicking site overlay
-			$('body').toggleClass('pushy-open').css({"overflow": "visible"}); //toggle site overlay + restore scrollbars
-			//pushy.toggleClass(pushyClass);
-			//container.toggleClass(containerClass);
+			body.toggleClass('menu-open');
+			pushy.toggleClass(pushyClass);
+			container.toggleClass(containerClass);
 		});
 	}else{
 		//jQuery fallback
