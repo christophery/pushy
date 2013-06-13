@@ -1,4 +1,4 @@
-/*! Pushy - v0.8.5 - 2013-6-11
+/*! Pushy - v0.8.5 - 2013-6-13
 * Pushy is an off-canvas navigation menu for your website.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -18,13 +18,13 @@ $(function() {
 		pushy.after('<div class="site-overlay"></div>'); //add site overlay
 
 		menuBtn.click(function() {
-			body.toggleClass('menu-open'); //toggle site overlay
+			body.toggleClass('pushy-active'); //toggle site overlay
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
 		});
 
 		$('.site-overlay').click(function(){ //close menu when clicking site overlay
-			body.toggleClass('menu-open');
+			body.toggleClass('pushy-active');
 			pushy.toggleClass(pushyClass);
 			container.toggleClass(containerClass);
 		});
@@ -32,7 +32,7 @@ $(function() {
 	}else{
 		//jQuery fallback
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
-		container.css({"overflow-x": "hidden"}); //fixes IE issue
+		container.css({"overflow-x": "hidden"}); //fixes IE scrollbar issue
 
 		//keep track of menu state (open/close)
 		var state = true;
