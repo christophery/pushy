@@ -12,11 +12,13 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
 - jQuery animation fallback for IE 7 - 9.
-- Menu closes when link is clicked.
+- Menu closes when a link is selected.
+- Menu closes when the site overlay is selected.
+- It's responsive!
 
 ##Requirements
 
-- jQuery 1.10
+- jQuery 1.11
 - Modernizr
 
 ##Browser Compatibility
@@ -35,6 +37,15 @@ Mobile
 - Safari (iOS 6)
 
 ##Version History
+
+0.9.0
+
+- Added a site overlay when Pushy is toggled
+- Fixed horizonal scroll bar issue on mobile devices
+- Disabled webkit tap highlight
+- Rejiggered the JS file
+- Updated to jQuery 1.11
+- Updated the demo file
 
 0.8.4
 
