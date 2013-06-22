@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Pushy - Off-canvas navigation menu</title>
+        <title>Pushy - Off-Canvas Navigation Menu</title>
         <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -13,8 +13,8 @@
         <link rel="stylesheet" href="css/pushy.css">
         
         <!-- jQuery -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.0.min.js"><\/script>')</script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
         <!-- Modernizr -->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -31,6 +31,10 @@
                 <li><a href="#">Item 6</a></li>
             </ul>
         </nav>
+
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+
         <!-- Your Content -->
         <div id="container">
             <!-- Menu Button -->
@@ -50,12 +54,14 @@
                 <li>Uses CSS transforms &amp; transitions.</li>
                 <li>Smooth performance on mobile devices.</li>
                 <li>jQuery animation fallback for IE 7 - 9.</li>
-                <li>Menu closes when link is clicked.</li>
+                <li>Menu closes when a link is selected.</li>
+                <li>Menu closes when the site overlay is selected.</li>
+                <li>It's responsive!</li>
             </ul>
             
             <h2>Requirements</h2>
             <ul>
-                <li>jQuery 1.10</li>
+                <li>jQuery 1.11</li>
                 <li>Modernizr</li>
             </ul>
 
@@ -77,6 +83,16 @@
             </ul>  
 
             <h2>Version history</h2>
+
+            0.9.0
+            <ul>
+                <li>Added a site overlay when Pushy is toggled</li>
+                <li>Fixed horizonal scroll bar issue on mobile devices</li>
+                <li>Disabled webkit tap highlight</li>
+                <li>Rejiggered the JS file</li>
+                <li>Updated to jQuery 1.11</li>
+                <li>Updated the demo file</li>
+            </ul> 
 
             0.8.4
             <ul>
@@ -101,7 +117,7 @@
         <!-- Pushy JS -->
         <script src="js/pushy.min.js"></script>
 
-        <!-- Demo Google Analytics -->
+        <!-- Demo Google Analytics (Don't use this!) -->
         <script>
             var _gaq=[['_setAccount','UA-3555686-2'],['_trackPageview']];
             (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
