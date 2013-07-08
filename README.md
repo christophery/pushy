@@ -18,7 +18,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ##Requirements
 
-- jQuery 1.10.1
+- jQuery 1.5+
 - Modernizr
 
 ##Browser Compatibility
