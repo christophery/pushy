@@ -44,7 +44,7 @@ Mobile
 - Fixed horizonal scroll bar issue on mobile devices
 - Disabled webkit tap highlight
 - Rejiggered the JS file
-- Updated to jQuery 1.11
+- Updated to jQuery 1.10.1
 - Updated the demo file
 
 0.8.4
