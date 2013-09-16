@@ -1,4 +1,4 @@
-/*! Pushy - v0.9 - 2013-6-22
+/*! Pushy - v0.9.1 - 2013-9-16
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */

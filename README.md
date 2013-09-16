@@ -80,6 +80,12 @@ Mobile
 
 ##Version History
 
+0.9.1
+
+- Added scroll bar support to the menu.
+- Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container DIV.
+- Updated the demo file.
+
 0.9.0
 
 - Added a site overlay when Pushy is toggled
