@@ -76,7 +76,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 /* Menu Movement */
 
 .pushy-left{
-    -webkit-transform: translate3d(-400px,0,0);
+    -webkit-transform: translate3d(-400px,0,0); /* Updated the values */
     -moz-transform: translate3d(-400px,0,0);
     -ms-transform: translate3d(-400px,0,0);
     -o-transform: translate3d(-400px,0,0);
@@ -84,7 +84,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 }
 
 .container-push, .push-push{
-    -webkit-transform: translate3d(400px,0,0);
+    -webkit-transform: translate3d(400px,0,0); /* Updated the values */
     -moz-transform: translate3d(400px,0,0);
     -ms-transform: translate3d(400px,0,0);
     -o-transform: translate3d(400px,0,0);
