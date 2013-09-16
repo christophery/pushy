@@ -7,6 +7,7 @@
 html, body{
 	overflow-x: hidden; /* prevents horizontal scroll bars */
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
+	height: 100%; /* fixes focus scrolling in Safari (OS X) */
 }
 
 body {
@@ -67,9 +68,30 @@ nav ul{
 	color: #FFF;
 }
 
+/* Header */
+
+header{
+	position: relative;
+	background: #000; 
+	color: #FFF; 
+	padding: 20px 40px;
+}
+
 /* Footer */
 
 footer{
 	font-size: 0.9em;
 	text-align: center;
+}
+
+/* Custom Scroll Bars */
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgba(156, 156, 156, .5);
 }

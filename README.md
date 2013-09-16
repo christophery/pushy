@@ -21,6 +21,48 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 - jQuery 1.9+
 - Modernizr
 
+##Usage
+
+1. Include jQuery & Modernizr in your head.
+
+2. Include the Pushy stylesheet (pushy.css) in your head and the Pushy JS (pushy.min.js) file in your footer.
+
+3. Include the following markup (menu, site overlay & container) in your body.
+
+```html
+<!-- Pushy Menu -->
+<nav class="pushy pushy-left">
+    <ul>
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+        <li><a href="#">Item 5</a></li>
+        <li><a href="#">Item 6</a></li>
+    </ul>
+</nav>
+
+<!-- Site Overlay -->
+<div class="site-overlay"></div>
+
+<!-- Your Content -->
+<div id="container"></div>
+```
+
+##Tips
+
+- Use the ```css push``` class on HTML elements outside of the container.
+
+```html
+<header class="push">
+    <h1>This is a Heading</h1>
+    <h2>This is a subheading</h2>
+</header>
+
+<!-- Your Content -->
+<div id="container"></div>
+```
+
 ##Browser Compatibility
 
 Desktop
