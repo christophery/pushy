@@ -51,7 +51,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ##Tips
 
-- Use the ```css push``` class on HTML elements outside of the container.
+- Use the ```.push``` CSS class on HTML elements outside of the container.
 
 ```html
 <header class="push">
@@ -62,6 +62,36 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 <!-- Your Content -->
 <div id="container"></div>
 ```
+
+- If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
+
+```css
+
+/* Menu Appearance */
+
+.pushy{
+    width: 400px; /* Changed the width to 400px */
+}
+
+/* Menu Movement */
+
+.pushy-left{
+    -webkit-transform: translate3d(-400px,0,0);
+    -moz-transform: translate3d(-400px,0,0);
+    -ms-transform: translate3d(-400px,0,0);
+    -o-transform: translate3d(-400px,0,0);
+    transform: translate3d(-400px,0,0);
+}
+
+.container-push, .push-push{
+    -webkit-transform: translate3d(400px,0,0);
+    -moz-transform: translate3d(400px,0,0);
+    -ms-transform: translate3d(400px,0,0);
+    -o-transform: translate3d(400px,0,0);
+    transform: translate3d(400px,0,0);
+}
+```
+
 
 ##Browser Compatibility
 
