@@ -23,11 +23,11 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ##Usage
 
-1. Include jQuery & Modernizr in your head.
+1. Include jQuery & Modernizr.
 
-2. Include the Pushy stylesheet (pushy.css) in your head and the Pushy JS (pushy.min.js) file in your footer.
+2. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
 
-3. Include the following markup (menu, site overlay & container) in your body.
+3. Insert the following markup into your body.
 
 ```html
 <!-- Pushy Menu -->
@@ -51,7 +51,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 ##Tips
 
-- Use the ```.push``` CSS class on HTML elements outside of the container.
+- Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
 
 ```html
 <header class="push">
@@ -61,6 +61,17 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 
 <!-- Your Content -->
 <div id="container"></div>
+```
+
+- Add the following to hide horizontal scroll bars when menu is open, disable the webkit tap highlight and fix the focus scrolling in Safari.
+
+
+```css
+html, body{
+	overflow-x: hidden; /* prevents horizontal scroll bars */
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
+	height: 100%; /* fixes focus scrolling in Safari (OS X) */
+}
 ```
 
 - If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
@@ -92,7 +103,6 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 }
 ```
 
-
 ##Browser Compatibility
 
 Desktop
@@ -106,7 +116,7 @@ Mobile
 
 - Chrome (Android 4.2.2)
 - Android Browser (Android 4.2.2)
-- Safari (iOS 6)
+- Safari (iOS 6-7)
 
 ##Version History
 
@@ -114,6 +124,7 @@ Mobile
 
 - Added scroll bar support to the menu.
 - Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container DIV.
+- Tested in iOS 7.
 - Updated the demo file.
 
 0.9.0

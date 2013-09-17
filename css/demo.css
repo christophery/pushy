@@ -11,8 +11,8 @@ html, body{
 }
 
 body {
-   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   line-height: 1.4em;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	line-height: 1.4em;
 }
 
 /* Links */
@@ -68,30 +68,9 @@ nav ul{
 	color: #FFF;
 }
 
-/* Header */
-
-header{
-	position: relative;
-	background: #000; 
-	color: #FFF; 
-	padding: 20px 40px;
-}
-
 /* Footer */
 
 footer{
 	font-size: 0.9em;
 	text-align: center;
-}
-
-/* Custom Scroll Bars */
-
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 8px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgba(156, 156, 156, .5);
 }
