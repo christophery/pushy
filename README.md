@@ -4,8 +4,7 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
-[View Demo](http://www.christopheryee.ca/pushy) |
-[View Project on GitHub](https://github.com/christophery/pushy/)
+[View Demo](http://www.christopheryee.ca/pushy)
 
 ##Features
 
