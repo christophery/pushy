@@ -1,4 +1,4 @@
-/*! Pushy - v0.9 - 2013-6-22
+/*! Pushy - v0.9.1 - 2013-9-16
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -14,17 +14,19 @@
     background: #333332;
     font-size: 0.9em;
     font-weight: bold;
-    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
-    -moz-box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
-    box-shadow: inset -10px 0 6px -9px rgba(0,0,0,0.7);
+    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 }
 
 .pushy a{
     display: block;
     color: #b3b3b1;
     padding: 15px 30px;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+    border-top: 1px solid rgba(255, 255, 255, .1);
     text-decoration: none;
 }
 
@@ -51,7 +53,7 @@
     transform: translate3d(0,0,0);
 }
 
-.container-push {
+.container-push, .push-push{
     -webkit-transform: translate3d(200px,0,0);
     -moz-transform: translate3d(200px,0,0);
     -ms-transform: translate3d(200px,0,0);
@@ -61,11 +63,11 @@
 
 /* Menu Transitions */
 
-.pushy, #container{
-    -webkit-transition: all 0.2s cubic-bezier(.16,.68,.43,.99);
-    -moz-transition: all 0.2s cubic-bezier(.16,.68,.43,.99);
-    -o-transition: all 0.2s cubic-bezier(.16,.68,.43,.99);
-    transition: all 0.2s cubic-bezier(.16,.68,.43,.99);
+.pushy, #container, .push{
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -moz-transition: -moz-transform .2s cubic-bezier(.16, .68, .43, .99);
+    -o-transition: -o-transform .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
     /* improves performance issues on mobile*/
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
