@@ -122,8 +122,9 @@ Mobile
 
 0.9.1
 
-- Added scroll bar support to the menu.
-- Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container DIV.
+- Added support for more menu items (with scroll bar).
+- Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container div.
+- Fixed menu transition.
 - Tested in iOS 7.
 - Updated the demo file.
 
