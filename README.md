@@ -102,6 +102,8 @@ html, body{
 }
 ```
 
+- Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the browser. Be sure to include this test in you are using the [Modernizr build tool](http://modernizr.com/download/).
+
 ##Browser Compatibility
 
 Desktop
