@@ -150,3 +150,7 @@ Mobile
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
+
+##WordPress Theme
+
+Check out [PushyPress](https://github.com/christophery/pushypress) is you're in need of a WordPress theme featuring Pushy.
