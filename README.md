@@ -34,10 +34,6 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
     <ul>
         <li><a href="#">Item 1</a></li>
         <li><a href="#">Item 2</a></li>
-        <li><a href="#">Item 3</a></li>
-        <li><a href="#">Item 4</a></li>
-        <li><a href="#">Item 5</a></li>
-        <li><a href="#">Item 6</a></li>
     </ul>
 </nav>
 
@@ -47,6 +43,11 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 <!-- Your Content -->
 <div id="container"></div>
 ```
+
+##Modernizr
+
+Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the browser. Be sure to include this test in you are using the [Modernizr build tool](http://modernizr.com/download/#-csstransforms3d-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load).
+
 
 ##Tips
 
@@ -77,47 +78,29 @@ html, body{
 
 ```css
 
-/* Menu Appearance */
-
 .pushy{
     width: 400px; /* Changed the width to 400px */
 }
 
-/* Menu Movement */
-
 .pushy-left{
-    -webkit-transform: translate3d(-400px,0,0); /* Updated the values */
-    -moz-transform: translate3d(-400px,0,0);
-    -ms-transform: translate3d(-400px,0,0);
-    -o-transform: translate3d(-400px,0,0);
-    transform: translate3d(-400px,0,0);
+    transform: translate3d(-400px,0,0); /* Updated the values */
+    /* Don't forget the vendor prefixes */
 }
 
 .container-push, .push-push{
-    -webkit-transform: translate3d(400px,0,0); /* Updated the values */
-    -moz-transform: translate3d(400px,0,0);
-    -ms-transform: translate3d(400px,0,0);
-    -o-transform: translate3d(400px,0,0);
-    transform: translate3d(400px,0,0);
+    transform: translate3d(400px,0,0); /* Updated the values */
+    /* Don't forget the vendor prefixes */
 }
 ```
 
-- Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the browser. Be sure to include this test in you are using the [Modernizr build tool](http://modernizr.com/download/).
-
 ##Browser Compatibility
 
-Desktop
-
-- IE 7-10
-- Chrome
-- Firefox
-- Safari (Mac)
-
-Mobile
-
-- Chrome (Android 4.2.2)
-- Android Browser (Android 4.2.2)
-- Safari (iOS 6-7)
+| Desktop       | Mobile                           |
+| ------------- | -------------------------------- |
+| IE 7-10       | Chrome (Android 4.2.2)           |
+| Chrome        | Android Browser (Android 4.2.2)  |
+| Firefox       | Safari (iOS 6-7)                 |
+| Safari (Mac)  |
 
 ##Version History
 
@@ -150,7 +133,3 @@ Mobile
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
-
-##WordPress Theme
-
-Check out [PushyPress](https://github.com/christophery/pushypress) is you're in need of a WordPress theme featuring Pushy.
