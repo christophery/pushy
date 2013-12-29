@@ -1,45 +1,12 @@
-*{
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;   
-}
-
 html, body{
 	overflow-x: hidden; /* prevents horizontal scroll bars */
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
 	height: 100%; /* fixes focus scrolling in Safari (OS X) */
 }
 
-body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	line-height: 1.4em;
-}
-
-/* Links */
-
-a{
-	color: #00b4ff;
-	text-decoration: none;
-}
-
-a:hover{
-	color: #000;
-}
-
-/* Headings*/
-
-h1{
-	font-size: 2.4em;
-}
-
-h2{
-	border-bottom: 1px solid #D9D9D9;
-	padding: 0 0 5px 0;
-}
-
 /* Lists */
 
-nav ul{
+ul{
     margin: 0;
     padding: 0;
 }
@@ -66,11 +33,4 @@ nav ul{
 .menu-btn:hover{
 	background: #00b4ff;
 	color: #FFF;
-}
-
-/* Footer */
-
-footer{
-	font-size: 0.9em;
-	text-align: center;
 }
