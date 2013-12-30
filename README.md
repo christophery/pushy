@@ -133,3 +133,7 @@ html, body{
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
+
+##WordPress Theme
+
+Try [PushyPress](https://github.com/christophery/pushypress)! It's a responsive WordPress theme built with Bootstrap 3 with Pushy included.
