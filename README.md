@@ -4,7 +4,7 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
-[View Demo](http://www.christopheryee.ca/pushy)
+[View Demo](http://www.christopheryee.ca/pushy) | [WordPress Theme](https://github.com/christophery/pushypress)
 
 ##Features
 
@@ -133,7 +133,3 @@ html, body{
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
-
-##WordPress Theme
-
-Try [PushyPress](https://github.com/christophery/pushypress)! It's a responsive WordPress theme built with Bootstrap 3 with Pushy included.
