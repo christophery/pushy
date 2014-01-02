@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2013 Christopher Yee
+Copyright (c) 2014 Christopher Yee
 http://www.christopheryee.ca
 
 Permission is hereby granted, free of charge, to any person obtaining
