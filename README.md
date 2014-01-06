@@ -95,12 +95,12 @@ html, body{
 
 ##Browser Compatibility
 
-| Desktop       | Mobile                           |
-| ------------- | -------------------------------- |
-| IE 7-10       | Chrome (Android 4.2.2)           |
-| Chrome        | Android Browser (Android 4.2.2)  |
-| Firefox       | Safari (iOS 6-7)                 |
-| Safari (Mac)  |
+| Desktop       | Mobile                                     |
+| ------------- | -------------------------------------------|
+| IE 7-10       | Chrome (Android 4.2.2)                     |
+| Chrome        | Android Browser (Android 4.2.2)            |
+| Firefox       | Safari (iOS 6-7)                           |
+| Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
 
 ##Version History
 
