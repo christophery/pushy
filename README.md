@@ -41,7 +41,9 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 <div class="site-overlay"></div>
 
 <!-- Your Content -->
-<div id="container"></div>
+<div id="container">
+    <a class="menu-btn">Toggle menu</a>
+</div>
 ```
 
 ##Modernizr
