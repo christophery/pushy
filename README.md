@@ -41,7 +41,10 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 <div class="site-overlay"></div>
 
 <!-- Your Content -->
-<div id="container"></div>
+<div id="container">
+    <!-- Menu Button -->
+    <div class="menu-btn">&#9776; Menu</div>
+</div>
 ```
 
 ##Modernizr
