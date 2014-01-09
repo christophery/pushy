@@ -136,3 +136,5 @@ html, body{
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
 - [Modernizr](http://modernizr.com/)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/christophery/pushy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
