@@ -50,6 +50,11 @@
 
         <!-- Pushy JS -->
         <script src="js/pushy.min.js"></script>
+        <script>
+          $(".menu-btn, .pushy a").on("click", function(e) {
+              $(document).trigger("pushyClick")
+          });
+        </script>
 
     </body>
 </html>

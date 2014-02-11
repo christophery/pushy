@@ -40,13 +40,9 @@ $(function() {
 
 	if(Modernizr.csstransforms3d){
 		//toggle menu
-		menuBtn.click(function() {
-			togglePushy();
-		});
-		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
-			togglePushy();
-		});
+    $(document).on("pushyClick", function(e) {
+      togglePushy();
+    });
 	}else{
 		//jQuery fallback
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
@@ -56,25 +52,14 @@ $(function() {
 		var state = true;
 
 		//toggle menu
-		menuBtn.click(function() {
-			if (state) {
+    $(document).on("pushyClick", function(e) {
+      if (state) {
 				openPushyFallback();
 				state = false;
 			} else {
 				closePushyFallback();
 				state = true;
 			}
-		});
-
-		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
-			if (state) {
-				openPushyFallback();
-				state = false;
-			} else {
-				closePushyFallback();
-				state = true;
-			}
-		});
+    });
 	}
 });
