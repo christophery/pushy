@@ -18,7 +18,7 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 ##Requirements
 
 - jQuery 1.9+
-- Modernizr
+- Modernizr (testing for CSS 3D Transforms)
 
 ##Usage
 
