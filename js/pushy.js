@@ -13,7 +13,7 @@ $(function() {
 		pushyActiveClass = "pushy-active", //css class to toggle site overlay
 		containerClass = "container-push", //container open class
 		pushClass = "push-push", //css class to add pushy capability
-		menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
+		menuBtn = $('.menu-btn'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
 
@@ -43,6 +43,14 @@ $(function() {
 		menuBtn.click(function() {
 			togglePushy();
 		});
+
+		// Watch .pushy for link events (use a deferred handler
+		// rather than immediate binding to handle dynamically
+		// created menu items).
+		pushy.on('click', 'a', function() {
+			togglePushy();
+		});
+		
 		//close menu when clicking site overlay
 		siteOverlay.click(function(){ 
 			togglePushy();
@@ -54,27 +62,26 @@ $(function() {
 
 		//keep track of menu state (open/close)
 		var state = true;
+		
+		var handler = function() {
+			if (state) {
+				openPushyFallback();
+				state = false;
+			} else {
+				closePushyFallback();
+				state = true;
+			}
+		};
 
 		//toggle menu
-		menuBtn.click(function() {
-			if (state) {
-				openPushyFallback();
-				state = false;
-			} else {
-				closePushyFallback();
-				state = true;
-			}
-		});
+		menuBtn.click(handler);
+
+		// Watch .pushy for link events (use a deferred handler
+		// rather than immediate binding to handle dynamically
+		// created menu items).
+		pushy.on('click', 'a', handler);
 
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
-			if (state) {
-				openPushyFallback();
-				state = false;
-			} else {
-				closePushyFallback();
-				state = true;
-			}
-		});
+		siteOverlay.click(handler);
 	}
 });
