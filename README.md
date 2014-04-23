@@ -1,3 +1,11 @@
+#Pushy -right
+
+This is a modified version to pull the menu out from the right - let me know if you have any problems.
+
+----------
+See the below for normal pushy
+----------
+
 #Pushy
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
