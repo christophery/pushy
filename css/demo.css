@@ -4,6 +4,10 @@ html, body{
 	height: 100%; /* fixes focus scrolling in Safari (OS X) */
 }
 
+.clear {
+	clear:both;
+}
+
 /* Lists */
 
 ul{
@@ -28,6 +32,7 @@ ul{
 	color: #FFF;
 	text-align: center;
 	cursor: pointer;
+	float:right;
 }
 
 .menu-btn:hover{
