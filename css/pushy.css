@@ -45,6 +45,12 @@
     transform: translate3d(-200px,0,0);
 }
 
+/* Modernizr false negative csstransforms3d fix*/
+.no-csstransforms3d .pushy-left{
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
 .pushy-open{
     -webkit-transform: translate3d(0,0,0);
     -moz-transform: translate3d(0,0,0);
