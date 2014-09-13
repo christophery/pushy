@@ -1,4 +1,4 @@
-/*! Pushy - v0.9.1 - 2013-9-16
+/*! Pushy - v0.9.2 - 2014-9-13
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -38,7 +38,34 @@ $(function() {
 		push.animate({left: "0px"}, menuSpeed); //css class to add pushy capability
 	}
 
-	if(Modernizr.csstransforms3d){
+	//checks if 3d transforms are supported removing the modernizr dependency
+	cssTransforms3d = (function csstransforms3d(){
+		var el = document.createElement('p'),
+		supported = false,
+		transforms = {
+		    'webkitTransform':'-webkit-transform',
+		    'OTransform':'-o-transform',
+		    'msTransform':'-ms-transform',
+		    'MozTransform':'-moz-transform',
+		    'transform':'transform'
+		};
+
+		// Add it to the body to get the computed style
+		document.body.insertBefore(el, null);
+
+		for(var t in transforms){
+		    if( el.style[t] !== undefined ){
+		        el.style[t] = 'translate3d(1px,1px,1px)';
+		        supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
+		    }
+		}
+
+		document.body.removeChild(el);
+
+		return (supported !== undefined && supported.length > 0 && supported !== "none");
+	})();
+
+	if(cssTransforms3d){
 		//toggle menu
 		menuBtn.click(function() {
 			togglePushy();

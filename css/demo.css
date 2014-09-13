@@ -1,7 +1,5 @@
 html, body{
-	overflow-x: hidden; /* prevents horizontal scroll bars */
 	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
-	height: 100%; /* fixes focus scrolling in Safari (OS X) */
 }
 
 /* Lists */

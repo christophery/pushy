@@ -18,11 +18,10 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 ##Requirements
 
 - jQuery 1.9+
-- Modernizr (testing for CSS 3D Transforms)
 
 ##Usage
 
-1. Include jQuery & Modernizr.
+1. Include jQuery.
 
 2. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
 
@@ -47,11 +46,6 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 </div>
 ```
 
-##Modernizr
-
-Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the browser. Be sure to include this test in you are using the [Modernizr build tool](http://modernizr.com/download/#-csstransforms3d-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load).
-
-
 ##Tips
 
 - Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
@@ -64,17 +58,6 @@ Pushy uses Modernizr to detect & test for ```CSS 3D Transforms``` support in the
 
 <!-- Your Content -->
 <div id="container"></div>
-```
-
-- Add the following to hide horizontal scroll bars when menu is open, disable the webkit tap highlight and fix the focus scrolling in Safari.
-
-
-```css
-html, body{
-	overflow-x: hidden; /* prevents horizontal scroll bars */
-	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
-	height: 100%; /* fixes focus scrolling in Safari (OS X) */
-}
 ```
 
 - If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
@@ -100,12 +83,19 @@ html, body{
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
-| IE 7-10       | Chrome (Android 4.2.2)                     |
-| Chrome        | Android Browser (Android 4.2.2)            |
-| Firefox       | Safari (iOS 6-7)                           |
+| IE 9-11       | Chrome (Android 4.x+)                      |
+| Chrome        | Android Browser (Android 4.x+)             |
+| Firefox       | Safari (iOS 7)                             |
 | Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
 
 ##Version History
+
+0.9.2
+
+- Removed modernizr dependency.
+- Updated site overlay with color + smoother transition.
+- Cleaned up the CSS a bit.
+- Dropped support for IE 7 & 8.
 
 0.9.1
 
@@ -135,6 +125,3 @@ html, body{
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
-- [Modernizr](http://modernizr.com/)
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/christophery/pushy/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
