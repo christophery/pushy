@@ -141,6 +141,8 @@ Pushy has been implemented on many sites in the wild, check them out:
 - [Echo](http://christopheryee.ca/ghost/echo/) by [@cmyee](https://twitter.com/cmyee)
 - [Mochi](http://christopheryee.ca/ghost/mochi/) by [@cmyee](https://twitter.com/cmyee)
 
+**Note:** You may have to resize your browser on some sites to see Pushy in action.
+
 To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
 
 ##Thanks to
