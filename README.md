@@ -1,8 +1,8 @@
 #Pushy
 
-Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
-Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
+Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
 [View Demo](http://www.christopheryee.ca/pushy) | [WordPress Theme](https://github.com/christophery/pushypress)
 
@@ -79,6 +79,14 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 }
 ```
 
+- If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
+
+```css
+html, body{
+    overflow-x: hidden;
+    height: 100%;
+}
+```
 ##Browser Compatibility
 
 | Desktop       | Mobile                                     |
@@ -120,6 +128,20 @@ Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one
 - Updated to jQuery 1.10
 - Updated the demo file
 - Updated the read me
+
+##Sites using Pushy
+
+Pushy has been implemented on many sites in the wild, check them out:
+
+- [Peter Tóth](http://www.petertoth.me/) by [@yednorozec](https://twitter.com/yednorozec)
+- [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
+- [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
+- [Developer Essentials](http://devessentials.net/) by [@dev_essentials](https://twitter.com/dev_essentials)
+- [The Black and Blue](http://www.theblackandblue.com/) by [Evan Luzi](http://www.evanluzi.com/)
+- [Echo](http://christopheryee.ca/ghost/echo/) by [@cmyee](https://twitter.com/cmyee)
+- [Mochi](http://christopheryee.ca/ghost/mochi/) by [@cmyee](https://twitter.com/cmyee)
+
+To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
 
 ##Thanks to
 
