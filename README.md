@@ -147,7 +147,8 @@ Pushy has been implemented on many sites in the wild, check them out:
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
 - [Developer Essentials](http://devessentials.net/) by [@dev_essentials](https://twitter.com/dev_essentials)
-- [The Black and Blue](http://www.theblackandblue.com/) by [Evan Luzi](http://www.evanluzi.com/)
+- [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
+- [Message Ghost Theme](http://162.243.60.100/) by [@madeforghost](https://twitter.com/madeforghost)
 - [Echo](http://christopheryee.ca/ghost/echo/) by [@cmyee](https://twitter.com/cmyee)
 - [Mochi](http://christopheryee.ca/ghost/mochi/) by [@cmyee](https://twitter.com/cmyee)
 
