@@ -17,15 +17,15 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 
 ##Requirements
 
-- jQuery 1.9+
+- [jQuery 1.9+](http://jquery.com/)
 
-##Usage
+##Install
 
-1. Include jQuery.
+Download the [packaged source file](https://github.com/christophery/pushy/archive/master.zip), this includes everything you need to get Pushy running on your site.
 
-2. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
+1. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
 
-3. Insert the following markup into your body.
+2. Insert the following markup into your body.
 
 ```html
 <!-- Pushy Menu -->
@@ -44,6 +44,14 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
     <!-- Menu Button -->
     <div class="menu-btn">&#9776; Menu</div>
 </div>
+```
+
+##Bower
+
+If your are comfortable with command line, you can install Pushy as a [Bower](http://bower.io/) package:
+
+```
+bower install pushy
 ```
 
 ##Tips
@@ -87,6 +95,7 @@ html, body{
     height: 100%;
 }
 ```
+
 ##Browser Compatibility
 
 | Desktop       | Mobile                                     |
@@ -133,6 +142,7 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
 - [Peter Tóth](http://www.petertoth.me/) by [@yednorozec](https://twitter.com/yednorozec)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
