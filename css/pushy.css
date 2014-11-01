@@ -87,7 +87,6 @@
     background-color: rgba(0,0,0,0.5);
     -webkit-animation: fade 500ms; 
     -moz-animation: fade 500ms; 
-    -ms-animation: fade 500ms;
     -o-animation: fade 500ms;
     animation: fade 500ms;
 }
@@ -106,11 +105,6 @@
     0%   { opacity: 0; }
     100% { opacity: 1; }
 }
-
-@-ms-keyframes fade{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-}​
 
 @-o-keyframes fade{
     0%   { opacity: 0; }
