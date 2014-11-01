@@ -142,15 +142,17 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Nordic Kaluste](http://www.nordickaluste.fi/) by [Joonas Sippola](http://www.joonassippola.fi/)
+- [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
+- [Alpha](http://christopheryee.ca/ghost/alpha/) by [Christopher Yee](https://creativemarket.com/cmyee/100484-Alpha)
 - [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
 - [Peter Tóth](http://www.petertoth.me/) by [@yednorozec](https://twitter.com/yednorozec)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
 - [Developer Essentials](http://devessentials.net/) by [@dev_essentials](https://twitter.com/dev_essentials)
 - [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
-- [Message Ghost Theme](http://162.243.60.100/) by [@madeforghost](https://twitter.com/madeforghost)
-- [Echo](http://christopheryee.ca/ghost/echo/) by [@cmyee](https://twitter.com/cmyee)
-- [Mochi](http://christopheryee.ca/ghost/mochi/) by [@cmyee](https://twitter.com/cmyee)
+- [Echo](http://christopheryee.ca/ghost/echo/) by [Christopher Yee](https://creativemarket.com/cmyee/24881-Echo)
+- [Mochi](http://christopheryee.ca/ghost/mochi/) by [Christopher Yee](http://themeforest.net/item/mochi-responsive-theme-for-ghost/6674078)
 
 **Note:** You may have to resize your browser on some sites to see Pushy in action.
 
