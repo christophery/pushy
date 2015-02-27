@@ -143,7 +143,6 @@ html, body{
 Pushy has been implemented on many sites in the wild, check them out:
 
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
-- [Blazing](http://www.blazingtheagency.com/)
 - [Nordic Kaluste](http://www.nordickaluste.fi/) by [Joonas Sippola](http://www.joonassippola.fi/)
 - [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
 - [Alpha](http://christopheryee.ca/ghost/alpha/) by [Christopher Yee](https://creativemarket.com/cmyee/100484-Alpha)
