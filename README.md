@@ -4,7 +4,7 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
-[View Demo](http://www.christopheryee.ca/pushy) | [WordPress Theme](https://github.com/christophery/pushypress)
+[View Demo](http://www.christopheryee.ca/pushy) | [Sites using Pushy](#sites-using-pushy)
 
 ##Features
 
@@ -138,21 +138,22 @@ html, body{
 - Updated the demo file
 - Updated the read me
 
+<a name="#sites-using-pushy"></a>
 ##Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Plex](https://plex.tv/)
+- [Making Waves Swim School](http://mwss.ca/)
 - [Flight Centre](http://www.flightcentre.ca/)
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
 - [Nordic Kaluste](http://www.nordickaluste.fi/) by [Joonas Sippola](http://www.joonassippola.fi/)
 - [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
-- [Alpha](http://christopheryee.ca/ghost/alpha/) by [Christopher Yee](https://creativemarket.com/cmyee/100484-Alpha)
 - [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
 - [Peter Tóth](http://www.petertoth.me/) by [@yednorozec](https://twitter.com/yednorozec)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
 - [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
-- [Echo](http://christopheryee.ca/ghost/echo/) by [Christopher Yee](https://creativemarket.com/cmyee/24881-Echo)
 
 **Note:** You may have to resize your browser on some sites to see Pushy in action.
 
