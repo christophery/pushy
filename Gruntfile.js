@@ -29,15 +29,29 @@ module.exports = function(grunt) {
           src: 'js/pushy.min.js',
           dest: 'js/pushy.min.js'
         }
+    },
+    copy: {
+      scss: {
+        files: [{
+          cwd: 'css/',
+          src: ['pushy.css'],
+          dest: 'scss/',
+          expand: true,
+          rename: function (dest, src) {
+            return dest + src.replace(/([^/]*)$/,'_$1').replace('.css', '.scss');
+          }
+        }]
+      }
     }
   });
-  
+
   // Load grunt plugins
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
     // Default task(s).
-  grunt.registerTask('default', ['concat', 'uglify']);
+  grunt.registerTask('default', ['concat', 'uglify', 'copy']);
 
 };
