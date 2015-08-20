@@ -142,6 +142,7 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
 - [Plex](https://plex.tv/)
 - [Flight Centre](http://www.flightcentre.ca/)
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
