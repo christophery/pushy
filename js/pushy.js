@@ -26,7 +26,7 @@ $(function() {
 
 	function openPushyFallback(){
 		body.addClass(pushyActiveClass);
-		pushy.animate({left: "0px"}, menuSpeed);
+		pushy.animate({left: minWidth}, menuSpeed);
 		container.animate({left: menuWidth}, menuSpeed);
 		push.animate({left: menuWidth}, menuSpeed); //css class to add pushy capability
 	}
