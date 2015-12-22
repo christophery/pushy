@@ -15,7 +15,7 @@ $(function() {
 		pushClass = "push-push", //css class to add pushy capability
 		menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
-		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
+		menuWidth; //jQuery fallback menu width
 
 	function togglePushy(){
 		body.toggleClass(pushyActiveClass); //toggle site overlay
@@ -39,7 +39,7 @@ $(function() {
 	}
 
 	//checks if 3d transforms are supported removing the modernizr dependency
-	cssTransforms3d = (function csstransforms3d(){
+	var cssTransforms3d = (function csstransforms3d(){
 		var el = document.createElement('p'),
 		supported = false,
 		transforms = {
@@ -71,11 +71,12 @@ $(function() {
 			togglePushy();
 		});
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.click(function(){
 			togglePushy();
 		});
 	}else{
 		//jQuery fallback
+		menuWidth = pushy.width() + "px";
 		pushy.css({left: "-" + menuWidth}); //hide menu by default
 		container.css({"overflow-x": "hidden"}); //fixes IE scrollbar issue
 
@@ -94,7 +95,7 @@ $(function() {
 		});
 
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.click(function(){
 			if (state) {
 				openPushyFallback();
 				state = false;
