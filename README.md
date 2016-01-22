@@ -142,6 +142,7 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Servizi CGN](http://www.cgn.it) by [@_MacSiva_](https://twitter.com/_MacSiva_)
 - [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
 - [Plex](https://plex.tv/)
 - [Flight Centre](http://www.flightcentre.ca/)
@@ -149,7 +150,6 @@ Pushy has been implemented on many sites in the wild, check them out:
 - [Nordic Kaluste](http://www.nordickaluste.fi/) by [Joonas Sippola](http://www.joonassippola.fi/)
 - [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
 - [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
-- [Peter Tóth](http://www.petertoth.me/) by [@yednorozec](https://twitter.com/yednorozec)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
 - [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
