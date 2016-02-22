@@ -67,11 +67,11 @@ $(function() {
 
 	if(cssTransforms3d){
 		//toggle menu
-		menuBtn.click(function() {
+		menuBtn.on('click', function(){
 			togglePushy();
 		});
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.on('click', function(){
 			togglePushy();
 		});
 	}else{
@@ -83,7 +83,7 @@ $(function() {
 		var state = true;
 
 		//toggle menu
-		menuBtn.click(function() {
+		menuBtn.on('click', function(){
 			if (state) {
 				openPushyFallback();
 				state = false;
@@ -94,7 +94,7 @@ $(function() {
 		});
 
 		//close menu when clicking site overlay
-		siteOverlay.click(function(){ 
+		siteOverlay.on('click', function(){
 			if (state) {
 				openPushyFallback();
 				state = false;
