@@ -9,13 +9,17 @@ $(function() {
 		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		siteOverlay = $('.site-overlay'), //site overlay
-		pushyClass = "pushy-left pushy-open", //menu position & menu open class
-		pushyActiveClass = "pushy-active", //css class to toggle site overlay
-		containerClass = "container-push", //container open class
-		pushClass = "push-push", //css class to add pushy capability
-		menuBtn = $('.menu-btn, .pushy a'), //css classes to toggle the menu
+		pushyClass = 'pushy-left pushy-open', //menu position & menu open class
+		pushyActiveClass = 'pushy-active', //css class to toggle site overlay
+		containerClass = 'container-push', //container open class
+		pushClass = 'push-push', //css class to add pushy capability
+		menuBtn = $('.menu-btn, .pushy-item'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
-		menuWidth = pushy.width() + "px"; //jQuery fallback menu width
+		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
+		submenuClass = '.pushy-submenu',
+		submenuOpenClass = 'pushy-submenu-open',
+		submenuLinksClass = '.pushy-submenu ul',
+		submenu = $(submenuClass);
 
 	function togglePushy(){
 		body.toggleClass(pushyActiveClass); //toggle site overlay
@@ -23,6 +27,17 @@ $(function() {
 		container.toggleClass(containerClass);
 		push.toggleClass(pushClass); //css class to add pushy capability
 	}
+
+	//submenu
+	submenu.children('a').on('click', function(event){
+		event.preventDefault();
+		$(this).toggleClass(submenuOpenClass)
+			   .next(submenuLinksClass).slideToggle(200)
+			   .end().parent(submenuClass)
+			   .siblings(submenuClass).children('a')
+			   .removeClass(submenuOpenClass)
+			   .next(submenuLinksClass).slideUp(200);
+	});
 
 	function openPushyFallback(){
 		body.addClass(pushyActiveClass);
