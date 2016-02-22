@@ -13,6 +13,7 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - jQuery animation fallback for IE 7 - 9.
 - Menu closes when a link is selected.
 - Menu closes when the site overlay is selected.
+- Collapsible submenus.
 - It's responsive!
 
 ##Requirements
@@ -31,8 +32,17 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 <!-- Pushy Menu -->
 <nav class="pushy pushy-left">
     <ul>
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
+        <!-- Submenu -->
+        <li class="pushy-submenu">
+            <a href="#">Submenu</a>
+            <ul>
+                <li class="pushy-item"><a href="#">Item 1</a></li>
+                <li class="pushy-item"><a href="#">Item 2</a></li>
+                <li class="pushy-item"><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li class="pushy-item"><a href="#">Item 1</a></li>
+        <li class="pushy-item"><a href="#">Item 2</a></li>
     </ul>
 </nav>
 
@@ -96,14 +106,27 @@ html, body{
 }
 ```
 
+- Only links with the CSS class of ```pushy-item``` will close the menu.
+
+```html
+<nav class="pushy pushy-left">
+    <ul>
+        <!-- This link will close the menu -->
+        <li class="pushy-item"><a href="#">Item 1</a></li>
+        <!-- This link won't close the menu -->
+        <li><a href="#">Item 2</a></li>
+    </ul>
+</nav>
+```
+
 ##Browser Compatibility
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
 | IE 9-11       | Chrome (Android 4.x+)                      |
-| Chrome        | Android Browser (Android 4.x+)             |
-| Firefox       | Safari (iOS 7)                             |
-| Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
+| Chrome        | Safari (iOS 9)                             |
+| Firefox       | 
+| Safari (Mac)  |
 
 ##Version History
 
