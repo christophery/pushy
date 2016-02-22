@@ -39,7 +39,7 @@ $(function() {
 	}
 
 	//checks if 3d transforms are supported removing the modernizr dependency
-	cssTransforms3d = (function csstransforms3d(){
+	var cssTransforms3d = (function csstransforms3d(){
 		var el = document.createElement('p'),
 		supported = false,
 		transforms = {
