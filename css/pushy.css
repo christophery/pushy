@@ -11,12 +11,8 @@
     height: 100%;
     top: 0;
     z-index: 9999;
-    background: #333332;
+    background: #191918;
     font-size: 0.9em;
-    font-weight: bold;
-    -webkit-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
-    -moz-box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
-    box-shadow: inset -10px 0 6px -9px rgba(0, 0, 0, .7);
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 }
@@ -25,14 +21,15 @@
     display: block;
     color: #b3b3b1;
     padding: 15px 30px;
-    border-bottom: 1px solid rgba(0, 0, 0, .1);
-    border-top: 1px solid rgba(255, 255, 255, .1);
     text-decoration: none;
 }
 
 .pushy a:hover{
-    background: #00b4ff;
     color: #FFF;
+}
+
+.pushy ul:first-child{
+    margin-top: 10px;
 }
 
 /* Menu Movement */
