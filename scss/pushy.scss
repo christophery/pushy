@@ -36,25 +36,19 @@
 
 .pushy-left{
     -webkit-transform: translate3d(-200px,0,0);
-    -moz-transform: translate3d(-200px,0,0);
     -ms-transform: translate3d(-200px,0,0);
-    -o-transform: translate3d(-200px,0,0);
     transform: translate3d(-200px,0,0);
 }
 
 .pushy-open{
     -webkit-transform: translate3d(0,0,0);
-    -moz-transform: translate3d(0,0,0);
     -ms-transform: translate3d(0,0,0);
-    -o-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
 }
 
 .container-push, .push-push{
     -webkit-transform: translate3d(200px,0,0);
-    -moz-transform: translate3d(200px,0,0);
     -ms-transform: translate3d(200px,0,0);
-    -o-transform: translate3d(200px,0,0);
     transform: translate3d(200px,0,0);
 }
 
@@ -80,8 +74,6 @@
     z-index: 9998;
     background-color: rgba(0,0,0,0.5);
     -webkit-animation: fade 500ms; 
-    -moz-animation: fade 500ms; 
-    -o-animation: fade 500ms;
     animation: fade 500ms;
 }
 
@@ -90,17 +82,7 @@
     100% { opacity: 1; }
 }
 
-@-moz-keyframes fade{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-}
-
 @-webkit-keyframes fade{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-}
-
-@-o-keyframes fade{
     0%   { opacity: 0; }
     100% { opacity: 1; }
 }
@@ -131,23 +113,17 @@
         background: url("../img/arrow.svg") no-repeat center center;
         background-size: 8px 11px;
         -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
-        -o-transform: translateY(-50%);
         transform: translateY(-50%);
         -webkit-transition-property: -webkit-transform;
-        -moz-transition-property: -moz-transform;
         transition-property: transform;
         -webkit-transition-duration: 0.2s;
-        -moz-transition-duration: 0.2s;
         transition-duration: 0.2s;
     }
 
     > a.pushy-submenu-open::after {
         -webkit-transform: translateY(-50%) rotate(90deg);
-        -moz-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
-        -o-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
     }
 }
