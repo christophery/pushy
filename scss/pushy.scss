@@ -15,21 +15,21 @@
     font-size: 0.9em;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
-}
 
-.pushy a{
-    display: block;
-    color: #b3b3b1;
-    padding: 15px 30px;
-    text-decoration: none;
-}
+    a{
+        display: block;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        text-decoration: none;
+    }
 
-.pushy a:hover{
-    color: #FFF;
-}
+    a:hover{
+        color: #FFF;
+    }
 
-.pushy ul:first-child{
-    margin-top: 10px;
+    ul:first-child{
+        margin-top: 10px;
+    }
 }
 
 /* Menu Movement */
@@ -110,45 +110,47 @@
 
 /* Submenu */
 
-.pushy-submenu ul{
-    display: none;
-    padding-left: 15px;
-}
+.pushy-submenu{
+    ul{
+        display: none;
+        padding-left: 15px;
+    }
 
-/* Submenu Icon */
+    /* Submenu Icon */
 
-.pushy-submenu > a {
-    position: relative;
-}
+    > a {
+        position: relative;
+    }
 
-.pushy-submenu > a::after {
-    content: '';
-    display: block;
-    height: 11px;
-    width: 8px;
-    position: absolute;
-    top: 50%;
-    bottom: auto;
-    right: 15px;
-    background: url("../img/arrow.svg") no-repeat center center;
-    background-size: 8px 11px;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    transition-duration: 0.2s;
-}
+    > a::after {
+        content: '';
+        display: block;
+        height: 11px;
+        width: 8px;
+        position: absolute;
+        top: 50%;
+        bottom: auto;
+        right: 15px;
+        background: url("../img/arrow.svg") no-repeat center center;
+        background-size: 8px 11px;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition-property: -webkit-transform;
+        -moz-transition-property: -moz-transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+    }
 
-.pushy-submenu > a.pushy-submenu-open::after {
-    -webkit-transform: translateY(-50%) rotate(90deg);
-    -moz-transform: translateY(-50%) rotate(90deg);
-    -ms-transform: translateY(-50%) rotate(90deg);
-    -o-transform: translateY(-50%) rotate(90deg);
-    transform: translateY(-50%) rotate(90deg);
+    > a.pushy-submenu-open::after {
+        -webkit-transform: translateY(-50%) rotate(90deg);
+        -moz-transform: translateY(-50%) rotate(90deg);
+        -ms-transform: translateY(-50%) rotate(90deg);
+        -o-transform: translateY(-50%) rotate(90deg);
+        transform: translateY(-50%) rotate(90deg);
+    }
 }

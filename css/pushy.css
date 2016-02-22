@@ -15,18 +15,15 @@
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */
 }
-
 .pushy a {
   display: block;
   color: #b3b3b1;
   padding: 15px 30px;
   text-decoration: none;
 }
-
 .pushy a:hover {
   color: #FFF;
 }
-
 .pushy ul:first-child {
   margin-top: 10px;
 }
@@ -117,16 +114,16 @@
   }
 }
 /* Submenu */
+.pushy-submenu {
+  /* Submenu Icon */
+}
 .pushy-submenu ul {
   display: none;
   padding-left: 15px;
 }
-
-/* Submenu Icon */
 .pushy-submenu > a {
   position: relative;
 }
-
 .pushy-submenu > a::after {
   content: '';
   display: block;
@@ -150,7 +147,6 @@
   -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-
 .pushy-submenu > a.pushy-submenu-open::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -moz-transform: translateY(-50%) rotate(90deg);
