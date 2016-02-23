@@ -19,7 +19,7 @@ $(function() {
 
 	function togglePushy(){
 		//add class to body based on menu position
-		if( $('.pushy').hasClass('pushy-left') ){
+		if( pushy.hasClass('pushy-left') ){
 			body.toggleClass('pushy-open-left');
 		}else{
 			body.toggleClass('pushy-open-right');
@@ -40,7 +40,7 @@ $(function() {
 	function openPushyFallback(){		
 
 		//animate menu position based on CSS class
-		if( $('.pushy').hasClass('pushy-left') ){
+		if( pushy.hasClass('pushy-left') ){
 			body.addClass('pushy-open-left');
 			pushy.animate({left: "0px"}, menuSpeed);
 			container.animate({left: menuWidth}, menuSpeed);
@@ -58,7 +58,7 @@ $(function() {
 	function closePushyFallback(){
 
 		//animate menu position based on CSS class
-		if( $('.pushy').hasClass('pushy-left') ){
+		if( pushy.hasClass('pushy-left') ){
 			body.removeClass('pushy-open-left');
 			pushy.animate({left: "-" + menuWidth}, menuSpeed);
 			container.animate({left: "0px"}, menuSpeed);
@@ -117,7 +117,7 @@ $(function() {
 		//jQuery fallback
 
 		//hide menu by default
-		if( $('.pushy').hasClass('pushy-left') ){
+		if( pushy.hasClass('pushy-left') ){
 			pushy.css({left: "-" + menuWidth});
 		}else{
 			pushy.css({right: "-" + menuWidth});
