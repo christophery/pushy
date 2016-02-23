@@ -27,7 +27,9 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 
 1. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
 
-2. Insert the following markup into your body.
+2. If you are using submenus, then you'll need to add the ```arrow.svg``` file into your `img` directory (optional).
+
+3. Insert the following markup into your body.
 
 ```html
 <!-- Pushy Menu -->
@@ -63,6 +65,15 @@ If your are comfortable with command line, you can install Pushy as a [Bower](ht
 
 ```
 bower install pushy
+```
+
+##Grunt
+
+You can use the default Grunt task to watch and compile the SCSS and JS files. Don't forget to run ```npm install``` beforehand to install the dependencies.
+
+```
+npm install
+grunt
 ```
 
 ##Tips
