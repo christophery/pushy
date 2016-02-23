@@ -98,27 +98,27 @@ $(function() {
 		container.css({"overflow-x": "hidden"}); //fixes IE scrollbar issue
 
 		//keep track of menu state (open/close)
-		var state = true;
+		var opened = false;
 
 		//toggle menu
 		menuBtn.on('click', function(){
-			if (state) {
-				openPushyFallback();
-				state = false;
-			} else {
+			if (opened) {
 				closePushyFallback();
-				state = true;
+				opened = false;
+			} else {
+				openPushyFallback();
+				opened = true;
 			}
 		});
 
 		//close menu when clicking site overlay
 		siteOverlay.on('click', function(){
-			if (state) {
-				openPushyFallback();
-				state = false;
-			} else {
+			if (opened) {
 				closePushyFallback();
-				state = true;
+				opened = false;
+			} else {
+				openPushyFallback();
+				opened = true;
 			}
 		});
 	}
