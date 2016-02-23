@@ -37,13 +37,13 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
         <li class="pushy-submenu">
             <a href="#">Submenu</a>
             <ul>
-                <li class="pushy-item"><a href="#">Item 1</a></li>
-                <li class="pushy-item"><a href="#">Item 2</a></li>
-                <li class="pushy-item"><a href="#">Item 3</a></li>
+                <li class="pushy-link"><a href="#">Item 1</a></li>
+                <li class="pushy-link"><a href="#">Item 2</a></li>
+                <li class="pushy-link"><a href="#">Item 3</a></li>
             </ul>
         </li>
-        <li class="pushy-item"><a href="#">Item 1</a></li>
-        <li class="pushy-item"><a href="#">Item 2</a></li>
+        <li class="pushy-link"><a href="#">Item 1</a></li>
+        <li class="pushy-link"><a href="#">Item 2</a></li>
     </ul>
 </nav>
 
@@ -73,8 +73,8 @@ bower install pushy
 <!-- Pushy will transition from the right -->
 <nav class="pushy pushy-right">
     <ul>
-        <li class="pushy-item"><a href="#">Item 1</a></li>
-        <li class="pushy-item"><a href="#">Item 2</a></li>
+        <li class="pushy-link"><a href="#">Item 1</a></li>
+        <li class="pushy-link"><a href="#">Item 2</a></li>
     </ul>
 </nav>
 ```
@@ -129,13 +129,13 @@ $menu_width: 400px;
 
 ```
 
-- Only links with the CSS class of ```pushy-item``` will close the menu.
+- Only links with the CSS class of ```pushy-link``` will close the menu.
 
 ```html
 <nav class="pushy pushy-left">
     <ul>
         <!-- This link will close the menu -->
-        <li class="pushy-item"><a href="#">Item 1</a></li>
+        <li class="pushy-link"><a href="#">Item 1</a></li>
         <!-- This link won't close the menu -->
         <li><a href="#">Item 2</a></li>
     </ul>

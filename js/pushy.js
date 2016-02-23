@@ -9,7 +9,7 @@ $(function() {
 		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		siteOverlay = $('.site-overlay'), //site overlay
-		menuBtn = $('.menu-btn, .pushy-item'), //css classes to toggle the menu
+		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
