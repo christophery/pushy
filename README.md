@@ -66,6 +66,18 @@ bower install pushy
 
 ##Tips
 
+- Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
+
+```html
+<!-- Pushy will transition from the right -->
+<nav class="pushy pushy-right">
+    <ul>
+        <li class="pushy-item"><a href="#">Item 1</a></li>
+        <li class="pushy-item"><a href="#">Item 2</a></li>
+    </ul>
+</nav>
+```
+
 - Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
 
 ```html
@@ -116,15 +128,6 @@ $menu_width: 400px;
 
 ```
 
-- If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
-
-```css
-html, body{
-    overflow-x: hidden;
-    height: 100%;
-}
-```
-
 - Only links with the CSS class of ```pushy-item``` will close the menu.
 
 ```html
@@ -136,6 +139,15 @@ html, body{
         <li><a href="#">Item 2</a></li>
     </ul>
 </nav>
+```
+
+- If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
+
+```css
+html, body{
+    overflow-x: hidden;
+    height: 100%;
+}
 ```
 
 ##Browser Compatibility
