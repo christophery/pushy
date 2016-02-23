@@ -20,9 +20,15 @@ $(function() {
 		submenu = $(submenuClass);
 
 	function togglePushy(){
+		//add class to body based on menu position
+		if( $('.pushy').hasClass('pushy-left') ){
+			body.toggleClass('pushy-open-left');
+		}else{
+			body.toggleClass('pushy-open-right');
+		}
+
 		siteOverlay.toggleClass(pushyClass); //toggle site overlay
 		pushy.toggleClass(pushyClass);
-		container.toggleClass(pushyClass);
 		push.toggleClass(pushClass); //css class to add pushy capability
 	}
 

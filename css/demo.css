@@ -14,6 +14,7 @@ ul {
 #container {
   position: relative;
   padding: 20px 40px;
+  padding-top: 120px;
 }
 
 /* Menu Button */
@@ -30,6 +31,14 @@ ul {
 .menu-btn:hover {
   background: #00b4ff;
   color: #FFF;
+}
+
+.site-header {
+  position: fixed;
+  background: red;
+  width: 100%;
+  height: 100px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=demo.css.map */

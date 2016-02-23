@@ -37,8 +37,9 @@
   -ms-transform: translate3d(-200px, 0, 0);
   transform: translate3d(-200px, 0, 0);
 }
-.pushy-left ~ #container.pushy-open,
-.pushy-left .push-push {
+
+.pushy-open-left #container,
+.pushy-open-left .push-push {
   transform: translate3d(200px, 0, 0);
 }
 
@@ -47,8 +48,9 @@
   -ms-transform: translate3d(200px, 0, 0);
   transform: translate3d(200px, 0, 0);
 }
-.pushy-right ~ #container.pushy-open,
-.pushy-right .push-push {
+
+.pushy-open-right #container,
+.pushy-open-right .push-push {
   transform: translate3d(-200px, 0, 0);
 }
 

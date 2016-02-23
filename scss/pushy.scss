@@ -42,8 +42,10 @@
     -webkit-transform: translate3d(-200px,0,0);
     -ms-transform: translate3d(-200px,0,0);
     transform: translate3d(-200px,0,0);
+}
 
-    ~ #container.pushy-open,
+.pushy-open-left{
+    #container,
     .push-push{
         transform: translate3d(200px,0,0);
     }
@@ -53,8 +55,10 @@
     -webkit-transform: translate3d(200px,0,0);
     -ms-transform: translate3d(200px,0,0);
     transform: translate3d(200px,0,0);
+}
 
-    ~ #container.pushy-open,
+.pushy-open-right{
+    #container,
     .push-push{
         transform: translate3d(-200px,0,0);
     }
