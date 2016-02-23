@@ -9,9 +9,7 @@ $(function() {
 		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		siteOverlay = $('.site-overlay'), //site overlay
-		pushyClass = 'pushy-left pushy-open', //menu position & menu open class
-		pushyActiveClass = 'pushy-active', //css class to toggle site overlay
-		containerClass = 'container-push', //container open class
+		pushyClass = 'pushy-open', //menu position & menu open class
 		pushClass = 'push-push', //css class to add pushy capability
 		menuBtn = $('.menu-btn, .pushy-item'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
@@ -22,9 +20,9 @@ $(function() {
 		submenu = $(submenuClass);
 
 	function togglePushy(){
-		body.toggleClass(pushyActiveClass); //toggle site overlay
+		siteOverlay.toggleClass(pushyClass); //toggle site overlay
 		pushy.toggleClass(pushyClass);
-		container.toggleClass(containerClass);
+		container.toggleClass(pushyClass);
 		push.toggleClass(pushClass); //css class to add pushy capability
 	}
 
@@ -40,14 +38,14 @@ $(function() {
 	});
 
 	function openPushyFallback(){
-		body.addClass(pushyActiveClass);
-		pushy.animate({left: menuWidth}, menuSpeed);
+		siteOverlay.addClass(pushyClass);
+		pushy.animate({left: "0px"}, menuSpeed);
 		container.animate({left: menuWidth}, menuSpeed);
 		push.animate({left: menuWidth}, menuSpeed); //css class to add pushy capability
 	}
 
 	function closePushyFallback(){
-		body.removeClass(pushyActiveClass);
+		siteOverlay.removeClass(pushyClass);
 		pushy.animate({left: "-" + menuWidth}, menuSpeed);
 		container.animate({left: "0px"}, menuSpeed);
 		push.animate({left: "0px"}, menuSpeed); //css class to add pushy capability
@@ -81,6 +79,9 @@ $(function() {
 	})();
 
 	if(cssTransforms3d){
+		//make menu visible
+		pushy.css({'visibility': 'visible'});
+
 		//toggle menu
 		menuBtn.on('click', function(){
 			togglePushy();
@@ -91,7 +92,9 @@ $(function() {
 		});
 	}else{
 		//jQuery fallback
-		pushy.css({left: "-" + menuWidth}); //hide menu by default
+		pushy.css({left: "-" + menuWidth}) //hide menu by default
+			 .css({'visibility': 'visible'}); //make menu visible
+
 		container.css({"overflow-x": "hidden"}); //fixes IE scrollbar issue
 
 		//keep track of menu state (open/close)

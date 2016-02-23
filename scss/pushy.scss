@@ -12,8 +12,8 @@
     top: 0;
     z-index: 9999;
     background: #191918;
-    font-size: 0.9em;
     overflow: auto;
+    visibility: hidden;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
     a{
@@ -46,7 +46,7 @@
     transform: translate3d(0,0,0);
 }
 
-.container-push, .push-push{
+#container.pushy-open, .push-push{
     -webkit-transform: translate3d(200px,0,0);
     -ms-transform: translate3d(200px,0,0);
     transform: translate3d(200px,0,0);
@@ -64,7 +64,7 @@
     display: none;
 }
 
-.pushy-active .site-overlay{
+.site-overlay.pushy-open{
     display: block;
     position: fixed;
     top: 0;
