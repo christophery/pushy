@@ -38,17 +38,39 @@ $(function() {
 	});
 
 	function openPushyFallback(){
+		//add site overlay
 		siteOverlay.addClass(pushyClass);
-		pushy.animate({left: "0px"}, menuSpeed);
-		container.animate({left: menuWidth}, menuSpeed);
-		push.animate({left: menuWidth}, menuSpeed); //css class to add pushy capability
+		
+		//animate menu position based on CSS class
+		if( $('.pushy').hasClass('pushy-left') ){
+			pushy.animate({left: "0px"}, menuSpeed);
+			container.animate({left: menuWidth}, menuSpeed);
+			//css class to add pushy capability
+			push.animate({left: menuWidth}, menuSpeed);
+		}else{
+			pushy.animate({right: '0px'}, menuSpeed);
+			container.animate({right: menuWidth}, menuSpeed);
+			push.animate({right: menuWidth}, menuSpeed);
+		}
+
 	}
 
 	function closePushyFallback(){
+		//remove site overlay
 		siteOverlay.removeClass(pushyClass);
-		pushy.animate({left: "-" + menuWidth}, menuSpeed);
-		container.animate({left: "0px"}, menuSpeed);
-		push.animate({left: "0px"}, menuSpeed); //css class to add pushy capability
+		
+		//animate menu position based on CSS class
+		if( $('.pushy').hasClass('pushy-left') ){
+			pushy.animate({left: "-" + menuWidth}, menuSpeed);
+			container.animate({left: "0px"}, menuSpeed);
+			//css class to add pushy capability
+			push.animate({left: "0px"}, menuSpeed);
+		}else{
+			pushy.animate({right: "-" + menuWidth}, menuSpeed);
+			container.animate({right: "0px"}, menuSpeed);
+			push.animate({right: "0px"}, menuSpeed);
+		}
+
 	}
 
 	//checks if 3d transforms are supported removing the modernizr dependency
@@ -79,6 +101,7 @@ $(function() {
 	})();
 
 	if(cssTransforms3d){
+	//if(false){
 		//make menu visible
 		pushy.css({'visibility': 'visible'});
 
@@ -92,10 +115,18 @@ $(function() {
 		});
 	}else{
 		//jQuery fallback
-		pushy.css({left: "-" + menuWidth}) //hide menu by default
-			 .css({'visibility': 'visible'}); //make menu visible
 
-		container.css({"overflow-x": "hidden"}); //fixes IE scrollbar issue
+		//hide menu by default
+		if( $('.pushy').hasClass('pushy-left') ){
+			pushy.css({left: "-" + menuWidth});
+		}else{
+			pushy.css({right: "-" + menuWidth});
+		}
+
+		//make menu visible
+		pushy.css({'visibility': 'visible'}); 
+		//fixes IE scrollbar issue
+		container.css({"overflow-x": "hidden"});
 
 		//keep track of menu state (open/close)
 		var opened = false;
