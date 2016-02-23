@@ -8,6 +8,9 @@ $(function() {
 		body = $('body'),
 		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
+		pushyLeft = 'pushy-left', //css class for left menu position
+		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
+		pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
 		siteOverlay = $('.site-overlay'), //site overlay
 		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
@@ -19,10 +22,10 @@ $(function() {
 
 	function togglePushy(){
 		//add class to body based on menu position
-		if( pushy.hasClass('pushy-left') ){
-			body.toggleClass('pushy-open-left');
+		if( pushy.hasClass(pushyLeft) ){
+			body.toggleClass(pushyOpenLeft);
 		}else{
-			body.toggleClass('pushy-open-right');
+			body.toggleClass(pushyOpenRight);
 		}
 	}
 
@@ -40,14 +43,14 @@ $(function() {
 	function openPushyFallback(){		
 
 		//animate menu position based on CSS class
-		if( pushy.hasClass('pushy-left') ){
-			body.addClass('pushy-open-left');
+		if( pushy.hasClass(pushyLeft) ){
+			body.addClass(pushyOpenLeft);
 			pushy.animate({left: "0px"}, menuSpeed);
 			container.animate({left: menuWidth}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: menuWidth}, menuSpeed);
 		}else{
-			body.addClass('pushy-open-right');
+			body.addClass(pushyOpenRight);
 			pushy.animate({right: '0px'}, menuSpeed);
 			container.animate({right: menuWidth}, menuSpeed);
 			push.animate({right: menuWidth}, menuSpeed);
@@ -58,14 +61,14 @@ $(function() {
 	function closePushyFallback(){
 
 		//animate menu position based on CSS class
-		if( pushy.hasClass('pushy-left') ){
-			body.removeClass('pushy-open-left');
+		if( pushy.hasClass(pushyLeft) ){
+			body.removeClass(pushyOpenLeft);
 			pushy.animate({left: "-" + menuWidth}, menuSpeed);
 			container.animate({left: "0px"}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: "0px"}, menuSpeed);
 		}else{
-			body.removeClass('pushy-open-right');
+			body.removeClass(pushyOpenRight);
 			pushy.animate({right: "-" + menuWidth}, menuSpeed);
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);
@@ -117,7 +120,7 @@ $(function() {
 		//jQuery fallback
 
 		//hide menu by default
-		if( pushy.hasClass('pushy-left') ){
+		if( pushy.hasClass(pushyLeft) ){
 			pushy.css({left: "-" + menuWidth});
 		}else{
 			pushy.css({right: "-" + menuWidth});
