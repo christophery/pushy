@@ -14,6 +14,7 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - Menu closes when a link is selected.
 - Menu closes when the site overlay is selected.
 - Collapsible submenus.
+- Left or right menu position.
 - It's responsive!
 
 ##Requirements
