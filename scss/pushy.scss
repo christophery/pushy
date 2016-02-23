@@ -3,11 +3,13 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
+$menu_width: 200px;
+
 /* Menu Appearance */
 
 .pushy{
     position: fixed;
-    width: 200px;
+    width: $menu_width;
     height: 100%;
     top: 0;
     z-index: 9999;
@@ -39,28 +41,28 @@
 /* Menu Movement */
 
 .pushy-left{
-    -webkit-transform: translate3d(-200px,0,0);
-    -ms-transform: translate3d(-200px,0,0);
-    transform: translate3d(-200px,0,0);
+    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    transform: translate3d( unquote('-' + $menu_width) ,0,0);
 }
 
 .pushy-open-left{
     #container,
     .push{
-        transform: translate3d(200px,0,0);
+        transform: translate3d( $menu_width ,0,0);
     }
 }
 
 .pushy-right{
-    -webkit-transform: translate3d(200px,0,0);
-    -ms-transform: translate3d(200px,0,0);
-    transform: translate3d(200px,0,0);
+    -webkit-transform: translate3d( $menu_width ,0,0);
+    -ms-transform: translate3d( $menu_width ,0,0);
+    transform: translate3d( $menu_width ,0,0);
 }
 
 .pushy-open-right{
     #container,
     .push{
-        transform: translate3d(-200px,0,0);
+        transform: translate3d( unquote('-' + $menu_width) ,0,0);
     }
 }
 
