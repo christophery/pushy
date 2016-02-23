@@ -78,7 +78,14 @@ bower install pushy
 <div id="container"></div>
 ```
 
-- If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
+- If you are using SCSS, you can easily change the menu width by adjusing the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
+
+```css
+$menu_width: 400px;
+
+```
+
+- Not using SCSS? You'll have to update the multiple values (or do a find a replace!) in the ```pushy.css``` file.
 
 ```css
 
@@ -91,10 +98,22 @@ bower install pushy
     /* Don't forget the vendor prefixes */
 }
 
-.container-push, .push-push{
-    transform: translate3d(400px,0,0); /* Updated the values */
+.pushy-open-left #container,
+.pushy-open-left .push {
+    transform: translate3d(400px, 0, 0); /* Updated the values */
+}
+
+.pushy-right {
+    transform: translate3d(400px, 0, 0); /* Updated the values */
     /* Don't forget the vendor prefixes */
 }
+
+.pushy-open-right #container,
+.pushy-open-right .push {
+    transform: translate3d(-400px, 0, 0); /* Updated the values */
+    /* Don't forget the vendor prefixes */
+}
+
 ```
 
 - If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
