@@ -49,6 +49,8 @@ $menu_width: 200px;
 .pushy-open-left{
     #container,
     .push{
+        -webkit-transform: translate3d( $menu_width ,0,0);
+        -ms-transform: translate3d( $menu_width ,0,0);
         transform: translate3d( $menu_width ,0,0);
     }
 }
@@ -62,6 +64,8 @@ $menu_width: 200px;
 .pushy-open-right{
     #container,
     .push{
+        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
+        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
         transform: translate3d( unquote('-' + $menu_width) ,0,0);
     }
 }

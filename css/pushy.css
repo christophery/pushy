@@ -40,6 +40,8 @@
 
 .pushy-open-left #container,
 .pushy-open-left .push {
+  -webkit-transform: translate3d(200px, 0, 0);
+  -ms-transform: translate3d(200px, 0, 0);
   transform: translate3d(200px, 0, 0);
 }
 
@@ -51,6 +53,8 @@
 
 .pushy-open-right #container,
 .pushy-open-right .push {
+  -webkit-transform: translate3d(-200px, 0, 0);
+  -ms-transform: translate3d(-200px, 0, 0);
   transform: translate3d(-200px, 0, 0);
 }
 
