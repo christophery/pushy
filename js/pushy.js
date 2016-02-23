@@ -9,8 +9,6 @@ $(function() {
 		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		siteOverlay = $('.site-overlay'), //site overlay
-		pushyClass = 'pushy-open', //menu position & menu open class
-		pushClass = 'push-push', //css class to add pushy capability
 		menuBtn = $('.menu-btn, .pushy-item'), //css classes to toggle the menu
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
@@ -26,10 +24,6 @@ $(function() {
 		}else{
 			body.toggleClass('pushy-open-right');
 		}
-
-		siteOverlay.toggleClass(pushyClass); //toggle site overlay
-		pushy.toggleClass(pushyClass);
-		push.toggleClass(pushClass); //css class to add pushy capability
 	}
 
 	//submenu
@@ -43,17 +37,17 @@ $(function() {
 			   .next(submenuLinksClass).slideUp(200);
 	});
 
-	function openPushyFallback(){
-		//add site overlay
-		siteOverlay.addClass(pushyClass);
-		
+	function openPushyFallback(){		
+
 		//animate menu position based on CSS class
 		if( $('.pushy').hasClass('pushy-left') ){
+			body.addClass('pushy-open-left');
 			pushy.animate({left: "0px"}, menuSpeed);
 			container.animate({left: menuWidth}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: menuWidth}, menuSpeed);
 		}else{
+			body.addClass('pushy-open-right');
 			pushy.animate({right: '0px'}, menuSpeed);
 			container.animate({right: menuWidth}, menuSpeed);
 			push.animate({right: menuWidth}, menuSpeed);
@@ -62,16 +56,16 @@ $(function() {
 	}
 
 	function closePushyFallback(){
-		//remove site overlay
-		siteOverlay.removeClass(pushyClass);
-		
+
 		//animate menu position based on CSS class
 		if( $('.pushy').hasClass('pushy-left') ){
+			body.removeClass('pushy-open-left');
 			pushy.animate({left: "-" + menuWidth}, menuSpeed);
 			container.animate({left: "0px"}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: "0px"}, menuSpeed);
 		}else{
+			body.removeClass('pushy-open-right');
 			pushy.animate({right: "-" + menuWidth}, menuSpeed);
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);
