@@ -40,7 +40,8 @@ module.exports = function(grunt) {
           style: 'expanded' //output style: nested, compact, compressed, expanded
         },
         files: {                         
-          'css/pushy.css': 'scss/pushy.scss' // 'destination': 'source'
+          'css/pushy.css': 'scss/pushy.scss', // 'destination': 'source'
+          'css/demo.css': 'scss/demo.scss'
         }
       }
     }
