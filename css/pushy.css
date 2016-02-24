@@ -105,13 +105,13 @@
     opacity: 1;
   }
 }
-/* Submenu */
+/* Submenu Appearance */
 .pushy-submenu {
   /* Submenu Icon */
 }
 .pushy-submenu ul {
-  display: none;
   padding-left: 15px;
+  transition: max-height 0.2s ease-in-out;
 }
 .pushy-submenu > a {
   position: relative;
@@ -135,7 +135,20 @@
   -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-.pushy-submenu > a.pushy-submenu-open::after {
+
+/* Submenu Movement */
+.pushy-submenu-closed ul {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.pushy-submenu-open {
+  /* Submenu Icon */
+}
+.pushy-submenu-open ul {
+  max-height: 1000px;
+}
+.pushy-submenu-open a::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
   transform: translateY(-50%) rotate(90deg);

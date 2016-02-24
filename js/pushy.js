@@ -29,16 +29,24 @@ $(function() {
 		}
 	}
 
-	//submenu
-	submenu.children('a').on('click', function(event){
-		event.preventDefault();
-		$(this).toggleClass(submenuOpenClass)
-			   .next(submenuLinksClass).slideToggle(200)
-			   .end().parent(submenuClass)
-			   .siblings(submenuClass).children('a')
-			   .removeClass(submenuOpenClass)
-			   .next(submenuLinksClass).slideUp(200);
-	});
+	//hide submenu by default
+	$(submenuClass).addClass('pushy-submenu-closed');
+
+	//toggle submenu
+	$(submenuClass).on('click', function(event){
+        var selected = $(this);
+
+        if( selected.hasClass('pushy-submenu-closed') ) {
+            //hide opened submenus
+            $('.pushy-submenu').addClass('pushy-submenu-closed').removeClass('pushy-submenu-open');
+            //show submenu
+            selected.removeClass('pushy-submenu-closed').addClass('pushy-submenu-open');
+        }else{
+            //hide submenu
+            selected.addClass('pushy-submenu-closed').removeClass('pushy-submenu-open');
+        }
+
+    });
 
 	function openPushyFallback(){		
 

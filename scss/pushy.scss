@@ -117,12 +117,12 @@ $menu_width: 200px;
     100% { opacity: 1; }
 }
 
-/* Submenu */
+/* Submenu Appearance */
 
 .pushy-submenu{
     ul{
-        display: none;
         padding-left: 15px;
+        transition: max-height 0.2s ease-in-out;
     }
 
     /* Submenu Icon */
@@ -150,8 +150,25 @@ $menu_width: 200px;
         -webkit-transition-duration: 0.2s;
         transition-duration: 0.2s;
     }
+}
 
-    > a.pushy-submenu-open::after {
+/* Submenu Movement */
+
+.pushy-submenu-closed{
+    ul{
+        max-height: 0;
+        overflow: hidden;
+    }
+}
+
+.pushy-submenu-open{
+    ul{
+        max-height: 1000px;
+    }
+    
+    /* Submenu Icon */
+
+    a::after {
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
