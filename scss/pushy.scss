@@ -81,7 +81,9 @@ $menu_width: 200px;
 
 /* Menu Transitions */
 
-.pushy, #container, .push{
+#container,
+.pushy,
+.push{
     transition: transform .2s cubic-bezier(.16, .68, .43, .99);
 }
 
@@ -138,17 +140,12 @@ $menu_width: 200px;
         width: 8px;
         position: absolute;
         top: 50%;
-        bottom: auto;
         right: 15px;
-        background: url("../img/arrow.svg") no-repeat center center;
-        background-size: 8px 11px;
+        background: url("../img/arrow.svg") no-repeat;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
-        -webkit-transition-property: -webkit-transform;
-        transition-property: transform;
-        -webkit-transition-duration: 0.2s;
-        transition-duration: 0.2s;
+        transition: transform 0.2s;
     }
 }
 
