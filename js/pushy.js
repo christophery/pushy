@@ -17,7 +17,7 @@ $(function() {
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
 		submenuOpenClass = 'pushy-submenu-open',
-		submenuLinksClass = '.pushy-submenu ul',
+		submenuClosedClass = 'pushy-submenu-closed',
 		submenu = $(submenuClass);
 
 	function togglePushy(){
@@ -30,20 +30,20 @@ $(function() {
 	}
 
 	//hide submenu by default
-	$(submenuClass).addClass('pushy-submenu-closed');
+	$(submenuClass).addClass(submenuClosedClass);
 
 	//toggle submenu
 	$(submenuClass).on('click', function(event){
         var selected = $(this);
 
-        if( selected.hasClass('pushy-submenu-closed') ) {
+        if( selected.hasClass(submenuClosedClass) ) {
             //hide opened submenus
-            $('.pushy-submenu').addClass('pushy-submenu-closed').removeClass('pushy-submenu-open');
+            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
             //show submenu
-            selected.removeClass('pushy-submenu-closed').addClass('pushy-submenu-open');
+            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
         }else{
             //hide submenu
-            selected.addClass('pushy-submenu-closed').removeClass('pushy-submenu-open');
+            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
         }
 
     });
