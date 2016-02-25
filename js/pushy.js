@@ -33,7 +33,7 @@ $(function() {
 	$(submenuClass).addClass(submenuClosedClass);
 
 	//toggle submenu
-	$(submenuClass).on('click', function(event){
+	$(submenuClass).on('click', function(){
         var selected = $(this);
 
         if( selected.hasClass(submenuClosedClass) ) {
