@@ -1,7 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="arrow"
-	 xmlns="http://www.w3.org/2000/svg" width="8" height="11" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8 11" enable-background="new 0 0 8 11" xml:space="preserve">
-<path id="arrow" fill="#B3B3B1" d="M8,5.5L1.9,11L0.1,9.4l4.3-3.8L0.1,1.8L2,0.1L8,5.5"/>
-</svg>
+<svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="7.9" height="10.9" viewBox="0 0 7.9 10.9"><title>arrow</title><path id="arrow" data-name="arrow" d="M8,5.5L1.9,11,0.1,9.4,4.4,5.6,0.1,1.8,2,0.1,8,5.5" transform="translate(-0.1 -0.1)" fill="#b3b3b1"/></svg>
