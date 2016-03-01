@@ -13,7 +13,7 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - jQuery animation fallback for IE 7 - 9.
 - Menu closes when a link is selected.
 - Menu closes when the site overlay is selected.
-- Collapsible submenus.
+- Auto-collapsible submenus.
 - Left or right menu position.
 - It's responsive!
 
@@ -65,15 +65,6 @@ If your are comfortable with command line, you can install Pushy as a [Bower](ht
 
 ```
 bower install pushy
-```
-
-##Grunt
-
-You can use the default Grunt task to watch and compile the SCSS and JS files. Don't forget to run ```npm install``` beforehand to install the dependencies.
-
-```
-npm install
-grunt
 ```
 
 ##Tips
@@ -167,11 +158,25 @@ html, body{
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
 | IE 9-11       | Chrome (Android 4.x+)                      |
-| Chrome        | Safari (iOS 9)                             |
+| MS Edge       | Safari (iOS 9)                             |
+| Chrome        |                              
 | Firefox       | 
 | Safari (Mac)  |
 
 ##Version History
+
+1.0.0
+
+- Added auto-collapsable submenus.
+- Added ```.pushy-right``` CSS class for right sided menu position.
+- Added SCSS files.
+- Added menu width SCSS variable.
+- Updated click event listeners.
+- Updated demo file.
+- Updated browser compatibility.
+- Removed unneeded CSS browser prefixes.
+- Consolidated menu state CSS classes.
+- Fixed brief menu visibility.
 
 0.9.2
 
