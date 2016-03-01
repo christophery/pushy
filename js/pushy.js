@@ -3,7 +3,7 @@
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
-$(function() {
+(function ($) {
 	var pushy = $('.pushy'), //menu css class
 		body = $('body'),
 		container = $('#container'), //container css class
@@ -127,7 +127,6 @@ $(function() {
 	})();
 
 	if(cssTransforms3d){
-	//if(false){
 		//make menu visible
 		pushy.css({'visibility': 'visible'});
 
@@ -186,4 +185,4 @@ $(function() {
 			}
 		});
 	}
-});
+}(jQuery));
