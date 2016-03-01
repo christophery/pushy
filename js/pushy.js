@@ -29,25 +29,6 @@ $(function() {
 		}
 	}
 
-	//hide submenu by default
-	$(submenuClass).addClass(submenuClosedClass);
-
-	//toggle submenu
-	$(submenuClass).on('click', function(){
-        var selected = $(this);
-
-        if( selected.hasClass(submenuClosedClass) ) {
-            //hide opened submenus
-            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
-            //show submenu
-            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
-        }else{
-            //hide submenu
-            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
-        }
-
-    });
-
 	function openPushyFallback(){		
 
 		//animate menu position based on CSS class
@@ -84,6 +65,40 @@ $(function() {
 
 	}
 
+	function toggleSubmenu(){
+		//hide submenu by default
+		$(submenuClass).addClass(submenuClosedClass);
+
+		$(submenuClass).on('click', function(){
+	        var selected = $(this);
+
+	        if( selected.hasClass(submenuClosedClass) ) {
+	            //hide opened submenus
+	            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
+	            //show submenu
+	            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
+	        }else{
+	            //hide submenu
+	            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
+	        }
+	    });
+	}
+	
+    function toggleSubmenuFallback(){
+    	//hide submenu by default
+    	$(submenuClass).addClass(submenuClosedClass);
+    	
+    	submenu.children('a').on('click', function(event){
+    		event.preventDefault();
+    		$(this).toggleClass(submenuOpenClass)
+    			   .next('.pushy-submenu ul').slideToggle(200)
+    			   .end().parent(submenuClass)
+    			   .siblings(submenuClass).children('a')
+    			   .removeClass(submenuOpenClass)
+    			   .next('.pushy-submenu ul').slideUp(200);
+    	});
+    }
+
 	//checks if 3d transforms are supported removing the modernizr dependency
 	var cssTransforms3d = (function csstransforms3d(){
 		var el = document.createElement('p'),
@@ -116,6 +131,9 @@ $(function() {
 		//make menu visible
 		pushy.css({'visibility': 'visible'});
 
+		//toggle submenu
+		toggleSubmenu();
+
 		//toggle menu
 		menuBtn.on('click', function(){
 			togglePushy();
@@ -125,7 +143,8 @@ $(function() {
 			togglePushy();
 		});
 	}else{
-		//jQuery fallback
+		//add css class to body
+		body.addClass('no-csstransforms3d');
 
 		//hide menu by default
 		if( pushy.hasClass(pushyLeft) ){
@@ -141,6 +160,9 @@ $(function() {
 
 		//keep track of menu state (open/close)
 		var opened = false;
+
+		//toggle submenu
+		toggleSubmenuFallback();
 
 		//toggle menu
 		menuBtn.on('click', function(){
