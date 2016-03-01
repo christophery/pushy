@@ -125,6 +125,10 @@ $menu_width: 200px;
     ul{
         padding-left: 15px;
         transition: max-height 0.2s ease-in-out;
+
+        .pushy-link{
+            transition: opacity 0.2s ease-in-out;
+        }
     }
 
     /* Submenu Icon */
@@ -156,11 +160,19 @@ $menu_width: 200px;
         max-height: 0;
         overflow: hidden;
     }
+
+    .pushy-link{
+        opacity: 0;
+    }
 }
 
 .pushy-submenu-open{
     ul{
         max-height: 1000px;
+    }
+
+    .pushy-link{
+        opacity: 1;
     }
     
     /* Submenu Icon */

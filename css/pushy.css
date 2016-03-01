@@ -115,6 +115,9 @@
   padding-left: 15px;
   transition: max-height 0.2s ease-in-out;
 }
+.pushy-submenu ul .pushy-link {
+  transition: opacity 0.2s ease-in-out;
+}
 .pushy-submenu > a {
   position: relative;
 }
@@ -138,12 +141,18 @@
   max-height: 0;
   overflow: hidden;
 }
+.pushy-submenu-closed .pushy-link {
+  opacity: 0;
+}
 
 .pushy-submenu-open {
   /* Submenu Icon */
 }
 .pushy-submenu-open ul {
   max-height: 1000px;
+}
+.pushy-submenu-open .pushy-link {
+  opacity: 1;
 }
 .pushy-submenu-open a::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
