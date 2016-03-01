@@ -20,6 +20,7 @@
   color: #b3b3b1;
   padding: 15px 30px;
   text-decoration: none;
+  outline: 0;
 }
 .pushy a:hover {
   color: #FFF;
