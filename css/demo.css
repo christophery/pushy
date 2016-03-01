@@ -28,8 +28,7 @@ ul {
   cursor: pointer;
 }
 .menu-btn:hover {
-  background: #00b4ff;
-  color: #FFF;
+  opacity: 0.6;
 }
 
 /* Header */
