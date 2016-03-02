@@ -1,7 +1,7 @@
 {
   "name": "Pushy",
   "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "homepage": "http://www.christopheryee.ca/pushy/",
   "author": {
     "name": "Christopher Yee",
@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "grunt": "~0.4.4",
+    "grunt-contrib-sass": "~0.9.2",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-concat": "~0.4.0",
     "grunt-contrib-uglify": "~0.4.0"

@@ -3,6 +3,7 @@
 
 /index.html
 node_modules
+.sass-cache
 
 # Compiled source #
 ###################

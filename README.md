@@ -13,6 +13,8 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - jQuery animation fallback for IE 7 - 9.
 - Menu closes when a link is selected.
 - Menu closes when the site overlay is selected.
+- Auto-collapsible submenus.
+- Left or right menu position.
 - It's responsive!
 
 ##Requirements
@@ -25,14 +27,25 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 
 1. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
 
-2. Insert the following markup into your body.
+2. If you are using submenus, then you'll need to add the ```arrow.svg``` file into your `img` directory (optional).
+
+3. Insert the following markup into your body.
 
 ```html
 <!-- Pushy Menu -->
 <nav class="pushy pushy-left">
     <ul>
-        <li><a href="#">Item 1</a></li>
-        <li><a href="#">Item 2</a></li>
+        <!-- Submenu -->
+        <li class="pushy-submenu">
+            <a href="#">Submenu</a>
+            <ul>
+                <li class="pushy-link"><a href="#">Item 1</a></li>
+                <li class="pushy-link"><a href="#">Item 2</a></li>
+                <li class="pushy-link"><a href="#">Item 3</a></li>
+            </ul>
+        </li>
+        <li class="pushy-link"><a href="#">Item 1</a></li>
+        <li class="pushy-link"><a href="#">Item 2</a></li>
     </ul>
 </nav>
 
@@ -56,6 +69,18 @@ bower install pushy
 
 ##Tips
 
+- Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
+
+```html
+<!-- Pushy will transition from the right -->
+<nav class="pushy pushy-right">
+    <ul>
+        <li class="pushy-link"><a href="#">Item 1</a></li>
+        <li class="pushy-link"><a href="#">Item 2</a></li>
+    </ul>
+</nav>
+```
+
 - Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
 
 ```html
@@ -68,7 +93,14 @@ bower install pushy
 <div id="container"></div>
 ```
 
-- If you change the width of the ```.pushy``` menu, be sure to update the values in the ```.pushy-left```and ```.container-push, .push-push``` CSS classes.
+- If you are using SCSS, you can easily change the menu width by adjusing the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
+
+```css
+$menu_width: 400px;
+
+```
+
+- Not using SCSS? You'll have to update the multiple values (or do a find a replace!) in the ```pushy.css``` file.
 
 ```css
 
@@ -81,10 +113,35 @@ bower install pushy
     /* Don't forget the vendor prefixes */
 }
 
-.container-push, .push-push{
-    transform: translate3d(400px,0,0); /* Updated the values */
+.pushy-open-left #container,
+.pushy-open-left .push {
+    transform: translate3d(400px, 0, 0); /* Updated the values */
+}
+
+.pushy-right {
+    transform: translate3d(400px, 0, 0); /* Updated the values */
     /* Don't forget the vendor prefixes */
 }
+
+.pushy-open-right #container,
+.pushy-open-right .push {
+    transform: translate3d(-400px, 0, 0); /* Updated the values */
+    /* Don't forget the vendor prefixes */
+}
+
+```
+
+- Only links with the CSS class of ```pushy-link``` will close the menu.
+
+```html
+<nav class="pushy pushy-left">
+    <ul>
+        <!-- This link will close the menu -->
+        <li class="pushy-link"><a href="#">Item 1</a></li>
+        <!-- This link won't close the menu -->
+        <li><a href="#">Item 2</a></li>
+    </ul>
+</nav>
 ```
 
 - If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
@@ -101,11 +158,25 @@ html, body{
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
 | IE 9-11       | Chrome (Android 4.x+)                      |
-| Chrome        | Android Browser (Android 4.x+)             |
-| Firefox       | Safari (iOS 7)                             |
-| Safari (Mac)  | Internet Explorer Mobile (Windows Phone 8) |
+| MS Edge       | Safari (iOS 9)                             |
+| Chrome        |                              
+| Firefox       | 
+| Safari (Mac)  |
 
 ##Version History
+
+1.0.0
+
+- Added auto-collapsable submenus.
+- Added ```.pushy-right``` CSS class for right sided menu position.
+- Added SCSS files.
+- Added menu width SCSS variable.
+- Updated click event listeners.
+- Updated demo file.
+- Updated browser compatibility.
+- Removed unneeded CSS browser prefixes.
+- Consolidated menu state CSS classes.
+- Fixed brief menu visibility.
 
 0.9.2
 
