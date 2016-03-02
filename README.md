@@ -150,6 +150,7 @@ $menu_width: 400px;
 html, body{
     overflow-x: hidden;
     height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 ```
 
