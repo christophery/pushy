@@ -28,6 +28,9 @@
 .pushy ul:first-child {
   margin-top: 10px;
 }
+.pushy.pushy-left {
+  left: 0;
+}
 .pushy.pushy-right {
   right: 0;
 }
