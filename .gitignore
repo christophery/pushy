@@ -4,6 +4,7 @@
 /index.html
 node_modules
 .sass-cache
+.htaccess
 
 # Compiled source #
 ###################
