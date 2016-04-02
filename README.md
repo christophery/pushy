@@ -93,7 +93,7 @@ bower install pushy
 <div id="container"></div>
 ```
 
-- If you are using SCSS, you can easily change the menu width by adjusing the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
+- If you are using SCSS, you can easily change the menu width by adjusting the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
 
 ```css
 $menu_width: 400px;
@@ -197,7 +197,7 @@ html, body{
 0.9.0
 
 - Added a site overlay when Pushy is toggled
-- Fixed horizonal scroll bar issue on mobile devices
+- Fixed horizontal scroll bar issue on mobile devices
 - Disabled webkit tap highlight
 - Rejiggered the JS file
 - Updated to jQuery 1.10.1
