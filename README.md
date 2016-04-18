@@ -214,6 +214,7 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Lela Design](http://leladesign.hr/) by [@div3rDesign](https://twitter.com/div3rDesign)
 - [Servizi CGN](http://www.cgn.it) by [@_MacSiva_](https://twitter.com/_MacSiva_)
 - [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
 - [Plex](https://plex.tv/)
