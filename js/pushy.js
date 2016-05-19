@@ -70,7 +70,6 @@
 		$(submenuClass).addClass(submenuClosedClass);
 
 		$(submenuClass).on('click', function(e){
-		// pushy.on('click', submenuClass, function(e){
 	        var selected = $(this);
 	        var isNestedSubmenu = selected.parents(submenuClass).length;
 
@@ -80,9 +79,9 @@
 
 	            // keep parent of nested submenu open if applicable
 	            if (isNestedSubmenu) {
-	            selected.parents(submenuClass)
-	                .removeClass(submenuClosedClass)
-	                .addClass(submenuOpenClass);
+	                selected.parents(submenuClass)
+	                    .removeClass(submenuClosedClass)
+	                    .addClass(submenuOpenClass);
 							}
 
 	            //show submenu
@@ -91,8 +90,8 @@
 	            // close parent of nested submenu if applicable
 	            if (isNestedSubmenu) {
 	                selected.parents(submenuClass)
-	                .addClass(submenuClosedClass)
-	                .removeClass(submenuOpenClass);
+	                    .addClass(submenuClosedClass)
+	                    .removeClass(submenuOpenClass);
 	            }
 
 	            //hide submenu
