@@ -69,7 +69,8 @@
 		//hide submenu by default
 		$(submenuClass).addClass(submenuClosedClass);
 
-		pushy.on('click', submenuClass, function(e){
+		$(submenuClass).on('click', function(e){
+		// pushy.on('click', submenuClass, function(e){
 	        var selected = $(this);
 	        var isNestedSubmenu = selected.parents(submenuClass).length;
 
