@@ -29,7 +29,7 @@
 		}
 	}
 
-	function openPushyFallback(){		
+	function openPushyFallback(){
 
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
@@ -69,25 +69,44 @@
 		//hide submenu by default
 		$(submenuClass).addClass(submenuClosedClass);
 
-		$(submenuClass).on('click', function(){
+		pushy.on('click', submenuClass, function(e){
 	        var selected = $(this);
+	        var isNestedSubmenu = selected.parents(submenuClass).length;
 
 	        if( selected.hasClass(submenuClosedClass) ) {
 	            //hide opened submenus
 	            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
+
+	            // keep parent of nested submenu open if applicable
+	            if (isNestedSubmenu) {
+	            selected.parents(submenuClass)
+	                .removeClass(submenuClosedClass)
+	                .addClass(submenuOpenClass);
+							}
+
 	            //show submenu
 	            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
 	        }else{
+	            // close parent of nested submenu if applicable
+	            if (isNestedSubmenu) {
+	                selected.parents(submenuClass)
+	                .addClass(submenuClosedClass)
+	                .removeClass(submenuOpenClass);
+	            }
+
 	            //hide submenu
 	            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
 	        }
+
+	        e.stopPropagation();
+	        e.preventDefault();
 	    });
 	}
-	
+
     function toggleSubmenuFallback(){
     	//hide submenu by default
     	$(submenuClass).addClass(submenuClosedClass);
-    	
+
     	submenu.children('a').on('click', function(event){
     		event.preventDefault();
     		$(this).toggleClass(submenuOpenClass)
@@ -153,7 +172,7 @@
 		}
 
 		//make menu visible
-		pushy.css({'visibility': 'visible'}); 
+		pushy.css({'visibility': 'visible'});
 		//fixes IE scrollbar issue
 		container.css({"overflow-x": "hidden"});
 
