@@ -6,7 +6,7 @@
     "christophery <@cmyee>"
   ],
   "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.",
-  "main": ["js/pushy.js", "css/pushy.css"],
+  "main": ["js/pushy.js", "scss/pushy.scss"],
   "keywords": [
     "jquery",
     "offcanvas",
