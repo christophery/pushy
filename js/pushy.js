@@ -20,12 +20,33 @@
 		submenuClosedClass = 'pushy-submenu-closed',
 		submenu = $(submenuClass);
 
+	//handle esc key
+	$(document).keyup(function(e) {
+		if (e.keyCode == 27) {
+			closePushy(); //close pushy
+			$('.menu-btn').focus();
+		}   
+	});
+
 	function togglePushy(){
 		//add class to body based on menu position
 		if( pushy.hasClass(pushyLeft) ){
 			body.toggleClass(pushyOpenLeft);
 		}else{
 			body.toggleClass(pushyOpenRight);
+		}
+
+		//focus on first link in menu
+		pushy.one('transitionend', function() {
+			$('.pushy li:first-child a').focus();
+		});
+	}
+
+	function closePushy(){
+		if( pushy.hasClass(pushyLeft) ){
+			body.removeClass(pushyOpenLeft);
+		}else{
+			body.removeClass(pushyOpenRight);
 		}
 	}
 
@@ -127,9 +148,6 @@
 	})();
 
 	if(cssTransforms3d){
-		//make menu visible
-		pushy.css({'visibility': 'visible'});
-
 		//toggle submenu
 		toggleSubmenu();
 
