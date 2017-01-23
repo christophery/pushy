@@ -23,7 +23,13 @@
 	//handle esc key
 	$(document).keyup(function(e) {
 		if (e.keyCode == 27) {
-			closePushy(); //close pushy
+
+			if(cssTransforms3d){
+				closePushy(); //close pushy
+			}else{
+				closePushyFallback();
+			}
+			
 			$('.menu-btn').focus();
 		}   
 	});
@@ -50,7 +56,10 @@
 		}
 	}
 
-	function openPushyFallback(){		
+	function openPushyFallback(){
+
+		//make menu visible
+		pushy.css({'visibility': 'visible'}); 	
 
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
@@ -66,6 +75,8 @@
 			push.animate({right: menuWidth}, menuSpeed);
 		}
 
+		$('.pushy li:first-child a').focus();
+
 	}
 
 	function closePushyFallback(){
@@ -73,7 +84,10 @@
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
 			body.removeClass(pushyOpenLeft);
-			pushy.animate({left: "-" + menuWidth}, menuSpeed);
+			pushy.animate({left: "-" + menuWidth}, menuSpeed, function(){
+				//make menu hidden
+				pushy.css({'visibility': 'hidden'}); 
+			});
 			container.animate({left: "0px"}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: "0px"}, menuSpeed);
@@ -104,21 +118,6 @@
 	        }
 	    });
 	}
-	
-    function toggleSubmenuFallback(){
-    	//hide submenu by default
-    	$(submenuClass).addClass(submenuClosedClass);
-    	
-    	submenu.children('a').on('click', function(event){
-    		event.preventDefault();
-    		$(this).toggleClass(submenuOpenClass)
-    			   .next('.pushy-submenu ul').slideToggle(200)
-    			   .end().parent(submenuClass)
-    			   .siblings(submenuClass).children('a')
-    			   .removeClass(submenuOpenClass)
-    			   .next('.pushy-submenu ul').slideUp(200);
-    	});
-    }
 
 	//checks if 3d transforms are supported removing the modernizr dependency
 	var cssTransforms3d = (function csstransforms3d(){
@@ -170,8 +169,6 @@
 			pushy.css({right: "-" + menuWidth});
 		}
 
-		//make menu visible
-		pushy.css({'visibility': 'visible'}); 
 		//fixes IE scrollbar issue
 		container.css({"overflow-x": "hidden"});
 
@@ -179,7 +176,7 @@
 		var opened = false;
 
 		//toggle submenu
-		toggleSubmenuFallback();
+		toggleSubmenu();
 
 		//toggle menu
 		menuBtn.on('click', function(){
