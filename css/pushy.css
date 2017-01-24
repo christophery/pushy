@@ -166,9 +166,4 @@
   transform: translateY(-50%) rotate(90deg);
 }
 
-.no-csstransforms3d .pushy-submenu-closed ul {
-  max-height: none;
-  display: none;
-}
-
 /*# sourceMappingURL=pushy.css.map */

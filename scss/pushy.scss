@@ -192,12 +192,3 @@ $menu_width: 200px !default;
         transform: translateY(-50%) rotate(90deg);
     }
 }
-
-.no-csstransforms3d{
-    .pushy-submenu-closed{
-        ul{
-            max-height: none;
-            display: none;
-        }
-    }
-}
