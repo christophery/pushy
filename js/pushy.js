@@ -24,16 +24,22 @@
 
 	//close menu w/ esc key
 	$(document).keyup(function(e) {
+		//check if esc key is pressed
 		if (e.keyCode == 27) {
-			if(cssTransforms3d){
-				closePushy(); //close pushy
-			}else{
-				closePushyFallback();
-				opened = false; //set menu state
+
+			//check if menu is open
+			if( body.hasClass(pushyOpenLeft) || body.hasClass(pushyOpenRight) ){
+				if(cssTransforms3d){
+					closePushy(); //close pushy
+				}else{
+					closePushyFallback();
+					opened = false; //set menu state
+				}
+				
+				//focus on menu button after menu is closed
+				menuBtnFocus.focus();
 			}
-			
-			//focus on menu button after menu is closed
-			menuBtnFocus.focus();
+
 		}   
 	});
 
