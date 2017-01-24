@@ -28,6 +28,7 @@
 				closePushy(); //close pushy
 			}else{
 				closePushyFallback();
+				opened = false; //set menu state
 			}
 			
 			$('.menu-btn').focus();
