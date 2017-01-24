@@ -55,7 +55,7 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 <!-- Your Content -->
 <div id="container">
     <!-- Menu Button -->
-    <div class="menu-btn">&#9776; Menu</div>
+    <button class="menu-btn">&#9776; Menu</button>
 </div>
 ```
 
