@@ -66,10 +66,6 @@
 	}
 
 	function openPushyFallback(){
-
-		//make menu visible
-		pushy.css({'visibility': 'visible'}); 	
-
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
 			body.addClass(pushyOpenLeft);
@@ -86,18 +82,13 @@
 
 		//focus on first link in menu
 		$(menuLinkFocus).focus();
-
 	}
 
 	function closePushyFallback(){
-
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
 			body.removeClass(pushyOpenLeft);
-			pushy.animate({left: "-" + menuWidth}, menuSpeed, function(){
-				//make menu hidden
-				pushy.css({'visibility': 'hidden'}); 
-			});
+			pushy.animate({left: "-" + menuWidth}, menuSpeed);
 			container.animate({left: "0px"}, menuSpeed);
 			//css class to add pushy capability
 			push.animate({left: "0px"}, menuSpeed);
@@ -107,7 +98,6 @@
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);
 		}
-
 	}
 
 	function toggleSubmenu(){
