@@ -1,6 +1,4 @@
 html, body {
-  -webkit-tap-highlight-color: transparent;
-  /* disable webkit tap highlight */
   overflow-x: hidden;
 }
 
