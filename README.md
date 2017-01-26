@@ -34,19 +34,21 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 ```html
 <!-- Pushy Menu -->
 <nav class="pushy pushy-left">
-    <ul>
-        <!-- Submenu -->
-        <li class="pushy-submenu">
-            <a href="#">Submenu</a>
-            <ul>
-                <li class="pushy-link"><a href="#">Item 1</a></li>
-                <li class="pushy-link"><a href="#">Item 2</a></li>
-                <li class="pushy-link"><a href="#">Item 3</a></li>
-            </ul>
-        </li>
-        <li class="pushy-link"><a href="#">Item 1</a></li>
-        <li class="pushy-link"><a href="#">Item 2</a></li>
-    </ul>
+    <div class="pushy-content">
+        <ul>
+            <!-- Submenu -->
+            <li class="pushy-submenu">
+                <button>Submenu</button>
+                <ul>
+                    <li class="pushy-link"><a href="#">Item 1</a></li>
+                    <li class="pushy-link"><a href="#">Item 2</a></li>
+                    <li class="pushy-link"><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            <li class="pushy-link"><a href="#">Item 1</a></li>
+            <li class="pushy-link"><a href="#">Item 2</a></li>
+        </ul>
+    </div>
 </nav>
 
 <!-- Site Overlay -->
@@ -154,6 +156,29 @@ html, body{
 }
 ```
 
+- Use the `data-focus` attribute to give focus to a link when Pushy is opened. Ideally the first link of the menu should be focused. For example `.home-page` or `#profile-page`.
+
+```html
+<nav class="pushy pushy-left" data-focus="#first-link">
+    <div class="pushy-content">
+        <ul>
+            <li class="pushy-submenu">
+                <button id="first-link">Submenu 1</button>
+                <ul>
+                    <li class="pushy-link"><a href="#">Item 1</a></li>
+                    <li class="pushy-link"><a href="#">Item 2</a></li>
+                    <li class="pushy-link"><a href="#">Item 3</a></li>
+                </ul>
+            </li>
+            <li class="pushy-link"><a href="#">Item 1</a></li>
+            <li class="pushy-link"><a href="#">Item 2</a></li>
+            <li class="pushy-link"><a href="#">Item 3</a></li>
+            <li class="pushy-link"><a href="#">Item 4</a></li>
+        </ul>
+    </div>
+</nav>
+```
+
 ##Browser Compatibility
 
 | Desktop       | Mobile                                     |
@@ -165,6 +190,19 @@ html, body{
 | Safari (Mac)  |
 
 ##Version History
+
+1.1.0
+
+- Accessiblity (a11y) enhancements:
+a) Can access and use menu with keyboard navigation.
+b) Can use the escape key to close the menu when opened.
+c) Changed the empty submenu links to buttons.
+d) Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
+e) Added `.pushy-content` element to menu structure (fixes visibility flickering).
+f) Changed `.menu-btn` div to button.
+
+- Removed some redundant CSS classes from `pushy.css`.
+- Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
 
 1.0.0
 
