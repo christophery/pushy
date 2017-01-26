@@ -14,7 +14,7 @@
 		siteOverlay = $('.site-overlay'), //site overlay
 		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
 		menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
-		menuLinkFocus = $('.pushy li:first-child a'), //focus on first link when menu is open
+		menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
@@ -37,7 +37,10 @@
 				}
 				
 				//focus on menu button after menu is closed
-				menuBtnFocus.focus();
+				if(menuBtnFocus){
+					menuBtnFocus.focus();
+				}
+				
 			}
 
 		}   
@@ -51,10 +54,13 @@
 			body.toggleClass(pushyOpenRight);
 		}
 
-		//focus on first link in menu after css transition ends
-		pushy.one('transitionend', function() {
-			menuLinkFocus.focus();
-		});
+		//focus on link in menu after css transition ends
+		if(menuLinkFocus){
+			pushy.one('transitionend', function() {
+				menuLinkFocus.focus();
+			});
+		}
+		
 	}
 
 	function closePushy(){
@@ -80,8 +86,10 @@
 			push.animate({right: menuWidth}, menuSpeed);
 		}
 
-		//focus on first link in menu
-		$(menuLinkFocus).focus();
+		//focus on link in menu
+		if(menuLinkFocus){
+			menuLinkFocus.focus();
+		}
 	}
 
 	function closePushyFallback(){
