@@ -139,19 +139,23 @@
 		    'transform':'transform'
 		};
 
-		// Add it to the body to get the computed style
-		document.body.insertBefore(el, null);
+		if (document.body !== null) {
+			// Add it to the body to get the computed style
+			document.body.insertBefore(el, null);
 
-		for(var t in transforms){
-		    if( el.style[t] !== undefined ){
-		        el.style[t] = 'translate3d(1px,1px,1px)';
-		        supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
-		    }
+			for(var t in transforms){
+			    if( el.style[t] !== undefined ){
+			        el.style[t] = 'translate3d(1px,1px,1px)';
+			        supported = window.getComputedStyle(el).getPropertyValue(transforms[t]);
+			    }
+			}
+
+			document.body.removeChild(el);
+
+			return (supported !== undefined && supported.length > 0 && supported !== "none");
+		}else{
+			return false;
 		}
-
-		document.body.removeChild(el);
-
-		return (supported !== undefined && supported.length > 0 && supported !== "none");
 	})();
 
 	if(cssTransforms3d){
