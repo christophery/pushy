@@ -123,6 +123,7 @@
 }
 /* Submenu Appearance */
 .pushy-submenu {
+  /* Submenu Buttons */
   /* Submenu Icon */
 }
 .pushy-submenu ul {
@@ -132,10 +133,23 @@
 .pushy-submenu ul .pushy-link {
   transition: opacity 0.2s ease-in-out;
 }
-.pushy-submenu > a {
+.pushy-submenu button {
+  width: 100%;
+  color: #b3b3b1;
+  padding: 15px 30px;
+  text-align: left;
+  background: transparent;
+  border: 0;
+}
+.pushy-submenu button:hover {
+  color: #FFF;
+}
+.pushy-submenu > a,
+.pushy-submenu > button {
   position: relative;
 }
-.pushy-submenu > a::after {
+.pushy-submenu > a::after,
+.pushy-submenu > button::after {
   content: '';
   display: block;
   height: 11px;
@@ -170,7 +184,8 @@
 .pushy-submenu-open .pushy-link {
   opacity: 1;
 }
-.pushy-submenu-open a::after {
+.pushy-submenu-open a::after,
+.pushy-submenu-open button::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
   transform: translateY(-50%) rotate(90deg);

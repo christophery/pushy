@@ -147,13 +147,30 @@ $menu_width: 200px !default;
         }
     }
 
+    /* Submenu Buttons */
+
+    button{
+        width: 100%;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        text-align: left;
+        background: transparent;
+        border: 0;
+
+        &:hover{
+            color: #FFF;
+        }
+    }
+
     /* Submenu Icon */
 
-    > a {
+    > a, 
+    > button {
         position: relative;
     }
 
-    > a::after {
+    > a::after, 
+    > button::after {
         content: '';
         display: block;
         height: 11px;
@@ -195,7 +212,8 @@ $menu_width: 200px !default;
     
     /* Submenu Icon */
 
-    a::after {
+    a::after,
+    button::after{
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
