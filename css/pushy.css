@@ -11,7 +11,6 @@
   z-index: 9999;
   background: #191918;
   overflow: auto;
-  visibility: hidden;
   -webkit-overflow-scrolling: touch;
   /* enables momentum scrolling in iOS overflow elements */
 }
@@ -32,6 +31,10 @@
 }
 .pushy.pushy-right {
   right: 0;
+}
+
+.pushy-content {
+  visibility: hidden;
 }
 
 /* Menu Movement */
@@ -66,6 +69,9 @@
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+.pushy-open-left .pushy-content,
+.pushy-open-right .pushy-content {
   visibility: visible;
 }
 
@@ -73,7 +79,11 @@
 #container,
 .pushy,
 .push {
-  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99), visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+  transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.pushy-content {
+  transition: visibility 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
 }
 
 /* Site Overlay */

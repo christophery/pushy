@@ -15,7 +15,6 @@ $menu_width: 200px !default;
     z-index: 9999;
     background: #191918;
     overflow: auto;
-    visibility: hidden;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
     a{
@@ -40,6 +39,10 @@ $menu_width: 200px !default;
     &.pushy-right{
         right: 0;
     }
+}
+
+.pushy-content{
+    visibility: hidden;
 }
 
 /* Menu Movement */
@@ -80,6 +83,9 @@ $menu_width: 200px !default;
         -webkit-transform: translate3d(0,0,0);
         -ms-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
+    }
+
+    .pushy-content{
         visibility: visible;
     }
 }
@@ -89,8 +95,11 @@ $menu_width: 200px !default;
 #container,
 .pushy,
 .push{
-    transition: transform .2s cubic-bezier(.16, .68, .43, .99),
-                visibility .2s cubic-bezier(.16, .68, .43, .99);
+    transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+}
+
+.pushy-content{
+    transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
 }
 
 /* Site Overlay */
