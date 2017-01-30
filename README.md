@@ -76,10 +76,12 @@ bower install pushy
 ```html
 <!-- Pushy will transition from the right -->
 <nav class="pushy pushy-right">
-    <ul>
-        <li class="pushy-link"><a href="#">Item 1</a></li>
-        <li class="pushy-link"><a href="#">Item 2</a></li>
-    </ul>
+    <div class="pushy-content">
+        <ul>
+            <li class="pushy-link"><a href="#">Item 1</a></li>
+            <li class="pushy-link"><a href="#">Item 2</a></li>
+        </ul>
+    </div>
 </nav>
 ```
 
@@ -137,12 +139,14 @@ $menu_width: 400px;
 
 ```html
 <nav class="pushy pushy-left">
-    <ul>
-        <!-- This link will close the menu -->
-        <li class="pushy-link"><a href="#">Item 1</a></li>
-        <!-- This link won't close the menu -->
-        <li><a href="#">Item 2</a></li>
-    </ul>
+    <div class="pushy-content">
+        <ul>
+            <!-- This link will close the menu -->
+            <li class="pushy-link"><a href="#">Item 1</a></li>
+            <!-- This link won't close the menu -->
+            <li><a href="#">Item 2</a></li>
+        </ul>
+    </div>
 </nav>
 ```
 
@@ -183,8 +187,8 @@ html, body{
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
-| IE 9-11       | Chrome (Android 4.x+)                      |
-| MS Edge       | Safari (iOS 9)                             |
+| IE 9-11       | Chrome (Android)                           |
+| MS Edge       | Safari (iOS)                               |
 | Chrome        |                              
 | Firefox       | 
 | Safari (Mac)  |
@@ -203,6 +207,7 @@ f) Changed `.menu-btn` div to button.
 
 - Removed some redundant CSS classes from `pushy.css`.
 - Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
+- Fixed issue #88
 
 1.0.0
 
