@@ -139,7 +139,7 @@
 		    'transform':'transform'
 		};
 
-		if (document.body !== null) {
+		if(document.body !== null) {
 			// Add it to the body to get the computed style
 			document.body.insertBefore(el, null);
 
