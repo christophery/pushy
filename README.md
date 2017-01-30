@@ -198,12 +198,12 @@ html, body{
 1.1.0
 
 - Accessiblity (a11y) enhancements:
-a) Can access and use menu with keyboard navigation.
-b) Can use the escape key to close the menu when opened.
-c) Changed the empty submenu links to buttons.
-d) Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
-e) Added `.pushy-content` element to menu structure (fixes visibility flickering).
-f) Changed `.menu-btn` div to button.
+ * Can access and use menu with keyboard navigation.
+ * Can use the escape key to close the menu when opened.
+ * Changed the empty submenu links to buttons.
+ * Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
+ * Added `.pushy-content` element to menu structure (fixes visibility flickering).
+ * Changed `.menu-btn` div to button.
 
 - Removed some redundant CSS classes from `pushy.css`.
 - Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
