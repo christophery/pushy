@@ -197,7 +197,7 @@ html, body{
 
 1.1.0
 
-- Accessiblity (a11y) enhancements:
+- Accessibility (a11y) enhancements:
  * Can access and use menu with keyboard navigation.
  * Can use the escape key to close the menu when opened.
  * Changed the empty submenu links to buttons.
