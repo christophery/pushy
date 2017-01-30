@@ -5,6 +5,7 @@
 node_modules
 .sass-cache
 .htaccess
+*.map
 
 # Compiled source #
 ###################

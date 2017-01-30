@@ -1,4 +1,4 @@
-/*! Pushy - v1.0.0 - 2016-3-1
+/*! Pushy - v1.1.0 - 2017-1-30
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -15,7 +15,6 @@ $menu_width: 200px !default;
     z-index: 9999;
     background: #191918;
     overflow: auto;
-    visibility: hidden;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
     a{
@@ -23,7 +22,6 @@ $menu_width: 200px !default;
         color: #b3b3b1;
         padding: 15px 30px;
         text-decoration: none;
-        outline: 0;
     }
 
     a:hover{
@@ -41,6 +39,10 @@ $menu_width: 200px !default;
     &.pushy-right{
         right: 0;
     }
+}
+
+.pushy-content{
+    visibility: hidden;
 }
 
 /* Menu Movement */
@@ -82,6 +84,10 @@ $menu_width: 200px !default;
         -ms-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
     }
+
+    .pushy-content{
+        visibility: visible;
+    }
 }
 
 /* Menu Transitions */
@@ -90,6 +96,10 @@ $menu_width: 200px !default;
 .pushy,
 .push{
     transition: transform .2s cubic-bezier(.16, .68, .43, .99);
+}
+
+.pushy-content{
+    transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
 }
 
 /* Site Overlay */
@@ -129,20 +139,38 @@ $menu_width: 200px !default;
 .pushy-submenu{
     ul{
         padding-left: 15px;
-        transition: max-height 0.2s ease-in-out;
+        transition: max-height 0.2s ease-in-out,
+                    visibility 0.2s ease-in-out;
 
         .pushy-link{
             transition: opacity 0.2s ease-in-out;
         }
     }
 
+    /* Submenu Buttons */
+
+    button{
+        width: 100%;
+        color: #b3b3b1;
+        padding: 15px 30px;
+        text-align: left;
+        background: transparent;
+        border: 0;
+
+        &:hover{
+            color: #FFF;
+        }
+    }
+
     /* Submenu Icon */
 
-    > a {
+    > a, 
+    > button {
         position: relative;
     }
 
-    > a::after {
+    > a::after, 
+    > button::after {
         content: '';
         display: block;
         height: 11px;
@@ -164,6 +192,7 @@ $menu_width: 200px !default;
     ul{
         max-height: 0;
         overflow: hidden;
+        visibility: hidden;
     }
 
     .pushy-link{
@@ -174,6 +203,7 @@ $menu_width: 200px !default;
 .pushy-submenu-open{
     ul{
         max-height: 1000px;
+        visibility: visible;
     }
 
     .pushy-link{
@@ -182,18 +212,10 @@ $menu_width: 200px !default;
     
     /* Submenu Icon */
 
-    a::after {
+    a::after,
+    button::after{
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
-    }
-}
-
-.no-csstransforms3d{
-    .pushy-submenu-closed{
-        ul{
-            max-height: none;
-            display: none;
-        }
     }
 }

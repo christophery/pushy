@@ -1,6 +1,4 @@
 html, body {
-  -webkit-tap-highlight-color: transparent;
-  /* disable webkit tap highlight */
   overflow-x: hidden;
 }
 
@@ -26,6 +24,7 @@ ul {
   color: #FFF;
   text-align: center;
   cursor: pointer;
+  border: 0px;
 }
 .menu-btn:hover {
   opacity: 0.6;
