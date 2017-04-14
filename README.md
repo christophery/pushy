@@ -253,7 +253,7 @@ html, body{
 - Updated the demo file
 - Updated the read me
 
-##Sites using Pushy
+## Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, check them out:
 
@@ -274,7 +274,7 @@ Pushy has been implemented on many sites in the wild, check them out:
 
 To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
 
-##Thanks to
+## Thanks to
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
