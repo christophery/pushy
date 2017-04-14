@@ -2,10 +2,10 @@
   "name": "Pushy",
   "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions",
   "version": "1.1.0",
-  "homepage": "http://chrisyee.ca/pushy/",
+  "homepage": "https://chrisyee.ca/pushy",
   "author": {
     "name": "Christopher Yee",
-    "url": "http://chrisyee.ca/"
+    "url": "https://chrisyee.ca/"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
