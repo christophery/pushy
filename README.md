@@ -1,12 +1,12 @@
-#Pushy
+# Pushy
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
 Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
-[View Demo](http://www.christopheryee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
+[View Demo](http://chrisyee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
 
-##Features
+## Features
 
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
@@ -17,11 +17,11 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - Left or right menu position.
 - It's responsive!
 
-##Requirements
+## Requirements
 
 - [jQuery 1.9+](http://jquery.com/)
 
-##Install
+## Install
 
 Download the [packaged source file](https://github.com/christophery/pushy/archive/master.zip), this includes everything you need to get Pushy running on your site.
 
@@ -61,7 +61,7 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 </div>
 ```
 
-##Bower
+## Bower
 
 If your are comfortable with command line, you can install Pushy as a [Bower](http://bower.io/) package:
 
@@ -69,7 +69,7 @@ If your are comfortable with command line, you can install Pushy as a [Bower](ht
 bower install pushy
 ```
 
-##Tips
+## Tips
 
 - Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
 
@@ -183,7 +183,7 @@ html, body{
 </nav>
 ```
 
-##Browser Compatibility
+## Browser Compatibility
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
@@ -193,7 +193,7 @@ html, body{
 | Firefox       | 
 | Safari (Mac)  |
 
-##Version History
+## Version History
 
 1.1.0
 
