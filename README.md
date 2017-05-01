@@ -69,6 +69,17 @@ If your are comfortable with command line, you can install Pushy as a [Bower](ht
 bower install pushy
 ```
 
+## WordPress
+
+Pushy works great with WordPress, here are some general tips to get it working with your theme:
+
+- Use the **console in your browser** to troubleshoot errors in your theme.
+- Make sure you are [enqueuing](https://developer.wordpress.org/reference/functions/wp_enqueue_script/) the scripts correctly in your theme.
+- Pushy requires **jQuery**, so be sure to load it as a [dependancy](https://developer.wordpress.org/reference/functions/wp_enqueue_script/).
+- If you are using [wp_nav_menu](https://developer.wordpress.org/reference/functions/wp_nav_menu/) with Pushy, you will need to use a [Walker](https://codex.wordpress.org/Class_Reference/Walker) to add the CSS classes Pushy requires.
+
+**NOTE: This is not a WordPress plugin.**
+
 ## Tips
 
 - Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
