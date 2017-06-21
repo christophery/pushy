@@ -8,10 +8,12 @@
     "url": "https://chrisyee.ca/"
   },
   "devDependencies": {
+    "font-awesome": "^4.7.0",
     "grunt": "~0.4.4",
-    "grunt-contrib-sass": "~0.9.2",
-    "grunt-contrib-watch": "~0.6.1",
     "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-uglify": "~0.4.0"
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "~0.9.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1"
   }
 }

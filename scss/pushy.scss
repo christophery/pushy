@@ -1,116 +1,121 @@
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
 /*! Pushy - v1.1.0 - 2017-1-30
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
 
 $menu_width: 200px !default;
+$menu_background: #191918;
+$menu_overlay_color: rgba(0, 0, 0, 0.5);
+$menu_item_text_color: #b3b3b1;
+$menu_item_text_color--hover: #fff;
+$menu_item_border_color: rgba(255,255,255,0.1);
 
 /* Menu Appearance */
 
-.pushy{
+.pushy {
     position: fixed;
     width: $menu_width;
     height: 100%;
     top: 0;
     z-index: 9999;
-    background: #191918;
+    background: $menu_background;
     overflow: auto;
-    -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
-
-    a{
+    -webkit-overflow-scrolling: touch;
+    /* enables momentum scrolling in iOS overflow elements */
+    a {
         display: block;
-        color: #b3b3b1;
+        color: $menu_item_text_color;
         padding: 15px 30px;
         text-decoration: none;
     }
-
-    a:hover{
-        color: #FFF;
+    a:hover {
+        color: $menu_item_text_color--hover;
     }
-
-    ul:first-child{
+    ul:first-child {
         margin-top: 10px;
     }
-
-    &.pushy-left{
+    &.pushy-left {
         left: 0;
     }
-
-    &.pushy-right{
+    &.pushy-right {
         right: 0;
     }
 }
 
-.pushy-content{
+.pushy-content {
     visibility: hidden;
 }
 
+
 /* Menu Movement */
 
-.pushy-left{
-    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    transform: translate3d( unquote('-' + $menu_width) ,0,0);
+.pushy-left {
+    -webkit-transform: translate3d( unquote('-' + $menu_width), 0, 0);
+    -ms-transform: translate3d( unquote('-' + $menu_width), 0, 0);
+    transform: translate3d( unquote('-' + $menu_width), 0, 0);
 }
 
-.pushy-open-left{
+.pushy-open-left {
     #container,
-    .push{
-        -webkit-transform: translate3d( $menu_width ,0,0);
-        -ms-transform: translate3d( $menu_width ,0,0);
-        transform: translate3d( $menu_width ,0,0);
+    .push {
+        -webkit-transform: translate3d( $menu_width, 0, 0);
+        -ms-transform: translate3d( $menu_width, 0, 0);
+        transform: translate3d( $menu_width, 0, 0);
     }
 }
 
-.pushy-right{
-    -webkit-transform: translate3d( $menu_width ,0,0);
-    -ms-transform: translate3d( $menu_width ,0,0);
-    transform: translate3d( $menu_width ,0,0);
+.pushy-right {
+    -webkit-transform: translate3d( $menu_width, 0, 0);
+    -ms-transform: translate3d( $menu_width, 0, 0);
+    transform: translate3d( $menu_width, 0, 0);
 }
 
-.pushy-open-right{
+.pushy-open-right {
     #container,
-    .push{
-        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    .push {
+        -webkit-transform: translate3d( unquote('-' + $menu_width), 0, 0);
+        -ms-transform: translate3d( unquote('-' + $menu_width), 0, 0);
+        transform: translate3d( unquote('-' + $menu_width), 0, 0);
     }
 }
 
 .pushy-open-left,
-.pushy-open-right{
-    .pushy{
-        -webkit-transform: translate3d(0,0,0);
-        -ms-transform: translate3d(0,0,0);
-        transform: translate3d(0,0,0);
+.pushy-open-right {
+    .pushy {
+        -webkit-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
-
-    .pushy-content{
+    .pushy-content {
         visibility: visible;
     }
 }
+
 
 /* Menu Transitions */
 
 #container,
 .pushy,
-.push{
+.push {
     transition: transform .2s cubic-bezier(.16, .68, .43, .99);
 }
 
-.pushy-content{
+.pushy-content {
     transition: visibility .2s cubic-bezier(.16, .68, .43, .99);
 }
 
+
 /* Site Overlay */
 
-.site-overlay{
+.site-overlay {
     display: none;
 }
 
 .pushy-open-left,
-.pushy-open-right{
-    .site-overlay{
+.pushy-open-right {
+    .site-overlay {
         display: block;
         position: fixed;
         top: 0;
@@ -118,67 +123,73 @@ $menu_width: 200px !default;
         bottom: 0;
         left: 0;
         z-index: 9998;
-        background-color: rgba(0,0,0,0.5);
-        -webkit-animation: fade 500ms; 
+        background-color: $menu_overlay_color;
+        -webkit-animation: fade 500ms;
         animation: fade 500ms;
     }
 }
 
-@keyframes fade{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-@-webkit-keyframes fade{
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 
 /* Submenu Appearance */
 
-.pushy-submenu{
-    ul{
-        padding-left: 15px;
-        transition: max-height 0.2s ease-in-out,
-                    visibility 0.2s ease-in-out;
+.pushy-content {
+    > ul > li {
+        border-bottom: 1px solid $menu_item_border_color;
+    }
+}
 
-        .pushy-link{
+.pushy-submenu {
+    ul {
+        padding-left: 15px;
+        transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
+        .pushy-link {
             transition: opacity 0.2s ease-in-out;
         }
     }
-
     /* Submenu Buttons */
-
-    button{
+    button {
         width: 100%;
         color: #b3b3b1;
         padding: 15px 30px;
         text-align: left;
         background: transparent;
         border: 0;
-
-        &:hover{
+        &:hover {
             color: #FFF;
         }
     }
-
     /* Submenu Icon */
-
-    > a, 
-    > button {
+    >a,
+    >button {
         position: relative;
     }
-
-    > a::after, 
-    > button::after {
-        content: '';
+    >a::after,
+    >button::after {
+        content: '\f105';
+        font-family: "fontawesome";
         display: block;
-        height: 11px;
         width: 8px;
         position: absolute;
         top: 50%;
         right: 15px;
-        background: url("../img/arrow.svg") no-repeat;
         -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
@@ -186,34 +197,31 @@ $menu_width: 200px !default;
     }
 }
 
+
 /* Submenu Movement */
 
-.pushy-submenu-closed{
-    ul{
+.pushy-submenu-closed {
+    ul {
         max-height: 0;
         overflow: hidden;
         visibility: hidden;
     }
-
-    .pushy-link{
+    .pushy-link {
         opacity: 0;
     }
 }
 
-.pushy-submenu-open{
-    ul{
+.pushy-submenu-open {
+    ul {
         max-height: 1000px;
         visibility: visible;
     }
-
-    .pushy-link{
+    .pushy-link {
         opacity: 1;
     }
-    
     /* Submenu Icon */
-
     a::after,
-    button::after{
+    button::after {
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);
