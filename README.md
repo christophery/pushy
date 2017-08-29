@@ -1,4 +1,4 @@
-#Pushy
+# Pushy
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
@@ -6,7 +6,7 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
 
-##Features
+## Features
 
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
@@ -17,11 +17,11 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - Left or right menu position.
 - It's responsive!
 
-##Requirements
+## Requirements
 
 - [jQuery 1.9+](http://jquery.com/)
 
-##Install
+## Install
 
 Download the [packaged source file](https://github.com/christophery/pushy/archive/master.zip), this includes everything you need to get Pushy running on your site.
 
@@ -61,7 +61,7 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 </div>
 ```
 
-##NPM
+## NPM
 
 If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
 
@@ -69,7 +69,7 @@ If your are comfortable with command line, you can install Pushy as a [NPM packa
 npm install @cmyee/pushy
 ```
 
-##Tips
+## Tips
 
 - Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
 
@@ -183,7 +183,7 @@ html, body{
 </nav>
 ```
 
-##Browser Compatibility
+## Browser Compatibility
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
@@ -193,7 +193,12 @@ html, body{
 | Firefox       | 
 | Safari (Mac)  |
 
-##Version History
+## Version History
+
+1.1.2
+
+- Fixed formatting issues in README.md
+- Added repository + license to package.json
 
 1.1.1
 
@@ -259,7 +264,7 @@ f) Changed `.menu-btn` div to button.
 - Updated the demo file
 - Updated the read me
 
-##Sites using Pushy
+## Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, check them out:
 
@@ -280,7 +285,7 @@ Pushy has been implemented on many sites in the wild, check them out:
 
 To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
 
-##Thanks to
+## Thanks to
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
