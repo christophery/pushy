@@ -1,12 +1,12 @@
-# Pushy
+#Pushy
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
-Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](https://www.twitter.com/cmyee) if you use Pushy in one of your websites.
+Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
 
-## Features
+##Features
 
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
@@ -17,11 +17,11 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 - Left or right menu position.
 - It's responsive!
 
-## Requirements
+##Requirements
 
 - [jQuery 1.9+](http://jquery.com/)
 
-## Install
+##Install
 
 Download the [packaged source file](https://github.com/christophery/pushy/archive/master.zip), this includes everything you need to get Pushy running on your site.
 
@@ -61,26 +61,15 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 </div>
 ```
 
-## Bower
+##NPM
 
-If your are comfortable with command line, you can install Pushy as a [Bower](http://bower.io/) package:
+If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
 
 ```
-bower install pushy
+npm install @cmyee/pushy
 ```
 
-## WordPress
-
-Pushy works great with WordPress, here are some general tips to get it working with your theme:
-
-- Use the **console in your browser** to troubleshoot errors in your theme.
-- Make sure you are [enqueuing](https://developer.wordpress.org/reference/functions/wp_enqueue_script/) the scripts correctly in your theme.
-- Pushy requires **jQuery**, so be sure to load it as a [dependancy](https://developer.wordpress.org/reference/functions/wp_enqueue_script/).
-- If you are using [wp_nav_menu](https://developer.wordpress.org/reference/functions/wp_nav_menu/) with Pushy, you will need to use a [Walker](https://codex.wordpress.org/Class_Reference/Walker) to add the CSS classes Pushy requires.
-
-**NOTE: This is not a WordPress plugin.**
-
-## Tips
+##Tips
 
 - Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
 
@@ -194,7 +183,7 @@ html, body{
 </nav>
 ```
 
-## Browser Compatibility
+##Browser Compatibility
 
 | Desktop       | Mobile                                     |
 | ------------- | -------------------------------------------|
@@ -204,17 +193,23 @@ html, body{
 | Firefox       | 
 | Safari (Mac)  |
 
-## Version History
+##Version History
+
+1.1.1
+
+- Published package to NPM.
+- Removed Bower support.
+- Updated demo & personal site links.
 
 1.1.0
 
-- Accessibility (a11y) enhancements:
- * Can access and use menu with keyboard navigation.
- * Can use the escape key to close the menu when opened.
- * Changed the empty submenu links to buttons.
- * Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
- * Added `.pushy-content` element to menu structure (fixes visibility flickering).
- * Changed `.menu-btn` div to button.
+- Accessiblity (a11y) enhancements:
+a) Can access and use menu with keyboard navigation.
+b) Can use the escape key to close the menu when opened.
+c) Changed the empty submenu links to buttons.
+d) Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
+e) Added `.pushy-content` element to menu structure (fixes visibility flickering).
+f) Changed `.menu-btn` div to button.
 
 - Removed some redundant CSS classes from `pushy.css`.
 - Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
@@ -264,7 +259,7 @@ html, body{
 - Updated the demo file
 - Updated the read me
 
-## Sites using Pushy
+##Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, check them out:
 
@@ -285,7 +280,7 @@ Pushy has been implemented on many sites in the wild, check them out:
 
 To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
 
-## Thanks to
+##Thanks to
 
 - [HTML5 Boilerplate](http://html5boilerplate.com/)
 - [jQuery](http://jquery.com/)
