@@ -4,6 +4,10 @@
 * by Christopher Yee */
 
 $menu_width: 200px !default;
+$background_color: #191918 !default;
+$link_color: #b3b3b1 !default;
+$overlay_opacity: 0.5 !default;
+$link_color_hover: #fff !default;
 
 /* Menu Appearance */
 
@@ -13,13 +17,13 @@ $menu_width: 200px !default;
     height: 100%;
     top: 0;
     z-index: 9999;
-    background: #191918;
+    background: $background_color;
     overflow: auto;
     -webkit-overflow-scrolling: touch; /* enables momentum scrolling in iOS overflow elements */
 
     a{
         display: block;
-        color: #b3b3b1;
+        color: $link_color;
         padding: 15px 30px;
         text-decoration: none;
     }
@@ -118,7 +122,7 @@ $menu_width: 200px !default;
         bottom: 0;
         left: 0;
         z-index: 9998;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0,0,0,$overlay_opacity);
         -webkit-animation: fade 500ms; 
         animation: fade 500ms;
     }
@@ -151,14 +155,14 @@ $menu_width: 200px !default;
 
     button{
         width: 100%;
-        color: #b3b3b1;
+        color: $link_color;
         padding: 15px 30px;
         text-align: left;
         background: transparent;
         border: 0;
 
         &:hover{
-            color: #FFF;
+            color: $link_color_hover;
         }
     }
 
