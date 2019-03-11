@@ -112,18 +112,20 @@
 		//hide submenu by default
 		$(submenuClass).addClass(submenuClosedClass);
 
-		$(submenuClass).on('click', function(){
+		$(submenuClass).on('click', function(e){
 	        var selected = $(this);
 
 	        if( selected.hasClass(submenuClosedClass) ) {
-	            //hide opened submenus
-	            $(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
+				//hide same-level opened submenus
+				selected.siblings(submenuClass).addClass(submenuClosedClass).removeClass(submenuOpenClass);
 	            //show submenu
-	            selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
+				selected.removeClass(submenuClosedClass).addClass(submenuOpenClass);
 	        }else{
 	            //hide submenu
 	            selected.addClass(submenuClosedClass).removeClass(submenuOpenClass);
-	        }
+			}
+			// prevent event to be triggered on parent
+			e.stopPropagation();
 	    });
 	}
 

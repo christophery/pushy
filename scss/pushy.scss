@@ -137,7 +137,7 @@ $menu_width: 200px !default;
 /* Submenu Appearance */
 
 .pushy-submenu{
-    ul{
+    > ul{
         padding-left: 15px;
         transition: max-height 0.2s ease-in-out,
                     visibility 0.2s ease-in-out;
@@ -189,7 +189,7 @@ $menu_width: 200px !default;
 /* Submenu Movement */
 
 .pushy-submenu-closed{
-    ul{
+    > ul{
         max-height: 0;
         overflow: hidden;
         visibility: hidden;
@@ -201,7 +201,7 @@ $menu_width: 200px !default;
 }
 
 .pushy-submenu-open{
-    ul{
+    > ul{
         max-height: 1000px;
         visibility: visible;
     }
@@ -212,8 +212,8 @@ $menu_width: 200px !default;
     
     /* Submenu Icon */
 
-    a::after,
-    button::after{
+    > a::after,
+    > button::after{
         -webkit-transform: translateY(-50%) rotate(90deg);
         -ms-transform: translateY(-50%) rotate(90deg);
         transform: translateY(-50%) rotate(90deg);

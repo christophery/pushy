@@ -126,11 +126,11 @@
   /* Submenu Buttons */
   /* Submenu Icon */
 }
-.pushy-submenu ul {
+.pushy-submenu > ul {
   padding-left: 15px;
   transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
-.pushy-submenu ul .pushy-link {
+.pushy-submenu > ul .pushy-link {
   transition: opacity 0.2s ease-in-out;
 }
 .pushy-submenu button {
@@ -165,7 +165,7 @@
 }
 
 /* Submenu Movement */
-.pushy-submenu-closed ul {
+.pushy-submenu-closed > ul {
   max-height: 0;
   overflow: hidden;
   visibility: hidden;
@@ -177,15 +177,15 @@
 .pushy-submenu-open {
   /* Submenu Icon */
 }
-.pushy-submenu-open ul {
+.pushy-submenu-open > ul {
   max-height: 1000px;
   visibility: visible;
 }
 .pushy-submenu-open .pushy-link {
   opacity: 1;
 }
-.pushy-submenu-open a::after,
-.pushy-submenu-open button::after {
+.pushy-submenu-open > a::after,
+.pushy-submenu-open > button::after {
   -webkit-transform: translateY(-50%) rotate(90deg);
   -ms-transform: translateY(-50%) rotate(90deg);
   transform: translateY(-50%) rotate(90deg);
