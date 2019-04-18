@@ -4,6 +4,8 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
+Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise) and in a [book](https://books.google.ca/books?id=guZjBAAAQBAJ&pg=PA103&lpg=PA103&dq=christopheryee.ca/pushy&source=bl&ots=1x-sSNmTHD&sig=ACfU3U1sFn-MU9bs3ia1UU0d9aNga5rB6w&hl=en&sa=X&ved=2ahUKEwi5wfKP9tnhAhUJbKwKHdbfBXAQ6AEwBnoECAoQAQ#v=onepage&q&f=false)!
+
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
 
 ## Features
@@ -19,7 +21,7 @@ Pushy has been implemented on many sites, [check them out!](https://github.com/c
 
 ## Requirements
 
-- [jQuery 1.9+](http://jquery.com/)
+- [jQuery 1.12+](http://jquery.com/)
 
 ## Install
 
@@ -268,17 +270,15 @@ f) Changed `.menu-btn` div to button.
 
 Pushy has been implemented on many sites in the wild, check them out:
 
+- [Making Waves Swim School](https://mwss.ca/)
+- [EZ Debride](https://ezdebride.com)
+- [The Oakville Community Foundation](https://theocf.org)
 - [Lela Design](http://leladesign.hr/) by [@div3rDesign](https://twitter.com/div3rDesign)
-- [Servizi CGN](http://www.cgn.it) by [@_MacSiva_](https://twitter.com/_MacSiva_)
 - [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
-- [Plex](https://plex.tv/)
-- [Flight Centre](http://www.flightcentre.ca/)
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
-- [Nordic Kaluste](http://www.nordickaluste.fi/) by [Joonas Sippola](http://www.joonassippola.fi/)
 - [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
 - [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
-- [Organized Interiors](http://www.organizedinteriors.com/) by [@bombippy](https://twitter.com/bombippy)
 - [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
 
 **Note:** You may have to resize your browser on some sites to see Pushy in action.
