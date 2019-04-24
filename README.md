@@ -199,7 +199,7 @@ html, body{
 
 1.2.0
 - Added support for a 3rd level submenu [#129](https://github.com/christophery/pushy/pull/129)
-- removed bower.json
+- Removed bower.json
 - Updated demo
 
 1.1.2
