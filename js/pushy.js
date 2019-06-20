@@ -12,8 +12,6 @@
 		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
 		pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
 		siteOverlay = $('.site-overlay'), //site overlay
-		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
-		menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
 		menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
@@ -21,6 +19,16 @@
 		submenuOpenClass = 'pushy-submenu-open',
 		submenuClosedClass = 'pushy-submenu-closed',
 		submenu = $(submenuClass);
+
+	//check if menu-btn-class data attribute exists
+	if( typeof pushy.data('menu-btn-class') !== 'undefined' ){
+		var menuBtnClass = pushy.data('menu-btn-class'); //take user defined menu button CSS class
+	}else{
+		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
+	}
+
+	var menuBtn = $(menuBtnClass + ', .pushy-link'), //css classes to toggle the menu
+		menuBtnFocus = $(menuBtnClass); //css class to focus when menu is closed w/ esc key
 
 	//close menu w/ esc key
 	$(document).keyup(function(e) {

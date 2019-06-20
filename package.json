@@ -3,14 +3,14 @@
   "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions",
   "version": "1.2.0",
   "homepage": "https://chrisyee.ca/pushy/",
-  "license" : "MIT",
+  "license": "MIT",
   "author": {
     "name": "Chris Yee",
     "url": "https://chrisyee.ca/"
   },
-  "repository" :{ 
-      "type" : "git",
-      "url" : "https://github.com/christophery/pushy.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophery/pushy.git"
   },
   "devDependencies": {
     "grunt": "~0.4.4",
