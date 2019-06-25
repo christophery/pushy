@@ -90,7 +90,7 @@ npm install @cmyee/pushy
 
 ## Options
 
-###Menu Position
+### Menu Position
 
 Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
 
@@ -106,7 +106,7 @@ Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu po
 </nav>
 ```
 
-###data-focus
+### data-focus
 
 Use the `data-focus` attribute to give focus to a link when the menu is opened. Ideally the first link of the menu should be focused.
 
@@ -124,7 +124,7 @@ This data attribute accepts a CSS selector.
 </nav>
 ```
 
-###data-menu-btn-class
+### data-menu-btn-class
 
 Use the `data-menu-btn-class` attribute to change the menu button CSS class for toggling the menu.
 
