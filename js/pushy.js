@@ -1,4 +1,4 @@
-/*! Pushy - v1.2.0 - 2019-4-24
+/*! Pushy - v1.3.0 - 2019-6-25
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -12,8 +12,6 @@
 		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
 		pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
 		siteOverlay = $('.site-overlay'), //site overlay
-		menuBtn = $('.menu-btn, .pushy-link'), //css classes to toggle the menu
-		menuBtnFocus = $('.menu-btn'), //css class to focus when menu is closed w/ esc key
 		menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
@@ -21,6 +19,19 @@
 		submenuOpenClass = 'pushy-submenu-open',
 		submenuClosedClass = 'pushy-submenu-closed',
 		submenu = $(submenuClass);
+
+	//check if menu-btn-class data attribute exists
+	if( typeof pushy.data('menu-btn-class') !== 'undefined' ){
+		var menuBtnClass = pushy.data('menu-btn-class'); //take user defined menu button CSS class
+	}else{
+		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
+	}
+
+	//css classes to toggle the menu
+	var menuBtn = $(menuBtnClass + ', .pushy-link');
+
+	//css class to focus when menu is closed w/ esc key
+	var menuBtnFocus = $(menuBtnClass);
 
 	//close menu w/ esc key
 	$(document).keyup(function(e) {
