@@ -1,4 +1,4 @@
-/*! Pushy - v1.3.0 - 2019-6-20
+/*! Pushy - v1.3.0 - 2019-6-25
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -27,8 +27,11 @@
 		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
 	}
 
-	var menuBtn = $(menuBtnClass + ', .pushy-link'), //css classes to toggle the menu
-		menuBtnFocus = $(menuBtnClass); //css class to focus when menu is closed w/ esc key
+	//css classes to toggle the menu
+	var menuBtn = $(menuBtnClass + ', .pushy-link');
+
+	//css class to focus when menu is closed w/ esc key
+	var menuBtnFocus = $(menuBtnClass);
 
 	//close menu w/ esc key
 	$(document).keyup(function(e) {
