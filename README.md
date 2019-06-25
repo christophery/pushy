@@ -25,9 +25,9 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 
 ## Install
 
-Download the [packaged source file](https://github.com/christophery/pushy/archive/master.zip), this includes everything you need to get Pushy running on your site.
+Download the [latest release](https://github.com/christophery/pushy/releases), this includes everything you need to get Pushy running on your site.
 
-1. Add the stylesheet (pushy.css) in your head and the JS (pushy.min.js) file in your footer.
+1. Add the stylesheet (`pushy.css`) in your head and the JS (`pushy.min.js`) file in your footer.
 
 2. If you are using submenus, then you'll need to add the ```arrow.svg``` file into your `img` directory (optional).
 
@@ -63,6 +63,23 @@ Download the [packaged source file](https://github.com/christophery/pushy/archiv
 </div>
 ```
 
+## Development
+Pushy CSS and JS are compiled and minified using Grunt. You'll need [Node](https://nodejs.org/en/) and [Grunt](https://gruntjs.com/) installed globally.
+
+**From the root directory run:**
+
+```
+$ npm install
+$ grunt
+```
+
+Now you can edit files in `/scss/` and `/js/`, which will be compiled to `/css/pushy.css` and `/js/pushy.min.js` automatically.
+
+## CDN
+
+Link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
+
+
 ## NPM
 
 If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
@@ -71,9 +88,11 @@ If your are comfortable with command line, you can install Pushy as a [NPM packa
 npm install @cmyee/pushy
 ```
 
-## Tips
+## Options
 
-- Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
+###Menu Position
+
+Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu position.
 
 ```html
 <!-- Pushy will transition from the right -->
@@ -86,6 +105,44 @@ npm install @cmyee/pushy
     </div>
 </nav>
 ```
+
+###data-focus
+
+Use the `data-focus` attribute to give focus to a link when the menu is opened. Ideally the first link of the menu should be focused.
+
+This data attribute accepts a CSS selector.
+
+```html
+<nav class="pushy pushy-left" data-focus="#home-link">
+    <div class="pushy-content">
+        <ul>
+            <li id="home-page" class="pushy-link"><a href="#">Home</a></li>
+            <li class="pushy-link"><a href="#">About Us</a></li>
+            <li class="pushy-link"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+```
+
+###data-menu-btn-class
+
+Use the `data-menu-btn-class` attribute to change the menu button CSS class for toggling the menu.
+
+By default Pushy will use `.menu-btn` to toggle the menu.
+
+This data attribute accepts a CSS selector.
+
+```html
+<!-- Pushy Menu -->
+<nav class="pushy pushy-left" data-menu-btn-class=".my-menu-btn">
+	<!-- I've removed the inner markup for brevity -->
+</nav>
+
+<!-- Menu Button-->
+<button class="my-menu-btn">Menu</button>
+```
+
+## Tips
 
 - Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
 
@@ -162,29 +219,6 @@ html, body{
 }
 ```
 
-- Use the `data-focus` attribute to give focus to a link when Pushy is opened. Ideally the first link of the menu should be focused. For example `.home-page` or `#profile-page`.
-
-```html
-<nav class="pushy pushy-left" data-focus="#first-link">
-    <div class="pushy-content">
-        <ul>
-            <li class="pushy-submenu">
-                <button id="first-link">Submenu 1</button>
-                <ul>
-                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                    <li class="pushy-link"><a href="#">Item 2</a></li>
-                    <li class="pushy-link"><a href="#">Item 3</a></li>
-                </ul>
-            </li>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
-            <li class="pushy-link"><a href="#">Item 3</a></li>
-            <li class="pushy-link"><a href="#">Item 4</a></li>
-        </ul>
-    </div>
-</nav>
-```
-
 ## Browser Compatibility
 
 | Desktop       | Mobile                                     |
@@ -197,7 +231,13 @@ html, body{
 
 ## Version History
 
+1.3.0
+
+- Added the `data-menu-btn-class` attribute [#131](https://github.com/christophery/pushy/issues/131)
+- Updated README.md with Development, NPM and Options sections.
+
 1.2.0
+
 - Added support for a 3rd level submenu [#129](https://github.com/christophery/pushy/pull/129)
 - Removed bower.json
 - Updated demo
@@ -216,12 +256,12 @@ html, body{
 1.1.0
 
 - Accessiblity (a11y) enhancements:
-a) Can access and use menu with keyboard navigation.
-b) Can use the escape key to close the menu when opened.
-c) Changed the empty submenu links to buttons.
-d) Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
-e) Added `.pushy-content` element to menu structure (fixes visibility flickering).
-f) Changed `.menu-btn` div to button.
+   - Can access and use menu with keyboard navigation.
+   - Can use the escape key to close the menu when opened.
+   - Changed the empty submenu links to buttons.
+   - Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
+   - Added `.pushy-content` element to menu structure (fixes visibility flickering).
+   - Changed `.menu-btn` div to button.
 
 - Removed some redundant CSS classes from `pushy.css`.
 - Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
@@ -275,9 +315,6 @@ f) Changed `.menu-btn` div to button.
 
 Pushy has been implemented on many sites in the wild, check them out:
 
-- [Making Waves Swim School](https://mwss.ca/)
-- [EZ Debride](https://ezdebride.com)
-- [The Oakville Community Foundation](https://theocf.org)
 - [Lela Design](http://leladesign.hr/) by [@div3rDesign](https://twitter.com/div3rDesign)
 - [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
