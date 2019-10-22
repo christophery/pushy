@@ -6,7 +6,6 @@
 (function ($) {
 	var pushy = $('.pushy'), //menu css class
 		body = $('body'),
-		container = $('#container'), //container css class
 		push = $('.push'), //css class to add pushy capability
 		pushyLeft = 'pushy-left', //css class for left menu position
 		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
@@ -32,6 +31,14 @@
 
 	//css class to focus when menu is closed w/ esc key
 	var menuBtnFocus = $(menuBtnClass);
+	
+    // check if container-selector data attribute exists
+    var containerSelector = '#container';
+    if (typeof pushy.data('container-selector') !== 'undefined') {
+        containerSelector = pushy.data('container-selector');
+    }
+    var container = $(containerSelector);
+		
 
 	//close menu w/ esc key
 	$(document).keyup(function(e) {
