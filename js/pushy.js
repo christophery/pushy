@@ -16,8 +16,7 @@
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
 		submenuOpenClass = 'pushy-submenu-open',
-		submenuClosedClass = 'pushy-submenu-closed',
-		submenu = $(submenuClass);
+		submenuClosedClass = 'pushy-submenu-closed';
 
 	//check if menu-btn-class data attribute exists
 	if( typeof pushy.data('menu-btn-class') !== 'undefined' ){
