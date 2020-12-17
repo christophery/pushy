@@ -21,7 +21,7 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 
 ## Requirements
 
-- [jQuery 1.12+](http://jquery.com/)
+- [jQuery 3.x+](https://jquery.com/)
 
 ## Install
 
@@ -142,6 +142,18 @@ This data attribute accepts a CSS selector.
 <button class="my-menu-btn">Menu</button>
 ```
 
+### data-container-selector
+
+Use the `data-container-selector` attribute to using a custom `#container` selector.
+
+If you use a custom `#container` selector you'll need to update the necessary CSS in `pushy.scss`.
+
+This data attribute accepts a CSS selector.
+
+```
+<nav class="pushy pushy-right" data-container-selector="#custom-container">
+```
+
 ## Tips
 
 - Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
@@ -230,6 +242,12 @@ html, body{
 | Safari (Mac)  |
 
 ## Version History
+
+1.4.0
+
+- Added the `data-container-selector` attribute [#133](https://github.com/christophery/pushy/pull/133).
+- Updated deprecated event handlers.
+- jQuery 3.x support.
 
 1.3.0
 
