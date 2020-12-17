@@ -37,10 +37,9 @@
         containerSelector = pushy.data('container-selector');
     }
     var container = $(containerSelector);
-		
 
 	//close menu w/ esc key
-	$(document).keyup(function(e) {
+	$(document).on('keyup', function(e) {
 		//check if esc key is pressed
 		if (e.keyCode == 27) {
 
@@ -55,7 +54,7 @@
 				
 				//focus on menu button after menu is closed
 				if(menuBtnFocus){
-					menuBtnFocus.focus();
+					menuBtnFocus.trigger('focus');
 				}
 				
 			}
@@ -74,7 +73,7 @@
 		//focus on link in menu after css transition ends
 		if(menuLinkFocus){
 			pushy.one('transitionend', function() {
-				menuLinkFocus.focus();
+				menuLinkFocus.trigger('focus');
 			});
 		}
 		
@@ -105,7 +104,7 @@
 
 		//focus on link in menu
 		if(menuLinkFocus){
-			menuLinkFocus.focus();
+			menuLinkFocus.trigger('focus');
 		}
 	}
 
