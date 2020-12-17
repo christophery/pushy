@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     watch: {
       options: {
         livereload: true,
+        spawn: false
       },
       css: {
         files: ['scss/*.scss'],
@@ -29,26 +30,27 @@ module.exports = function(grunt) {
         },
     },
     uglify: {
-        build: {
-          src: 'js/pushy.min.js',
-          dest: 'js/pushy.min.js'
+        dist: {
+          files: {
+              'js/pushy.min.js': 'js/pushy.min.js'
+          }
         }
     },
-    sass: {                              
-      dist: {                          
+    sass: {
+      dist: {
         options: {
-          style: 'expanded' //output style: nested, compact, compressed, expanded
+          outputStyle: 'expanded' //output style: nested, compact, compressed, expanded
         },
-        files: {                         
+        files: {
           'css/pushy.css': 'scss/pushy.scss', // 'destination': 'source'
           'css/demo.css': 'scss/demo.scss'
         }
       }
     }
   });
-  
+
   // Load grunt plugins
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-concat');
