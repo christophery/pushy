@@ -334,10 +334,11 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, check them out:
 
-- [Lela Design](http://leladesign.hr/) by [@div3rDesign](https://twitter.com/div3rDesign)
+- [Guitar Center](https://www.guitarcenter.com/)
+- [Santander México](https://www.santander.com.mx/)
+- [National Harbor - DC Waterfront Resort](https://www.nationalharbor.com/)
 - [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
 - [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
-- [Bentleys Estate and Lettings Agents](http://www.bentleysestateagents.co.uk/) by [@WolfHook](https://twitter.com/WolfHook)
 - [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
 - [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
 - [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
