@@ -242,7 +242,7 @@ html, body{
 | Safari (Mac)  |
 
 
-##Sites using Pushy
+## Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
 
