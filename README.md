@@ -240,3 +240,11 @@ html, body{
 | Chrome        |                              
 | Firefox       | 
 | Safari (Mac)  |
+
+
+##Sites using Pushy
+
+Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
+
+To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
+
