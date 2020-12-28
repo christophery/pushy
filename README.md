@@ -2,11 +2,11 @@
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
-Pushy has been implemented on many sites, [check them out!](https://github.com/christophery/pushy#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
+Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
 
 Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise) and in a [book](https://books.google.ca/books?id=guZjBAAAQBAJ&pg=PA103&lpg=PA103&dq=christopheryee.ca/pushy&source=bl&ots=1x-sSNmTHD&sig=ACfU3U1sFn-MU9bs3ia1UU0d9aNga5rB6w&hl=en&sa=X&ved=2ahUKEwi5wfKP9tnhAhUJbKwKHdbfBXAQ6AEwBnoECAoQAQ#v=onepage&q&f=false)!
 
-[View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://github.com/christophery/pushy#sites-using-pushy)
+[View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://chrisyee.ca/pushy/#sites-using-pushy)
 
 ## Features
 
@@ -240,114 +240,3 @@ html, body{
 | Chrome        |                              
 | Firefox       | 
 | Safari (Mac)  |
-
-## Version History
-
-1.4.0
-
-- Added the `data-container-selector` attribute [#133](https://github.com/christophery/pushy/pull/133).
-- Updated deprecated event handlers.
-- Renamed `data-menu-btn-class` attribute to `data-menu-btn-selector`
-- jQuery 3.x support.
-
-1.3.0
-
-- Added the `data-menu-btn-class` attribute [#131](https://github.com/christophery/pushy/issues/131)
-- Updated README.md with Development, NPM and Options sections.
-
-1.2.0
-
-- Added support for a 3rd level submenu [#129](https://github.com/christophery/pushy/pull/129)
-- Removed bower.json
-- Updated demo
-
-1.1.2
-
-- Fixed formatting issues in README.md
-- Added repository + license to package.json
-
-1.1.1
-
-- Published package to NPM.
-- Removed Bower support.
-- Updated demo & personal site links.
-
-1.1.0
-
-- Accessiblity (a11y) enhancements:
-   - Can access and use menu with keyboard navigation.
-   - Can use the escape key to close the menu when opened.
-   - Changed the empty submenu links to buttons.
-   - Added `data-focus` attribute to allow user to specify a link to focus on when menu is opened.
-   - Added `.pushy-content` element to menu structure (fixes visibility flickering).
-   - Changed `.menu-btn` div to button.
-
-- Removed some redundant CSS classes from `pushy.css`.
-- Removed `toggleSubmenuFallback` function, older browsers will use `toggleSubmenu` instead.
-- Fixed issue #88
-
-1.0.0
-
-- Added auto-collapsable submenus.
-- Added ```.pushy-right``` CSS class for right sided menu position.
-- Added SCSS files.
-- Added menu width SCSS variable.
-- Updated click event listeners.
-- Updated demo file.
-- Updated browser compatibility.
-- Removed unneeded CSS browser prefixes.
-- Consolidated menu state CSS classes.
-- Fixed brief menu visibility.
-
-0.9.2
-
-- Removed modernizr dependency.
-- Updated site overlay with color + smoother transition.
-- Cleaned up the CSS a bit.
-- Dropped support for IE 7 & 8.
-
-0.9.1
-
-- Added support for more menu items (with scroll bar).
-- Added the .push CSS class. This adds pushy support to additional HTML elements outside of the container div.
-- Fixed menu transition.
-- Tested in iOS 7.
-- Updated the demo file.
-
-0.9.0
-
-- Added a site overlay when Pushy is toggled
-- Fixed horizontal scroll bar issue on mobile devices
-- Disabled webkit tap highlight
-- Rejiggered the JS file
-- Updated to jQuery 1.10.1
-- Updated the demo file
-
-0.8.4
-
-- Fixed performance issue with mobile devices
-- Updated to jQuery 1.10
-- Updated the demo file
-- Updated the read me
-
-## Sites using Pushy
-
-Pushy has been implemented on many sites in the wild, check them out:
-
-- [Guitar Center](https://www.guitarcenter.com/)
-- [Santander México](https://www.santander.com.mx/)
-- [National Harbor - DC Waterfront Resort](https://www.nationalharbor.com/)
-- [emota](http://www.emota.com) by [@YayRomina](https://twitter.com/YayRomina)
-- [Selby College](http://www.selby.ac.uk/) by [@welcomebrand](https://twitter.com/welcomebrand)
-- [Firefox OS Devices](https://firefoxosdevices.org/) by [@s_hentzschel](https://twitter.com/s_hentzschel)
-- [FulcrumTech](http://www.fulcrumtech.net/) by [@maxlapides](https://twitter.com/maxlapides)
-- [The Black and Blue](http://www.theblackandblue.com/) by [@evanluzi](https://github.com/evanluzi)
-
-**Note:** You may have to resize your browser on some sites to see Pushy in action.
-
-To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
-
-## Thanks to
-
-- [HTML5 Boilerplate](http://html5boilerplate.com/)
-- [jQuery](http://jquery.com/)
