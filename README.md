@@ -124,9 +124,9 @@ This data attribute accepts a CSS selector.
 </nav>
 ```
 
-### data-menu-btn-class
+### data-menu-btn-selector
 
-Use the `data-menu-btn-class` attribute to change the menu button CSS class for toggling the menu.
+Use the `data-menu-btn-selector` attribute to change the menu button CSS class for toggling the menu.
 
 By default Pushy will use `.menu-btn` to toggle the menu.
 
@@ -134,7 +134,7 @@ This data attribute accepts a CSS selector.
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-left" data-menu-btn-class=".my-menu-btn">
+<nav class="pushy pushy-left" data-menu-btn-selector=".my-menu-btn">
 	<!-- I've removed the inner markup for brevity -->
 </nav>
 
@@ -247,6 +247,7 @@ html, body{
 
 - Added the `data-container-selector` attribute [#133](https://github.com/christophery/pushy/pull/133).
 - Updated deprecated event handlers.
+- Renamed `data-menu-btn-class` attribute to `data-menu-btn-selector`
 - jQuery 3.x support.
 
 1.3.0

@@ -18,9 +18,9 @@
 		submenuOpenClass = 'pushy-submenu-open',
 		submenuClosedClass = 'pushy-submenu-closed';
 
-	//check if menu-btn-class data attribute exists
-	if( typeof pushy.data('menu-btn-class') !== 'undefined' ){
-		var menuBtnClass = pushy.data('menu-btn-class'); //take user defined menu button CSS class
+	//check if menu-btn-selector data attribute exists
+	if( typeof pushy.data('menu-btn-selector') !== 'undefined' ){
+		var menuBtnClass = pushy.data('menu-btn-selector'); //take user defined menu button CSS class
 	}else{
 		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
 	}
