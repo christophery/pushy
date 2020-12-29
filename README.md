@@ -132,6 +132,8 @@ By default Pushy will use `.menu-btn` to toggle the menu.
 
 This data attribute accepts a CSS selector.
 
+**Note:** In v1.4.0 this attribute was renamed from `data-menu-btn-class` to `data-menu-btn-selector`
+
 ```html
 <!-- Pushy Menu -->
 <nav class="pushy pushy-left" data-menu-btn-selector=".my-menu-btn">
