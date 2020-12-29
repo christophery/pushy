@@ -26,6 +26,7 @@ ul {
   cursor: pointer;
   border: 0px;
 }
+
 .menu-btn:hover {
   opacity: 0.6;
 }
@@ -50,5 +51,3 @@ ul {
   font-size: 0.8em;
   text-align: center;
 }
-
-/*# sourceMappingURL=demo.css.map */
