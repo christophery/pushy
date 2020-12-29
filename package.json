@@ -13,10 +13,10 @@
     "url": "https://github.com/christophery/pushy.git"
   },
   "devDependencies": {
-    "grunt": "~0.4.4",
-    "grunt-contrib-sass": "~0.9.2",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-contrib-concat": "~0.4.0",
-    "grunt-contrib-uglify": "~0.4.0"
+    "grunt": "~1.0.1",
+    "grunt-sass": "^2.1.0",
+    "grunt-contrib-watch": "~1.0.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1"
   }
 }

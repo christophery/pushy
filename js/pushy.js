@@ -1,4 +1,4 @@
-/*! Pushy - v1.3.0 - 2019-6-25
+/*! Pushy - v1.4.0 - 2020-12-28
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
 * by Christopher Yee */
@@ -18,9 +18,9 @@
 		submenuOpenClass = 'pushy-submenu-open',
 		submenuClosedClass = 'pushy-submenu-closed';
 
-	//check if menu-btn-class data attribute exists
-	if( typeof pushy.data('menu-btn-class') !== 'undefined' ){
-		var menuBtnClass = pushy.data('menu-btn-class'); //take user defined menu button CSS class
+	//check if menu-btn-selector data attribute exists
+	if( typeof pushy.data('menu-btn-selector') !== 'undefined' ){
+		var menuBtnClass = pushy.data('menu-btn-selector'); //take user defined menu button CSS class
 	}else{
 		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
 	}
@@ -37,10 +37,9 @@
         containerSelector = pushy.data('container-selector');
     }
     var container = $(containerSelector);
-		
 
 	//close menu w/ esc key
-	$(document).keyup(function(e) {
+	$(document).on('keyup', function(e) {
 		//check if esc key is pressed
 		if (e.keyCode == 27) {
 
@@ -55,7 +54,7 @@
 				
 				//focus on menu button after menu is closed
 				if(menuBtnFocus){
-					menuBtnFocus.focus();
+					menuBtnFocus.trigger('focus');
 				}
 				
 			}
@@ -74,7 +73,7 @@
 		//focus on link in menu after css transition ends
 		if(menuLinkFocus){
 			pushy.one('transitionend', function() {
-				menuLinkFocus.focus();
+				menuLinkFocus.trigger('focus');
 			});
 		}
 		
@@ -105,7 +104,7 @@
 
 		//focus on link in menu
 		if(menuLinkFocus){
-			menuLinkFocus.focus();
+			menuLinkFocus.trigger('focus');
 		}
 	}
 
