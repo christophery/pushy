@@ -2,7 +2,7 @@
 
 Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
-Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [let me know](http://www.twitter.com/cmyee) if you use Pushy in one of your websites.
+Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [contact me](https://chrisyee.ca/contact/) if you use Pushy in one of your websites.
 
 Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise) and in a [book](https://books.google.ca/books?id=guZjBAAAQBAJ&pg=PA103&lpg=PA103&dq=christopheryee.ca/pushy&source=bl&ots=1x-sSNmTHD&sig=ACfU3U1sFn-MU9bs3ia1UU0d9aNga5rB6w&hl=en&sa=X&ved=2ahUKEwi5wfKP9tnhAhUJbKwKHdbfBXAQ6AEwBnoECAoQAQ#v=onepage&q&f=false)!
 
@@ -248,5 +248,5 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
 
-To add your site, tweet to me [@cmyee](https://twitter.com/cmyee).
+To add your site, [contact me using the form](https://chrisyee.ca/contact/).
 
