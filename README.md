@@ -248,5 +248,5 @@ html, body{
 
 Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
 
-To add your site, [contact me using the form](https://chrisyee.ca/contact/).
+To add your site, [contact me](https://chrisyee.ca/contact/).
 
