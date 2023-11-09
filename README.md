@@ -113,10 +113,10 @@ Use the `data-focus` attribute to give focus to a link when the menu is opened. 
 This data attribute accepts a CSS selector.
 
 ```html
-<nav class="pushy pushy-left" data-focus="#home-link">
+<nav class="pushy pushy-left" data-focus="#first-link">
     <div class="pushy-content">
         <ul>
-            <li id="home-page" class="pushy-link"><a href="#">Home</a></li>
+            <li id="first-link" class="pushy-link"><a href="#">Home</a></li>
             <li class="pushy-link"><a href="#">About Us</a></li>
             <li class="pushy-link"><a href="#">Contact</a></li>
         </ul>
