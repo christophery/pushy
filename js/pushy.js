@@ -6,37 +6,52 @@
 (function ($) {
 	var pushy = $('.pushy'), //menu css class
 		body = $('body'),
+		containerSelector = '#container',
+		menuBtnWrapperSelector = '.wrp-pushy-trigger',
+		menuBtnWrapper = $(menuBtnWrapperSelector),
+		menuBtnSelector = '.menu-btn', //set default menu button CSS class
+		menuBtn = menuBtnWrapper.find(menuBtnSelector),
+		menuBtnFocus = menuBtnWrapper.find(menuBtnSelector),
 		push = $('.push'), //css class to add pushy capability
 		pushyLeft = 'pushy-left', //css class for left menu position
 		pushyOpenLeft = 'pushy-open-left', //css class when menu is open (left position)
 		pushyOpenRight = 'pushy-open-right', //css class when menu is open (right position)
 		siteOverlay = $('.site-overlay'), //site overlay
-		menuLinkFocus = $(pushy.data('focus')), //focus on link when menu is open
+		menuLinkFocus = $(pushy.attr('data-focus')), //focus on link when menu is open
 		menuSpeed = 200, //jQuery fallback menu speed
 		menuWidth = pushy.width() + 'px', //jQuery fallback menu width
 		submenuClass = '.pushy-submenu',
 		submenuOpenClass = 'pushy-submenu-open',
-		submenuClosedClass = 'pushy-submenu-closed';
+		submenuClosedClass = 'pushy-submenu-closed',
+		lastButtonPressed = null,
+		devBodyClass = '';
 
-	//check if menu-btn-selector data attribute exists
-	if( typeof pushy.data('menu-btn-selector') !== 'undefined' ){
-		var menuBtnClass = pushy.data('menu-btn-selector'); //take user defined menu button CSS class
-	}else{
-		var menuBtnClass = '.menu-btn'; //set default menu button CSS class
-	}
-
-	//css classes to toggle the menu
-	var menuBtn = $(menuBtnClass + ', .pushy-link');
-
-	//css class to focus when menu is closed w/ esc key
-	var menuBtnFocus = $(menuBtnClass);
 	
     // check if container-selector data attribute exists
-    var containerSelector = '#container';
-    if (typeof pushy.data('container-selector') !== 'undefined') {
-        containerSelector = pushy.data('container-selector');
+    if (typeof pushy.attr('data-container-selector') !== 'undefined') {
+        containerSelector = pushy.attr('data-container-selector');
     }
     var container = $(containerSelector);
+
+	// Get User Custom Body Classes 
+	function getDevBodyClasses(currentButton){
+		var btnParent = currentButton.closest(menuBtnWrapperSelector);
+
+		if( typeof btnParent.attr('data-pushy-body-class') !== 'undefined' ) {
+			devBodyClass = btnParent.attr('data-pushy-body-class');
+		}
+
+	}
+
+	// Get Pushy Menu Target for the current button pressed
+	function getPushyMenuTarget(currentButton) {
+		var btnParent = currentButton.closest(menuBtnWrapperSelector);
+
+		if( typeof btnParent.attr('data-pushy-target') !== 'undefined' ) {
+			pushy = $(btnParent.attr('data-pushy-target'));
+		}
+	}
+
 
 	//close menu w/ esc key
 	$(document).on('keyup', function(e) {
@@ -46,9 +61,9 @@
 			//check if menu is open
 			if( body.hasClass(pushyOpenLeft) || body.hasClass(pushyOpenRight) ){
 				if(cssTransforms3d){
-					closePushy(); //close pushy
+					closePushy(lastButtonPressed); //close pushy
 				}else{
-					closePushyFallback();
+					closePushyFallback(lastButtonPressed);
 					opened = false; //set menu state
 				}
 				
@@ -62,13 +77,21 @@
 		}   
 	});
 
-	function togglePushy(){
+	function togglePushy(currentButton){
+
+		getPushyMenuTarget(currentButton);
+		getDevBodyClasses(currentButton);
+		
 		//add class to body based on menu position
-		if( pushy.hasClass(pushyLeft) ){
+		if( pushy.hasClass(pushyLeft) ) {
 			body.toggleClass(pushyOpenLeft);
+			
 		}else{
 			body.toggleClass(pushyOpenRight);
+
 		}
+		pushy.toggleClass('active');
+		body.toggleClass(devBodyClass);
 
 		//focus on link in menu after css transition ends
 		if(menuLinkFocus){
@@ -79,15 +102,26 @@
 		
 	}
 
-	function closePushy(){
+	function closePushy(currentButton){
+		
+		getPushyMenuTarget(currentButton);
+		getDevBodyClasses(currentButton);
+
 		if( pushy.hasClass(pushyLeft) ){
 			body.removeClass(pushyOpenLeft);
 		}else{
 			body.removeClass(pushyOpenRight);
 		}
+
+		pushy.removeClass('active');
+		body.removeClass(devBodyClass);
 	}
 
-	function openPushyFallback(){
+	function openPushyFallback(currentButton) {
+
+		getPushyMenuTarget(currentButton);
+		getDevBodyClasses(currentButton);
+
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
 			body.addClass(pushyOpenLeft);
@@ -102,13 +136,20 @@
 			push.animate({right: menuWidth}, menuSpeed);
 		}
 
+		pushy.addClass('active');
+		body.addClass(devBodyClass);
+
 		//focus on link in menu
 		if(menuLinkFocus){
 			menuLinkFocus.trigger('focus');
 		}
 	}
 
-	function closePushyFallback(){
+	function closePushyFallback(currentButton){
+
+		getPushyMenuTarget(currentButton);
+		getDevBodyClasses(currentButton);
+		
 		//animate menu position based on CSS class
 		if( pushy.hasClass(pushyLeft) ){
 			body.removeClass(pushyOpenLeft);
@@ -122,6 +163,9 @@
 			container.animate({right: "0px"}, menuSpeed);
 			push.animate({right: "0px"}, menuSpeed);
 		}
+
+		pushy.removeClass('active');
+		body.removeClass(devBodyClass);
 	}
 
 	function toggleSubmenu(){
@@ -181,12 +225,15 @@
 		toggleSubmenu();
 
 		//toggle menu
-		menuBtn.on('click', function(){
-			togglePushy();
+		menuBtn.on('click', function(e){
+			e.preventDefault();
+			lastButtonPressed = $(this);
+			
+			togglePushy(lastButtonPressed);
 		});
 		//close menu when clicking site overlay
-		siteOverlay.on('click', function(){
-			togglePushy();
+		siteOverlay.on('click', function() {
+			togglePushy(lastButtonPressed);
 		});
 	}else{
 		//add css class to body
@@ -209,12 +256,15 @@
 		toggleSubmenu();
 
 		//toggle menu
-		menuBtn.on('click', function(){
+		menuBtn.on('click', function(e) {
+			e.preventDefault();
+			lastButtonPressed = $(this);
+
 			if (opened) {
-				closePushyFallback();
+				closePushyFallback(lastButtonPressed);
 				opened = false;
 			} else {
-				openPushyFallback();
+				openPushyFallback(lastButtonPressed);
 				opened = true;
 			}
 		});
@@ -222,10 +272,10 @@
 		//close menu when clicking site overlay
 		siteOverlay.on('click', function(){
 			if (opened) {
-				closePushyFallback();
+				closePushyFallback(lastButtonPressed);
 				opened = false;
 			} else {
-				openPushyFallback();
+				openPushyFallback(lastButtonPressed);
 				opened = true;
 			}
 		});
