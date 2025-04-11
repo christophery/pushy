@@ -1,14 +1,17 @@
 {
-  "name": "pushy",
+  "name": "@cmyee/pushy",
+  "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.",
   "version": "2.0.0",
-  "description": "Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "homepage": "https://chrisyee.ca/pushy/",
+  "license": "MIT",
+  "author": {
+    "name": "Chris Yee",
+    "url": "https://chrisyee.ca/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christophery/pushy.git"
+  },
   "devDependencies": {
     "grunt": "^1.6.1",
     "grunt-contrib-uglify": "^5.2.2",
