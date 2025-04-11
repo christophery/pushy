@@ -50,7 +50,7 @@
 	});
 
 	/**
-	 * Toggle psuhy being open or closed
+	 * Toggle pushy being open or closed
 	 */
 	function togglePushy() {
 		// add focus to element after opening/closing
