@@ -1,8 +1,6 @@
 # Pushy
 
-Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
-
-Pushy-vanilla is a rewrite of the original Pushy to remove the jQuery dependency.
+Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 
 Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [contact me](https://chrisyee.ca/contact/) if you use Pushy in one of your websites.
 
@@ -10,15 +8,23 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://chrisyee.ca/pushy/#sites-using-pushy)
 
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#install)
+3. [Development](#development)
+
 ## Features
 
 - Uses CSS transforms & transitions.
 - Smooth performance on mobile devices.
 - Menu closes when a link is selected.
 - Menu closes when the site overlay is selected.
-- Auto-collapsible submenus.
+- Works with a keyboard (ESC closes the menu)
+- Auto-collapsible submenus, nested to multiple levels
 - Left or right menu position.
 - It's responsive!
+- Jquery free (as of version 2.0).
 
 ## Install
 
