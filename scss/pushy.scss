@@ -54,7 +54,7 @@ $menu_width: 200px !default;
 }
 
 .pushy-open-left{
-    #container,
+    .container,
     .push{
         -webkit-transform: translate3d( $menu_width ,0,0);
         -ms-transform: translate3d( $menu_width ,0,0);
@@ -69,7 +69,7 @@ $menu_width: 200px !default;
 }
 
 .pushy-open-right{
-    #container,
+    .container,
     .push{
         -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
         -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
@@ -92,7 +92,7 @@ $menu_width: 200px !default;
 
 /* Menu Transitions */
 
-#container,
+.container,
 .pushy,
 .push{
     transition: transform .2s cubic-bezier(.16, .68, .43, .99);

@@ -63,7 +63,7 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 <div class="site-overlay"></div>
 
 <!-- Your Content -->
-<div id="container">
+<div class="container">
     <!-- Menu Button -->
     <button class="menu-btn">&#9776; Menu</button>
 </div>
@@ -141,21 +141,9 @@ This data attribute accepts a CSS selector.
 <button class="my-menu-btn">Menu</button>
 ```
 
-### data-container-selector
-
-Use the `data-container-selector` attribute to using a custom `#container` selector.
-
-If you use a custom `#container` selector you'll need to update the necessary CSS in `pushy.scss`.
-
-This data attribute accepts a CSS selector.
-
-```
-<nav class="pushy pushy-right" data-container-selector="#custom-container">
-```
-
 ## Tips
 
-- Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
+- Use the ```.push``` CSS class on HTML elements outside of the ```.container```.
 
 ```html
 <header class="push">
@@ -164,7 +152,7 @@ This data attribute accepts a CSS selector.
 </header>
 
 <!-- Your Content -->
-<div id="container"></div>
+<div class="container"></div>
 ```
 
 - If you are using SCSS, you can easily change the menu width by adjusting the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
@@ -187,7 +175,7 @@ $menu_width: 400px;
     /* Don't forget the vendor prefixes */
 }
 
-.pushy-open-left #container,
+.pushy-open-left .container,
 .pushy-open-left .push {
     transform: translate3d(400px, 0, 0); /* Updated the values */
 }
@@ -197,7 +185,7 @@ $menu_width: 400px;
     /* Don't forget the vendor prefixes */
 }
 
-.pushy-open-right #container,
+.pushy-open-right #.container,
 .pushy-open-right .push {
     transform: translate3d(-400px, 0, 0); /* Updated the values */
     /* Don't forget the vendor prefixes */
@@ -249,4 +237,3 @@ html, body{
 Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
 
 To add your site, [contact me](https://chrisyee.ca/contact/).
-

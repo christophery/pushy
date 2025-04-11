@@ -9,7 +9,7 @@ ul {
 }
 
 /* Container */
-#container {
+.container {
   position: relative;
   padding: 20px 40px;
   padding-top: 80px;
