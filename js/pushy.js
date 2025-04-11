@@ -10,7 +10,6 @@
 		pushyOpenLeft = 'pushy-open-left', // css class when menu is open (left position)
 		pushyOpenRight = 'pushy-open-right', // css class when menu is open (right position)
 		siteOverlay = document.querySelector('.site-overlay'), // site overlay
-		menuLinkFocus = document.querySelector('.pushy-link'), // focus on link when menu is open
 		submenuClass = '.pushy-submenu',
 		submenuOpenClass = 'pushy-submenu-open',
 		submenuClosedClass = 'pushy-submenu-closed',
@@ -20,6 +19,10 @@
 	const menuBtnClass = pushy.dataset.menuBtnSelector ?? '.menu-btn';
 	const menuBtn = document.querySelector(menuBtnClass);
 	const menuBtnFocus = document.querySelector(menuBtnClass);
+
+	// focus on link when menu is open
+	const menuLinkClass = pushy.dataset.focus ?? '.menu-link'; 
+	const menuLinkFocus = document.querySelector(menuLinkClass);
 
     // prepare sub-menus
 	toggleSubmenu(subMenus);
@@ -58,8 +61,12 @@
 			// pushy currently open, closing now
 			menuBtnFocus.focus();
 		} else {
-			// pushy currently closed, opening now
-			menuLinkFocus.focus();
+			// focus on link in menu after css transition ends
+			pushy.addEventListener('transitionend', function() {
+				menuLinkFocus.focus();
+			}, { 
+				once: true //fire once
+			});
 		}
 
 		if (pushy.classList.contains(pushyLeft)) {
