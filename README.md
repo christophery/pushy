@@ -4,7 +4,7 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [contact me](https://chrisyee.ca/contact/) if you use Pushy in one of your websites.
 
-Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise?t=572) and in a [book](https://www.google.ca/books/edition/Responsive_Mobile_Design/guZjBAAAQBAJ?hl=en&gbpv=1&dq=christopheryee.ca/pushy&pg=PA103&printsec=frontcover)!
+Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise?t=572), in a [book](https://www.google.ca/books/edition/Responsive_Mobile_Design/guZjBAAAQBAJ?hl=en&gbpv=1&dq=christopheryee.ca/pushy&pg=PA103&printsec=frontcover) and used in [Antarctica](https://www.antarctica.gov.au/)!
 
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://chrisyee.ca/pushy/#sites-using-pushy)
 
