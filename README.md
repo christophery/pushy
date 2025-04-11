@@ -13,18 +13,21 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 1. [Features](#features)
 2. [Installation](#install)
 3. [Development](#development)
+4. [Options](#options)
+5. [Browser Compatibility](#browser-compatibility)
+6. [Sites using Pushy](#sites-using-pushy)
 
 ## Features
 
-- Uses CSS transforms & transitions.
-- Smooth performance on mobile devices.
-- Menu closes when a link is selected.
-- Menu closes when the site overlay is selected.
+- Uses CSS transforms & transitions
+- No jQuery dependency (as of version 2.0)
+- Smooth performance on mobile devices
+- Menu closes when a link is selected
+- Menu closes when the site overlay is selected
 - Works with a keyboard (ESC closes the menu)
 - Auto-collapsible submenus, nested to multiple levels
-- Left or right menu position.
+- Left or right menu position
 - It's responsive!
-- Jquery free (as of version 2.0).
 
 ## Install
 
@@ -66,6 +69,10 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 </div>
 ```
 
+### CDN
+
+Alternatively link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
+
 ## Development
 Pushy CSS and JS are compiled and minified using Grunt. You'll need [Node](https://nodejs.org/en/) and [Grunt](https://gruntjs.com/) installed globally.
 
@@ -77,10 +84,6 @@ $ npx grunt
 ```
 
 Now you can edit files in `/scss/` and `/js/`, which will be compiled to `/css/pushy.css` and `/js/pushy.min.js`.
-
-## CDN
-
-Link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
 
 ## Options
 
@@ -226,6 +229,20 @@ html, body{
     -webkit-overflow-scrolling: touch;
 }
 ```
+
+## Browser compatibility
+
+### Desktop
+- Edge
+- Chrome
+- Firefox
+- Safari (Mac)
+- Opera
+- Arc
+
+### Mobile
+- Chrome
+- Safari
 
 ## Sites using Pushy
 
