@@ -1,6 +1,6 @@
 # Pushy
 
-Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
+Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions. This project was inspired by the off-canvas navigation menu seen on [Medium](https://medium.com/).
 
 Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [contact me](https://chrisyee.ca/contact/) if you use Pushy in one of your websites.
 
@@ -14,8 +14,7 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 2. [Installation](#install)
 3. [Development](#development)
 4. [Options](#options)
-5. [Browser Compatibility](#browser-compatibility)
-6. [Sites using Pushy](#sites-using-pushy)
+5. [Sites using Pushy](#sites-using-pushy)
 
 ## Features
 
@@ -69,9 +68,17 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 </div>
 ```
 
-### CDN
+## CDN
 
 Alternatively link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
+
+## NPM
+
+If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
+
+```
+npm install @cmyee/pushy
+```
 
 ## Development
 Pushy CSS and JS are compiled and minified using Grunt. You'll need [Node](https://nodejs.org/en/) and [Grunt](https://gruntjs.com/) installed globally.
@@ -80,7 +87,7 @@ Pushy CSS and JS are compiled and minified using Grunt. You'll need [Node](https
 
 ```
 $ npm install
-$ npx grunt
+$ grunt
 ```
 
 Now you can edit files in `/scss/` and `/js/`, which will be compiled to `/css/pushy.css` and `/js/pushy.min.js`.
@@ -217,20 +224,6 @@ html, body{
     -webkit-overflow-scrolling: touch;
 }
 ```
-
-## Browser compatibility
-
-### Desktop
-- Edge
-- Chrome
-- Firefox
-- Safari (Mac)
-- Opera
-- Arc
-
-### Mobile
-- Chrome
-- Safari
 
 ## Sites using Pushy
 
