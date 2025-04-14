@@ -4,35 +4,35 @@ module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         watch: {
-          options: {
-            livereload: true,
-            spawn: false,
-          },
-          css: {
-            files: ['scss/*.scss'],
-            tasks: ['sass-task'],
-          },
-          js: {
-            files: ['js/*.js'],
-            tasks: ['js-task'],
-          },
+            options: {
+                livereload: true,
+                spawn: false,
+            },
+            css: {
+                files: ['scss/*.scss'],
+                tasks: ['sass-task'],
+            },
+            js: {
+                files: ['js/*.js'],
+                tasks: ['js-task'],
+            },
         },
         sass: {
             options: {
                 implementation: sass,
-                sourceMap: true
+                sourceMap: false
             },
             dist: {
                 files: {
-                'css/pushy.css': 'scss/pushy.scss',
-                'css/demo.css': 'scss/demo.scss',
+                    'css/pushy.css': 'scss/pushy.scss',
+                    'css/demo.css': 'scss/demo.scss',
                 }
             }
         },
         uglify: {
             dist: {
                 files: {
-                'js/pushy.min.js': 'js/pushy.js'
+                    'js/pushy.min.js': 'js/pushy.js'
                 }
             }
         },
