@@ -142,7 +142,7 @@ $menu_width: 200px !default;
         transition: max-height 0.2s ease-in-out,
                     visibility 0.2s ease-in-out;
 
-        .pushy-link{
+        li{
             transition: opacity 0.2s ease-in-out;
         }
     }
@@ -195,7 +195,7 @@ $menu_width: 200px !default;
         visibility: hidden;
     }
 
-    .pushy-link{
+    li{
         opacity: 0;
     }
 }
@@ -206,7 +206,7 @@ $menu_width: 200px !default;
         visibility: visible;
     }
 
-    .pushy-link{
+    li{
         opacity: 1;
     }
     

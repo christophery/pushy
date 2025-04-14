@@ -129,7 +129,7 @@
   padding-left: 15px;
   transition: max-height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
-.pushy-submenu > ul .pushy-link {
+.pushy-submenu > ul li {
   transition: opacity 0.2s ease-in-out;
 }
 .pushy-submenu button {
@@ -169,7 +169,7 @@
   overflow: hidden;
   visibility: hidden;
 }
-.pushy-submenu-closed .pushy-link {
+.pushy-submenu-closed li {
   opacity: 0;
 }
 
@@ -180,7 +180,7 @@
   max-height: 1000px;
   visibility: visible;
 }
-.pushy-submenu-open .pushy-link {
+.pushy-submenu-open li {
   opacity: 1;
 }
 .pushy-submenu-open > a::after,

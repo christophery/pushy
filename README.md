@@ -47,13 +47,13 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
             <li class="pushy-submenu">
                 <button>Submenu</button>
                 <ul>
-                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                    <li class="pushy-link"><a href="#">Item 2</a></li>
-                    <li class="pushy-link"><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
                 </ul>
             </li>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
         </ul>
     </div>
 </nav>
@@ -103,8 +103,8 @@ Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu po
 <nav class="pushy pushy-right">
     <div class="pushy-content">
         <ul>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
         </ul>
     </div>
 </nav>
@@ -120,9 +120,9 @@ This data attribute accepts a CSS selector.
 <nav class="pushy pushy-left" data-focus="#first-link">
     <div class="pushy-content">
         <ul>
-            <li id="first-link" class="pushy-link"><a href="#">Home</a></li>
-            <li class="pushy-link"><a href="#">About Us</a></li>
-            <li class="pushy-link"><a href="#">Contact</a></li>
+            <li><a href="#" id="first-link">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -198,21 +198,6 @@ $menu_width: 400px;
     /* Don't forget the vendor prefixes */
 }
 
-```
-
-- Only links with the CSS class of ```pushy-link``` will close the menu.
-
-```html
-<nav class="pushy pushy-left">
-    <div class="pushy-content">
-        <ul>
-            <!-- This link will close the menu -->
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <!-- This link won't close the menu -->
-            <li><a href="#">Item 2</a></li>
-        </ul>
-    </div>
-</nav>
 ```
 
 - If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.

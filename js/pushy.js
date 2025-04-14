@@ -21,7 +21,7 @@
 	const menuBtnFocus = document.querySelector(menuBtnClass);
 
 	// focus on link when menu is open
-	const menuLinkClass = pushy.dataset.focus ?? '.menu-link'; 
+	const menuLinkClass = pushy.dataset.focus; 
 	const menuLinkFocus = document.querySelector(menuLinkClass);
 
     // prepare sub-menus
@@ -35,6 +35,15 @@
 	// close pushy menu when overlay clicked
 	siteOverlay.addEventListener('click', function(e) {
 		closePushy();
+	});
+
+	// close pushy menu when links are clicked
+	pushy.addEventListener('click', function(e) {
+		const link = e.target.closest('a');
+
+		if (link && this.contains(link)) {
+			closePushy();
+		}
 	});
 
 	// close menu when 'ESC' key pressed
