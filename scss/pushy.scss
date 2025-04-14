@@ -1,7 +1,7 @@
-/*! Pushy - v1.4.0 - 2020-12-28
+/*! Pushy - v2.0.0 - 2025-04-14
 * Pushy is a responsive off-canvas navigation menu using CSS transforms & transitions.
 * https://github.com/christophery/pushy/
-* by Christopher Yee */
+* by Chris Yee */
 
 $menu_width: 200px !default;
 
@@ -24,7 +24,8 @@ $menu_width: 200px !default;
         text-decoration: none;
     }
 
-    a:hover{
+    a:hover,
+    a:focus{
         color: #FFF;
     }
 
@@ -48,13 +49,13 @@ $menu_width: 200px !default;
 /* Menu Movement */
 
 .pushy-left{
-    -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-    transform: translate3d( unquote('-' + $menu_width) ,0,0);
+    -webkit-transform: translate3d( #{'-' + $menu_width} ,0,0);
+    -ms-transform: translate3d( #{'-' + $menu_width} ,0,0);
+    transform: translate3d( #{'-' + $menu_width} ,0,0);
 }
 
 .pushy-open-left{
-    #container,
+    .container,
     .push{
         -webkit-transform: translate3d( $menu_width ,0,0);
         -ms-transform: translate3d( $menu_width ,0,0);
@@ -69,11 +70,11 @@ $menu_width: 200px !default;
 }
 
 .pushy-open-right{
-    #container,
+    .container,
     .push{
-        -webkit-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        -ms-transform: translate3d( unquote('-' + $menu_width) ,0,0);
-        transform: translate3d( unquote('-' + $menu_width) ,0,0);
+        -webkit-transform: translate3d( #{'-' + $menu_width} ,0,0);
+        -ms-transform: translate3d( #{'-' + $menu_width} ,0,0);
+        transform: translate3d( #{'-' + $menu_width} ,0,0);
     }
 }
 
@@ -92,7 +93,7 @@ $menu_width: 200px !default;
 
 /* Menu Transitions */
 
-#container,
+.container,
 .pushy,
 .push{
     transition: transform .2s cubic-bezier(.16, .68, .43, .99);
@@ -142,7 +143,7 @@ $menu_width: 200px !default;
         transition: max-height 0.2s ease-in-out,
                     visibility 0.2s ease-in-out;
 
-        .pushy-link{
+        li{
             transition: opacity 0.2s ease-in-out;
         }
     }
@@ -157,7 +158,8 @@ $menu_width: 200px !default;
         background: transparent;
         border: 0;
 
-        &:hover{
+        &:hover,
+        &:focus{
             color: #FFF;
         }
     }
@@ -195,7 +197,7 @@ $menu_width: 200px !default;
         visibility: hidden;
     }
 
-    .pushy-link{
+    li{
         opacity: 0;
     }
 }
@@ -206,7 +208,7 @@ $menu_width: 200px !default;
         visibility: visible;
     }
 
-    .pushy-link{
+    li{
         opacity: 1;
     }
     

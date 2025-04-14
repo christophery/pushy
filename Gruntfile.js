@@ -1,63 +1,50 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
+    const sass = require('sass');
 
-  // Project configuration.
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    watch: {
-      options: {
-        livereload: true,
-        spawn: false
-      },
-      css: {
-        files: ['scss/*.scss'],
-        tasks: ['sass-task'],
-      },
-      js: {
-        files: ['js/pushy.js'],
-        tasks: ['js-task'],
-      },
-    },
-    concat: {
-        options: {
-          stripBanners: false,
-          separator: ';'
+    grunt.initConfig({
+        pkg: grunt.file.readJSON('package.json'),
+        watch: {
+            options: {
+                livereload: true,
+                spawn: false,
+            },
+            css: {
+                files: ['scss/*.scss'],
+                tasks: ['sass-task'],
+            },
+            js: {
+                files: ['js/*.js'],
+                tasks: ['js-task'],
+            },
         },
-        dist: {
-          src: [
-                'js/pushy.js'
-                ],
-          dest: 'js/pushy.min.js',
+        sass: {
+            options: {
+                implementation: sass,
+                sourceMap: false
+            },
+            dist: {
+                files: {
+                    'css/pushy.css': 'scss/pushy.scss',
+                    'css/demo.css': 'scss/demo.scss',
+                }
+            }
         },
-    },
-    uglify: {
-        dist: {
-          files: {
-              'js/pushy.min.js': 'js/pushy.min.js'
-          }
-        }
-    },
-    sass: {
-      dist: {
-        options: {
-          outputStyle: 'expanded' //output style: nested, compact, compressed, expanded
+        uglify: {
+            dist: {
+                files: {
+                    'js/pushy.min.js': 'js/pushy.js'
+                }
+            }
         },
-        files: {
-          'css/pushy.css': 'scss/pushy.scss', // 'destination': 'source'
-          'css/demo.css': 'scss/demo.scss'
-        }
-      }
-    }
-  });
+    });
 
-  // Load grunt plugins
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+    // Load grunt plugins
+    grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
-  // Default task(s).
-  grunt.registerTask('default', ['watch']);
-  grunt.registerTask('js-task', ['concat', 'uglify']);
-  grunt.registerTask('sass-task', ['sass']);
-
-};
+    // Default task(s).
+    grunt.registerTask('default', ['watch']);
+    grunt.registerTask('js-task', ['uglify']);
+    grunt.registerTask('sass-task', ['sass']);
+};  

@@ -4,24 +4,29 @@ Pushy is a responsive off-canvas navigation menu using CSS transforms & transiti
 
 Pushy has been implemented on many sites, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy) Feel free to [contact me](https://chrisyee.ca/contact/) if you use Pushy in one of your websites.
 
-Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise?t=572) and in a [book](https://www.google.ca/books/edition/Responsive_Mobile_Design/guZjBAAAQBAJ?hl=en&gbpv=1&dq=christopheryee.ca/pushy&pg=PA103&printsec=frontcover)!
+Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/library/episode-118-page-transitions-designing-for-thumbs-concise?t=572), in a [book](https://www.google.ca/books/edition/Responsive_Mobile_Design/guZjBAAAQBAJ?hl=en&gbpv=1&dq=christopheryee.ca/pushy&pg=PA103&printsec=frontcover) and used in [Antarctica](https://www.antarctica.gov.au/)!
 
 [View Demo](https://chrisyee.ca/pushy) | [Sites using Pushy](https://chrisyee.ca/pushy/#sites-using-pushy)
 
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#install)
+3. [Development](#development)
+4. [Options](#options)
+5. [Sites using Pushy](#sites-using-pushy)
+
 ## Features
 
-- Uses CSS transforms & transitions.
-- Smooth performance on mobile devices.
-- jQuery animation fallback for IE 7 - 9.
-- Menu closes when a link is selected.
-- Menu closes when the site overlay is selected.
-- Auto-collapsible submenus.
-- Left or right menu position.
+- Uses CSS transforms & transitions
+- No jQuery dependency (as of version 2.0)
+- Smooth performance on mobile devices
+- Menu/submenu closes when a link is selected
+- Menu closes when the site overlay is selected
+- Works with a keyboard (ESC closes the menu)
+- Auto-collapsible submenus, nested to multiple levels
+- Left or right menu position
 - It's responsive!
-
-## Requirements
-
-- [jQuery 3.x+](https://jquery.com/)
 
 ## Install
 
@@ -35,20 +40,19 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-left">
+<nav class="pushy pushy-left" data-focus="#focus-link">
     <div class="pushy-content">
         <ul>
-            <!-- Submenu -->
             <li class="pushy-submenu">
-                <button>Submenu</button>
+                <button id="focus-link">Submenu</button>
                 <ul>
-                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                    <li class="pushy-link"><a href="#">Item 2</a></li>
-                    <li class="pushy-link"><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
                 </ul>
             </li>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
         </ul>
     </div>
 </nav>
@@ -57,10 +61,22 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 <div class="site-overlay"></div>
 
 <!-- Your Content -->
-<div id="container">
+<div class="container">
     <!-- Menu Button -->
     <button class="menu-btn">&#9776; Menu</button>
 </div>
+```
+
+## CDN
+
+Alternatively link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
+
+## NPM
+
+If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
+
+```
+npm install @cmyee/pushy
 ```
 
 ## Development
@@ -73,20 +89,7 @@ $ npm install
 $ grunt
 ```
 
-Now you can edit files in `/scss/` and `/js/`, which will be compiled to `/css/pushy.css` and `/js/pushy.min.js` automatically.
-
-## CDN
-
-Link directly to Pushy files on [cdnjs](https://cdnjs.com/libraries/pushy).
-
-
-## NPM
-
-If your are comfortable with command line, you can install Pushy as a [NPM package](https://www.npmjs.com/package/@cmyee/pushy):
-
-```
-npm install @cmyee/pushy
-```
+Now you can edit files in `/scss/` and `/js/`, which will be compiled to `/css/pushy.css` and `/js/pushy.min.js`.
 
 ## Options
 
@@ -99,8 +102,8 @@ Use the ```.pushy-left``` or ```.pushy-right``` CSS class to specify the menu po
 <nav class="pushy pushy-right">
     <div class="pushy-content">
         <ul>
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <li class="pushy-link"><a href="#">Item 2</a></li>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
         </ul>
     </div>
 </nav>
@@ -113,12 +116,12 @@ Use the `data-focus` attribute to give focus to a link when the menu is opened. 
 This data attribute accepts a CSS selector.
 
 ```html
-<nav class="pushy pushy-left" data-focus="#first-link">
+<nav class="pushy pushy-left" data-focus="#focus-link">
     <div class="pushy-content">
         <ul>
-            <li id="first-link" class="pushy-link"><a href="#">Home</a></li>
-            <li class="pushy-link"><a href="#">About Us</a></li>
-            <li class="pushy-link"><a href="#">Contact</a></li>
+            <li><a href="#" id="focus-link">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </div>
 </nav>
@@ -144,21 +147,9 @@ This data attribute accepts a CSS selector.
 <button class="my-menu-btn">Menu</button>
 ```
 
-### data-container-selector
-
-Use the `data-container-selector` attribute to using a custom `#container` selector.
-
-If you use a custom `#container` selector you'll need to update the necessary CSS in `pushy.scss`.
-
-This data attribute accepts a CSS selector.
-
-```
-<nav class="pushy pushy-right" data-container-selector="#custom-container">
-```
-
 ## Tips
 
-- Use the ```.push``` CSS class on HTML elements outside of the ```#container```.
+- Use the ```.push``` CSS class on HTML elements outside of the ```.container```.
 
 ```html
 <header class="push">
@@ -167,7 +158,7 @@ This data attribute accepts a CSS selector.
 </header>
 
 <!-- Your Content -->
-<div id="container"></div>
+<div class="container"></div>
 ```
 
 - If you are using SCSS, you can easily change the menu width by adjusting the ```$menu_width``` variable. The SCSS file [will need to be compiled](http://sass-lang.com/install) to CSS in order to see the change.
@@ -190,7 +181,7 @@ $menu_width: 400px;
     /* Don't forget the vendor prefixes */
 }
 
-.pushy-open-left #container,
+.pushy-open-left .container,
 .pushy-open-left .push {
     transform: translate3d(400px, 0, 0); /* Updated the values */
 }
@@ -200,27 +191,12 @@ $menu_width: 400px;
     /* Don't forget the vendor prefixes */
 }
 
-.pushy-open-right #container,
+.pushy-open-right #.container,
 .pushy-open-right .push {
     transform: translate3d(-400px, 0, 0); /* Updated the values */
     /* Don't forget the vendor prefixes */
 }
 
-```
-
-- Only links with the CSS class of ```pushy-link``` will close the menu.
-
-```html
-<nav class="pushy pushy-left">
-    <div class="pushy-content">
-        <ul>
-            <!-- This link will close the menu -->
-            <li class="pushy-link"><a href="#">Item 1</a></li>
-            <!-- This link won't close the menu -->
-            <li><a href="#">Item 2</a></li>
-        </ul>
-    </div>
-</nav>
 ```
 
 - If you want to prevent scrolling of your site when Pushy is open just add overflow-x: hidden and height: 100% to both the html & body tags.
@@ -233,20 +209,8 @@ html, body{
 }
 ```
 
-## Browser Compatibility
-
-| Desktop       | Mobile                                     |
-| ------------- | -------------------------------------------|
-| IE 9-11       | Chrome (Android)                           |
-| MS Edge       | Safari (iOS)                               |
-| Chrome        |                              
-| Firefox       | 
-| Safari (Mac)  |
-
-
 ## Sites using Pushy
 
 Pushy has been implemented on many sites in the wild, [check them out!](https://chrisyee.ca/pushy/#sites-using-pushy)
 
 To add your site, [contact me](https://chrisyee.ca/contact/).
-

@@ -9,69 +9,70 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/demo.css">
+
         <!-- Pushy CSS -->
         <link rel="stylesheet" href="css/pushy.css">
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Pushy JS -->
+        <script src="js/pushy.min.js" defer></script>
     </head>
     <body>
 
         <header class="site-header push">This is a header</header>
 
         <!-- Pushy Menu -->
-        <nav class="pushy pushy-left" data-focus="#first-link">
+        <nav class="pushy pushy-left" data-focus="#focus-link">
             <div class="pushy-content">
                 <ul>
                     <li class="pushy-submenu">
-                        <button id="first-link">Submenu 1</button>
+                        <button id="focus-link">Submenu 1</button>
                         <ul>
                             <li class="pushy-submenu">
                                 <button>Sub-Submenu 1</button>
                                 <ul>
-                                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                                    <li class="pushy-link"><a href="#">Item 2</a></li>
+                                    <li><a href="#">Item 1</a></li>
+                                    <li><a href="#">Item 2</a></li>
                                 </ul>
                             </li>
                             <li class="pushy-submenu">
                                 <button>Sub-Submenu 2</button>
                                 <ul>
-                                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                                    <li class="pushy-link"><a href="#">Item 2</a></li>
+                                    <li><a href="#">Item 1</a></li>
+                                    <li><a href="#">Item 2</a></li>
                                 </ul>
                             </li>
-                            <li class="pushy-link"><a href="#">Item 1</a></li>
-                            <li class="pushy-link"><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
                         </ul>
                     </li>
                     <li class="pushy-submenu">
                         <button>Submenu 2</button>
                         <ul>
-                            <li class="pushy-link"><a href="#">Item 1</a></li>
-                            <li class="pushy-link"><a href="#">Item 2</a></li>
-                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
                         </ul>
                     </li>
                     <li class="pushy-submenu">
                         <button>Submenu 3</button>
                         <ul>
-                            <li class="pushy-link"><a href="#">Item 1</a></li>
-                            <li class="pushy-link"><a href="#">Item 2</a></li>
-                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
                         </ul>
                     </li>
                     <li class="pushy-submenu">
                         <button>Submenu 4</button>
                         <ul>
-                            <li class="pushy-link"><a href="#">Item 1</a></li>
-                            <li class="pushy-link"><a href="#">Item 2</a></li>
-                            <li class="pushy-link"><a href="#">Item 3</a></li>
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
                         </ul>
                     </li>
-                    <li class="pushy-link"><a href="#">Item 1</a></li>
-                    <li class="pushy-link"><a href="#">Item 2</a></li>
-                    <li class="pushy-link"><a href="#">Item 3</a></li>
-                    <li class="pushy-link"><a href="#">Item 4</a></li>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
                 </ul>
             </div>
         </nav>
@@ -80,7 +81,7 @@
         <div class="site-overlay"></div>
 
         <!-- Your Content -->
-        <div id="container">
+        <div class="container">
             <!-- Menu Button -->
             <button class="menu-btn">&#9776; Menu</button>
 
@@ -99,9 +100,5 @@
         </div>
 
         <footer class="site-footer push">This is a footer</footer>
-
-        <!-- Pushy JS -->
-        <script src="js/pushy.min.js"></script>
-
     </body>
 </html>
