@@ -40,12 +40,11 @@ Download the [latest release](https://github.com/christophery/pushy/releases), t
 
 ```html
 <!-- Pushy Menu -->
-<nav class="pushy pushy-left">
+<nav class="pushy pushy-left" data-focus="#focus-link">
     <div class="pushy-content">
         <ul>
-            <!-- Submenu -->
             <li class="pushy-submenu">
-                <button>Submenu</button>
+                <button id="focus-link">Submenu</button>
                 <ul>
                     <li><a href="#">Item 1</a></li>
                     <li><a href="#">Item 2</a></li>
