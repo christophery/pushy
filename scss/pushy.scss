@@ -24,7 +24,8 @@ $menu_width: 200px !default;
         text-decoration: none;
     }
 
-    a:hover{
+    a:hover,
+    a:focus{
         color: #FFF;
     }
 
@@ -157,7 +158,8 @@ $menu_width: 200px !default;
         background: transparent;
         border: 0;
 
-        &:hover{
+        &:hover,
+        &:focus{
             color: #FFF;
         }
     }

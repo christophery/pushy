@@ -19,7 +19,8 @@
   padding: 15px 30px;
   text-decoration: none;
 }
-.pushy a:hover {
+.pushy a:hover,
+.pushy a:focus {
   color: #FFF;
 }
 .pushy ul:first-child {
@@ -140,7 +141,7 @@
   background: transparent;
   border: 0;
 }
-.pushy-submenu button:hover {
+.pushy-submenu button:hover, .pushy-submenu button:focus {
   color: #FFF;
 }
 .pushy-submenu > a,

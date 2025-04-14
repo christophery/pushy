@@ -23,11 +23,10 @@ ul {
   background: #000;
   color: #FFF;
   text-align: center;
-  cursor: pointer;
   border: 0px;
 }
-.menu-btn:hover {
-  opacity: 0.6;
+.menu-btn:hover, .menu-btn:focus {
+  background: #295AEC;
 }
 
 /* Header */
