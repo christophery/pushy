@@ -24,7 +24,7 @@
 	const menuLinkClass = pushy.dataset.focus; 
 	const menuLinkFocus = document.querySelector(menuLinkClass);
 
-    // prepare sub-menus
+	// prepare sub-menus
 	toggleSubmenu(subMenus);
 
 	// open pushy menu when trigger btn clicked
