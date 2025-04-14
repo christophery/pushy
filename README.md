@@ -21,7 +21,7 @@ Pushy has been featured on the [Treehouse Show](https://teamtreehouse.com/librar
 - Uses CSS transforms & transitions
 - No jQuery dependency (as of version 2.0)
 - Smooth performance on mobile devices
-- Menu closes when a link is selected
+- Menu/submenu closes when a link is selected
 - Menu closes when the site overlay is selected
 - Works with a keyboard (ESC closes the menu)
 - Auto-collapsible submenus, nested to multiple levels
